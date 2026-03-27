@@ -1,0 +1,2131 @@
+:root {
+  --primary-color: #007a5e; /* Main green color */
+  --secondary-color: #005f47; /* Darker green for hover states */
+  --accent-color: #f4f4f4; /* Light gray background */
+  --text-color: #333; /* Default text color */
+  --muted-text-color: #666; /* Muted text */
+  --button-text-color: #fff; /* Text on buttons */
+  --shadow-color: rgba(0, 0, 0, 0.1); /* Shadow */
+  --border-color: #003c2f; /* Border color */
+  --hover-border-color: #002e25; /* Hover border color */
+  --active-border-color: #001f19; /* Active border color */
+  --focus-outline-color: #004d39; /* Focus outline color */
+}
+
+
+
+
+
+.widebtn {
+  display: block;
+  width: 280px;
+  margin: 20px auto 20px calc(50% - 150px + 10px); /* przesunięcie lekko w prawo */
+  padding: 12px;
+  font-size: 16px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px var(--shadow-color);
+  box-sizing: border-box;
+  transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out;
+}
+
+
+
+
+
+
+.widebtn:hover {
+  background-color: var(--secondary-color);
+}
+
+.widebtn:active {
+  transform: scale(0.98);
+}
+
+
+
+
+
+
+
+
+
+h1 {
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+    font-size: 1.8em; /* optional: reduce if too huge */
+}
+
+
+
+
+
+
+
+
+
+p.maintext {
+  color: #2a463c;
+}
+
+
+
+
+.duat-content p {
+    text-indent: 2em;
+}
+
+
+.duat-content p {
+    text-indent: 2em;
+}
+
+
+
+
+
+
+.duat-content {
+  max-width: 85%;
+  margin: 30px 0 30px 70px; /* top right bottom left */
+  padding: 0 10px;
+  font-family: Arial, sans-serif;
+  color: #007a5e;
+  text-align: left;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 799px) {
+  .duat-content {
+    max-width: 100%;
+    margin: 60px 10px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function scrollToDiagnostics() {
+  document.getElementById("diagnostics-start").scrollIntoView({ behavior: "smooth" });
+}
+
+
+
+
+
+#additional-tests.input-wide .diagnostic-question input {
+  max-width: 290px;
+}
+
+@media (max-width: 768px) {
+  #additional-tests.input-wide .diagnostic-question input {
+    max-width: 200px;
+  }
+}
+
+
+
+
+.diagnostic-question .result-output {
+  font-weight: normal !important;
+}
+
+
+.question-container label.result-output {
+  margin-left: 0 !important;
+  display: block;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+.result-output {
+  font-weight: normal;
+  font-size: 16px;
+  color: var(--primary-color);
+  background-color: #f9f9f9;
+  border-left: 4px solid var(--primary-color);
+  padding: 10px 15px;
+  margin: 10px 0;
+  border-radius: 6px;
+  text-align: left;
+  display: block;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+#additional-tests .diagnostic-question input {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+@media (max-width: 768px) {
+  #additional-tests .diagnostic-question input {
+    width: 100%;
+    max-width: 180px; /* Same as mobile Analyze button */
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.contact {
+  margin-top: -95px;
+  margin-right: -20px;
+  width: 45vw;
+  max-width: 200px;
+  min-width: 120px; /* Add min width so it doesn't collapse */
+  padding: 10px;
+  float: right;
+  text-align: center;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.contact p {
+  font-size: 11px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.4;
+  word-break: break-word; /* If email too long on tiny screens */
+   color: var(--primary-color); /* ← Correct */
+}
+
+
+
+
+h1.textadjustment {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2.textadjustment {
+  font-size: 1.4em;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.maintext {
+  width: 100%;
+  font-size: 1.25em;         /* bigger text on laptop */
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+
+
+.sodium-bicarbonate-disclaimer {
+  background-color: #f1f1f1;
+  padding: 12px;
+  font-size: 0.95em;
+  margin: 25px 0;
+  border-left: 4px solid #007a5e;
+  color: #333;
+  line-height: 1.5;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+
+
+
+
+.duat-image-wrapper.center {
+  text-align: center;
+  border-radius: 6px;          /* match buttons */
+  overflow: hidden;            /* clip image corners */
+  box-shadow: 0px 4px 6px var(--shadow-color); /* optional: match button shadow */
+}
+
+.duat-image-wrapper.center img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  box-sizing: border-box;
+  border-radius: 0; /* keep flat inside if wrapper has the roundness */
+}
+
+
+
+
+@media (max-width: 768px) {
+  .duat-content {
+    padding: 0 5px;
+  }
+
+  h1.textadjustment {
+    font-size: 1.5em;
+  }
+
+  h2.textadjustment {
+    font-size: 1.2em;
+  }
+
+  .maintext {
+    font-size: 1.1em;   /* was 0.95em — now readable */
+    line-height: 1.6;
+  }
+
+  .duat-image-wrapper.center img {
+    max-width: 90%;
+    margin: 15px auto;
+  }
+}
+
+
+
+
+
+.logo {
+  margin-top: -40px; /* cancels out .screen's padding-top */
+  margin-left: -20px; /* cancels out .screen's padding-left */
+  margin-bottom: 20px; /* adds space below the logo */
+  width: 15vw;
+  max-width: 120px;
+  padding: 0;
+}
+
+.logo img {
+  width: 80px;       /* force square */
+  height: 80px;
+  display: block;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+.nielogo {
+  margin-top: -40px;   /* cancels out .screen's padding-top */
+  margin-right: -20px; /* cancels out .screen's padding-right */
+  margin-bottom: 20px; /* adds space below the logo */
+  width: 15vw;
+  max-width: 120px;
+  padding: 0;
+  float: right;
+}
+
+.nielogo img {
+  width: 80px;
+  height: 80px;
+  display: block;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+.wrapped-label {
+  display: block;
+  max-width: 75%;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: none;
+  height: 1px; /* Default height */
+  background-color: #ccc; /* Light gray line */
+}
+
+/* On mobile, increase the thickness to 2px */
+@media screen and (max-width: 768px) {
+  hr {
+    height: 2px; /* Thicker divider on mobile */
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* Reset and Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--accent-color);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-color);
+}
+
+/* Header styling */
+.header {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+}
+
+.header-title {
+  font-size: 24px;
+}
+
+/* Desktop Buttons */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.desktop-nav {
+  display: flex;
+}
+
+.button {
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--button-text-color);
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 6px var(--shadow-color);
+}
+
+.button:hover {
+  background: linear-gradient(
+    to bottom,
+    var(--secondary-color),
+    var(--hover-border-color)
+  );
+  border: 2px solid var(--hover-border-color);
+  transform: translateY(-1px);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  background: linear-gradient(
+    to bottom,
+    var(--hover-border-color),
+    var(--active-border-color)
+  );
+  border: 2px solid var(--active-border-color);
+  transform: translateY(0);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.button:focus {
+  outline: 2px solid var(--focus-outline-color);
+  border: 2px solid var(--focus-outline-color);
+}
+
+/* Mobile-specific styling */
+.hamburger-menu {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--button-text-color);
+}
+
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: var(--primary-color);
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 5px var(--shadow-color);
+}
+
+.mobile-nav .button {
+  margin: 5px 0;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hamburger-menu {
+    display: block;
+  }
+  .desktop-nav {
+    display: none;
+  }
+}
+
+/* Screen styling */
+.screen {
+  display: none;
+  padding: 40px 20px;
+  text-align: center;
+  background-color: var(--accent-color);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.screen.active {
+  display: block;
+}
+
+/* Navigation Buttons */
+.nav-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* General Section Style */
+.section {
+  margin: 200px auto;
+  padding: 20px;
+  border: 10px solid var(--border-color);
+  border-radius: 4px;
+  background-color: white;
+}
+
+.medication-entry-section {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px; /* Smooth rounded corners */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  background-color: #fff; /* Clean white background */
+  max-width: 600px; /* Adjust width as needed */
+}
+.section-title {
+  font-size: 1.5em;
+  color: #007a5e;
+  margin-bottom: 10px;
+}
+
+#medication-search {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+#medication-search:focus {
+  border: 1px solid #00aa88;
+  box-shadow: 0 0 8px rgba(0, 170, 136, 0.4);
+  outline: none;
+}
+
+
+
+
+
+.suggestions-list {
+  list-style: none;
+  padding: 0;
+  margin: 5px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.suggestions-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.suggestions-list li:hover,
+.suggestions-list li.active {
+  background-color: #007a5e;
+  color: #fff;
+}
+
+.medication-list {
+  margin-top: 20px;
+}
+
+.medication-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.submit-button {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0px 2px 5px var(--shadow-color);
+}
+
+.submit-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.confirmation {
+  margin-top: 20px;
+}
+
+.confirmation p {
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+.confirmation button {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease, border 0.3s ease;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+.confirmation button:hover {
+  background-color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.diagnostic-button {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  width: 95%; /* Full width of the container */
+  text-align: center; /* Center-align text */
+  margin-bottom: 0px; /* Space between buttons */
+  margin-top: 10px;
+}
+
+.diagnostic-button:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.diagnostic-button:active {
+  background-color: var(--hover-border-color);
+  border-color: var(--hover-border-color);
+  transform: translateY(0);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Container for the buttons */
+.diagnostic-buttons-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%; /* Ensure it takes up the entire section width */
+}
+
+/* Diagnostic Category Section */
+.diagnostic-category {
+  background-color: var(--accent-color);
+  padding: 2px;
+  box-shadow: 0px 4px 8px var(--shadow-color); /* Replacing border with shadow */
+  border-radius: 8px; /* Optional for rounded corners */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Authentication Buttons Styling */
+.auth-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.auth-buttons button {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease, border 0.3s ease;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  text-align: center;
+  width: 50%; /* Default for mobile */
+}
+
+@media (min-width: 768px) {
+  .auth-buttons button {
+    width: 20%; /* Adjust for laptop screens */
+  }
+}
+
+.auth-buttons button:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* Universal Modal Styling for Register, Login, and Update Profile */
+.modal-reg,
+.modal-log,
+.modal-profile {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Universal Modal Content Styling */
+.modal-content-reg,
+.modal-content-log,
+.modal-content-profile {
+  background-color: var(--accent-color);
+  margin: 10% auto;
+  padding: 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  box-shadow: 0px 4px 8px var(--shadow-color);
+}
+
+/* Shared Modal Header & Form Styles */
+.modal-content-reg h3,
+.modal-content-log h3,
+.modal-content-profile h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Labels for all inputs */
+.modal-content-reg label,
+.modal-content-log label,
+.modal-content-profile label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+/* Inputs for all modals */
+.modal-content-reg input,
+.modal-content-log input,
+.modal-content-profile input {
+  width: calc(100% - 25px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px var(--shadow-color);
+  font-size: 16px;
+  background-color: white;
+  color: var(--text-color);
+}
+
+.modal-content-reg input:focus,
+.modal-content-log input:focus,
+.modal-content-profile input:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0px 4px 8px var(--shadow-color);
+}
+
+/* Close Button */
+.modal-content-reg .close,
+.modal-content-log .close,
+.modal-content-profile .close {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.modal-content-reg .close:hover,
+.modal-content-log .close:hover,
+.modal-content-profile .close:hover {
+  color: var(--secondary-color);
+}
+
+/* Submit Buttons for Register, Login, and Update Profile */
+.modal-content-reg button,
+.modal-content-log button,
+.modal-content-profile button {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease, border 0.3s ease;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+}
+
+.modal-content-reg button:hover,
+.modal-content-log button:hover,
+.modal-content-profile button:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .modal-content-reg input,
+  .modal-content-log input,
+  .modal-content-profile input {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ✅ Question Container (Applies to All) */
+.question-container,
+.questionnaire {
+  padding: 20px;
+  min-width: 65%;
+  max-width: 95%;
+  background-color: var(--accent-color);
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px auto; /* Center the question box */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Welcome Box Styling */
+#welcome-box {
+  display: none; /* Hidden by default */
+  text-align: center;
+  padding: 15px;
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  background-color: var(--accent-color);
+  box-shadow: 0px 4px 8px var(--shadow-color);
+  margin-top: 20px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-size: 14px; /* Slightly smaller text */
+}
+
+/* Ensures the welcome message text wraps properly */
+#welcome-message {
+  font-size: 14px; /* Slightly smaller text */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin-bottom: 10px;
+}
+
+/* Container for buttons to keep them inline */
+#welcome-box .button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+/* Styling for buttons inside the welcome box */
+#welcome-box button {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  padding: 8px 15px; /* Slightly smaller padding */
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  font-size: 14px; /* Slightly smaller text */
+  transition: background-color 0.3s ease, transform 0.2s ease, border 0.3s ease;
+  box-shadow: 0 4px 6px var(--shadow-color);
+  width: 48%; /* Ensures equal width, keeping buttons inline */
+  text-align: center;
+  display: inline-block;
+}
+
+/* Hover effect */
+#welcome-box button:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.respiratory-button {
+  display: flex; /* Flexbox for proper alignment */
+  align-items: center; /* Vertically align icon and text */
+  justify-content: flex-start; /* Align everything to the left */
+  text-align: left; /* Ensures text aligns properly */
+  width: 75%; /* Full width button within its container */
+  max-width: 620px; /* Limit max width for better layout */
+  height: auto; /* Adjust height as needed */
+  padding: 10px 15px 10px 160px; /* Proper spacing inside */
+  font-size: 16px; /* Adjust font size */
+  border-radius: 5px; /* Rounded corners for styling */
+  border: 2px solid var(--primary-color); /* Consistent border */
+  background-color: var(--primary-color); /* Background color */
+  color: var(--button-text-color); /* Text color */
+  cursor: pointer; /* Pointer cursor for buttons */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  gap: 50px;
+}
+
+/* Icon Styling */
+.respiratory-button i {
+  margin-left: 10%; /* Moves icon more to the right */
+  font-size: 1.2em; /* Icon size */
+  width: 24px; /* Fixed width to maintain alignment */
+  text-align: center; /* Centers icon */
+  flex-shrink: 0; /* Prevents icon from resizing */
+}
+
+/* Moves text further away from the icon */
+.respiratory-button span {
+  margin-left: 60px; /* Increased spacing between icon and text */
+  flex-grow: 1; /* Ensures text expands properly */
+}
+
+/* Hover and Active States */
+.respiratory-button:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.respiratory-button:active {
+  background-color: var(--hover-border-color);
+  border-color: var(--hover-border-color);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive adjustments for mobile */
+@media screen and (max-width: 768px) {
+  .respiratory-button {
+    width: 90%; /* Make buttons slightly wider for smaller screens */
+    max-width: none; /* Allow full width */
+    padding: 10px; /* Reduce padding to keep button heights equal */
+  }
+
+  .respiratory-button i {
+    margin-left: 8%; /* Adjust icon alignment on mobile */
+  }
+
+  .respiratory-button span {
+    margin-left: 70px; /* Further increase spacing between icon and text on mobile */
+  }
+}
+
+/* Container for Symptom Group */
+.symptom-group {
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: var(--accent-color);
+  border: px solid var(--primary-color);
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px var(--shadow-color);
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Ensure elements stack vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically if needed */
+}
+
+.back-to-baseline-button {
+  display: flex; /* Align icon and text horizontally */
+  align-items: center; /* Center icon and text vertically */
+  justify-content: center; /* Center content horizontally */
+  margin: 20px auto; /* Centers the button horizontally */
+  padding: 10px 20px; /* Adds space inside the button */
+  font-size: 16px; /* Adjusts font size */
+  background-color: var(--primary-color); /* Main green background */
+  color: var(--button-text-color); /* White text color */
+  border: 2px solid var(--primary-color); /* Matches background */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-to-baseline-button:hover {
+  background-color: var(--secondary-color); /* Slightly darker green on hover */
+  transform: translateY(-2px); /* Slight lift */
+}
+
+.back-to-baseline-button:active {
+  background-color: var(--hover-border-color); /* Darker green when pressed */
+  transform: translateY(0); /* Reset position */
+}
+
+.back-to-baseline-button i {
+  margin-right: 8px; /* Space between icon and text */
+  font-size: 1.2em; /* Icon size */
+}
+
+
+
+/* ✅ Diagnostic Question Text */
+.diagnostic-question p {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+/* ✅ Default Label Styling Inside Question Containers */
+.question-container label {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Keep text and radio vertically aligned */
+  margin-bottom: 5px; /* Space between labels */
+  text-align: left; /* Align content to the left */
+  margin-left: 40px; /* ✅ Moves label text 20px to the right */
+  
+}
+
+
+
+
+/* Radio button */
+input[type="radio"] {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--primary-color); /* Główna zielona obwódka */
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  pointer-events: all;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Dodano płynne przejście */
+}
+
+/* Kropka po zaznaczeniu */
+input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color); /* Główna zielona kropka */
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* Hover/zaznaczenie obwódki i cień */
+input[type="radio"]:hover,
+input[type="radio"]:checked {
+  border-color: var(--primary-color); /* Główna zielona obwódka */
+  box-shadow: 0 0 5px var(--primary-color); /* Dodano cień */
+}
+
+/* Brak niebieskiej poświaty po kliknięciu */
+input[type="radio"]:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Media queries – zmniejszamy tylko na mobile */
+@media (max-width: 768px) {
+  input[type="radio"] {
+    width: 24px;
+    height: 24px;
+  }
+
+  input[type="radio"]:checked::before {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* Label – wyśrodkowanie radia względem tekstu */
+label {
+  display: inline-flex;
+  align-items: center;
+  gap: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Upload Button - Green, Turns Red on Hover */
+.ecg-upload-button {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: var(--primary-color); /* Green */
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px var(--shadow-color);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.ecg-upload-button:hover {
+  background-color: var(--primary-color); /* Red on hover */
+}
+
+/* ECG Preview Wrapper to Fit Image */
+.ecg-preview-wrapper {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 6px var(--shadow-color);
+}
+
+/* ECG Preview Image */
+.ecg-preview {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Delete Button - Green, Turns Red on Hover */
+.delete-ecg-button {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: var(--primary-color); /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px var(--shadow-color);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.delete-ecg-button:hover {
+  background-color: #d9534f; /* Red on hover */
+}
+
+/* 🟢 Mobile Adjustments */
+@media screen and (max-width: 768px) {
+  .ecg-upload-button {
+    max-width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .ecg-preview-wrapper {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .delete-ecg-button {
+    width: 90%;
+    max-width: 180px;
+  }
+}
+
+
+
+
+input,
+select {
+  width: 50%;
+  padding: 10px;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: white;
+  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 8px var(--primary-color);
+}
+
+@media screen and (max-width: 768px) {
+  input,
+  select {
+    width: 80%;
+    font-size: 0.95rem;
+    padding: 8px;
+    max-width: 175px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.submit-diagnosis-button {
+  width: 80%;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #007a5e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-diagnosis-button:hover {
+  background-color: #005f48;
+}
+
+.diagnosis-result {
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px solid #007a5e;
+  border-radius: 10px;
+  background-color: #1a1a2e;
+  box-shadow: 0 4px 15px rgba(0, 122, 94, 0.3);
+  color: #e0e0e0;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  white-space: pre-line;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.diagnosis-result h3 {
+  color: #00c896;
+  margin-bottom: 15px;
+  font-family: Arial, sans-serif;
+  border-bottom: 1px solid #007a5e;
+  padding-bottom: 10px;
+}
+
+.diagnosis-result p {
+  white-space: pre-line;
+  margin: 0;
+}
+
+.diagnosis-result.severity-low {
+  border-color: #4caf50;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.diagnosis-result.severity-medium {
+  border-color: #ff9800;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+}
+
+.diagnosis-result.severity-high {
+  border-color: #f44336;
+  box-shadow: 0 4px 15px rgba(244, 67, 54, 0.3);
+  animation: pulse-red 2s infinite;
+}
+
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 4px 15px rgba(244, 67, 54, 0.3); }
+  50% { box-shadow: 0 4px 25px rgba(244, 67, 54, 0.6); }
+}
+
+
+
+
+
+
+
+
+
+.input-box {
+  background-color: #fff; /* Light background */
+  box-shadow: 0px 4px 8px var(--shadow-color); /* Subtle shadow */
+  padding: 20px; /* Inner spacing */
+  border-radius: 10px; /* Rounded corners */
+  width: 100%; /* Controls width */
+  margin: 5px auto; /* Centers the box horizontally */
+  font-family: Arial, sans-serif;
+}
+
+.input-box h3 {
+  text-align: center;
+  color: var(--primary-color); /* Green heading */
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input-group label {
+  font-weight: bold;
+  color: var(--text-color);
+  margin-right: 5px;
+  flex-basis: 25%;
+}
+
+.input-group input,
+.input-group select {
+  flex: 1;
+  padding: 8px;
+  font-size: 1rem;
+  color: var(--text-color);
+  background-color: var(--accent-color);
+  box-shadow: 0 3px 5px var(--shadow-color); /* Subtle shadow */
+  border: none; /* Removes borders */
+  border-radius: 5px;
+  outline: none;
+  appearance: none; /* Removes default dropdown styling */
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.input-group select:focus,
+.input-group input:focus {
+  box-shadow: 0 0 8px var(--primary-color); /* Green glow focus effect */
+}
+
+
+
+
+
+
+
+
+
+#calculate-bmi-bmr-btn {
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  border: none;
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px var(--shadow-color);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#calculate-bmi-bmr-btn:hover {
+  background-color: var(--secondary-color); /* Darker green on hover */
+  box-shadow: 0 3px 8px var(--shadow-color);
+}
+
+#results {
+  margin-top: 20px;
+  text-align: center;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+#results p {
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Default: Hidden Dialog */
+.dialog {
+  display: none; /* Hidden initially */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 10px var(--shadow-color);
+  z-index: 1000;
+  width: 31vw; /* Medium size */
+  max-width: 600px; /* Max size on large screens */
+  min-width: 400px; /* Minimum size on laptops */
+  text-align: center;
+}
+
+/* Responsive: Smaller Size on Phones */
+@media (max-width: 768px) {
+  .dialog {
+    width: 90vw; /* Constrain width on mobile */
+    max-width: 95%; /* Prevent it from stretching too much */
+    min-width: auto; /* Remove min-width restriction */
+    padding: 15px; /* Adjust padding */
+  }
+}
+
+/* When Active (Shown by JavaScript) */
+
+.dialog.active {
+  display: block; /* Makes it visible */
+}
+
+.dialog-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw; /* Ensure full width */
+  height: 100vh; /* Ensure full height */
+  background: rgba(0, 0, 0, 0.5); /* Dimmed background */
+  z-index: 999; /* Just below the modal */
+}
+
+.dialog.active + .dialog-overlay {
+  display: block; /* Show the overlay when the dialog is active */
+}
+
+#autocomplete-list,
+#selected-conditions {
+  list-style: none; /* Remove dots */
+  padding: 0;
+  margin: 10px, 0;
+  max-height: 150px; /* Limit the height of the list */
+  overflow-y: auto; /* Add vertical scroll for overflow */
+}
+
+#autocomplete-list li,
+#selected-conditions li {
+  max-width: 80%; /* Controls the max width */
+  width: 100%; /* Ensures uniform width */
+  padding: 10px; /* Uniform padding */
+  margin: 5px auto; /* Centers the items */
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background-color: var(--accent-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
+  min-height: 40px; /* Ensures consistent height */
+  text-align: left; /* Aligns text neatly */
+}
+
+#autocomplete-list li:hover {
+  background: var(--primary-color);
+  color: var(--button-text-color);
+}
+
+.delete-button {
+  background-color: var(--primary-color); /* Red background */
+  color: var(--button-text-color); /* White text */
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #8e0000; /* Darker red */
+}
+
+
+
+
+
+#condition-input {
+  width: 80%;
+  font-size: 17px;
+  padding: 12px 14px;
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  color: #333;
+  box-sizing: border-box;
+  display: block;
+  margin: 10px auto;
+  height: auto; /* or set a fixed height if needed */
+}
+
+@media (max-width: 600px) {
+  #condition-input {
+    width: 80%;
+    max-width: 300px;
+    font-size: 16px;
+    padding: 10px 12px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.condition-item {
+  width: 80%; /* Match the width of #condition-input */
+  padding: 10px; /* Match the input padding */
+  margin: 5px auto; /* Center it and match the input margin */
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  font-size: 1em; /* Ensure text matches the input font size */
+  min-height: 40px; /* Prevent excessive height differences */
+}
+
+#open-conditions-dialog {
+  height: 70px; /* Make the button taller */
+  width: auto; /* Maintain flexibility for the width */
+  padding: 0 20px; /* Horizontal padding for spacing */
+  font-size: 1.2em; /* Adjust font size for visibility */
+  text-align: center; /* Center the text horizontally */
+  line-height: 70px; /* Center the text vertically */
+  display: inline-block; /* Ensure it's treated as a button */
+  vertical-align: middle; /* Align properly within any parent */
+  background-color: #007a5e; /* Optional: Stylish green background */
+  color: white; /* Optional: White text for better contrast */
+  border: none; /* Optional: Remove default browser border */
+  border-radius: 10px; /* Optional: Add smooth rounded corners */
+  cursor: pointer; /* Optional: Change cursor to pointer */
+}
+
+#open-conditions-dialog:hover {
+  transform: scale(1.05); /* Slightly increases size */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for effect */
+}
+
+
+
+
+
+
+
+/* ✅ Popup Overlay (Background Dim) */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* ✅ Popup Window */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  background: var(--accent-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  padding: 50px;
+  z-index: 1000;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+/* ✅ Popup Header */
+.popup-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.popup-header h3 {
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.popup-header .close {
+  position: absolute;
+  right: 1px;
+  top: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ✅ Popup Content */
+.popup-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 10px;
+}
+
+.popup-content label {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+/* ✅ Popup Input Styling - Desktop */
+.popup input {
+  width: 100%;
+  max-width: 290px;
+  margin: 0 auto 10px;
+  padding: 10px;
+  font-size: 16px;
+  
+  display: block;
+}
+
+/* ✅ Mobile Optimization */
+@media screen and (max-width: 768px) {
+  .popup {
+    width: 75%;
+    max-width: 600px;
+    max-height: 95vh;
+    padding: 15px;
+  }
+
+  .popup-header .close {
+    font-size: 28px;
+  }
+
+  .popup input {
+    max-width: 175px;
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+
+
+
+ .medication-entry-section input {
+    width: 100%;
+    max-width: none;
+  }
+
+
+
+
+/* ✅ Styled Analyze Button for Clotting Factors */
+.analyze-button {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 12px;
+    margin: 10px auto;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px var(--shadow-color);
+    transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out;
+}
+
+/* ✅ Hover & Active Effects */
+.analyze-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.analyze-button:active {
+    transform: scale(0.98);
+}
+
+/* ✅ Mobile Optimization */
+@media screen and (max-width: 768px) {
+    .analyze-button {
+        width: 100%;
+        max-width: 180px;
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+.inline-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between buttons */
+}
+
+.inline-buttons button {
+    width: 50%; /* Each button takes 30% of the section's width */
+    padding: 12px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px var(--shadow-color);
+    transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out;
+}
+
+/* 🔹 Hover & Active Effects */
+.inline-buttons button:hover {
+    background-color: var(--secondary-color);
+}
+
+.inline-buttons button:active {
+    transform: scale(0.98);
+}
+
+/* ✅ Mobile Optimization */
+@media screen and (max-width: 768px) {
+    .inline-buttons button {
+        width: 45%; /* Adjust for smaller screens */
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.category-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  background-color: #fff; /* Default white */
+  color: #007a5e; /* Text in primary color */
+  border: 2px solid #007a5e;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.category-button:hover {
+  background-color: #b3e0d6; /* Light green on hover */
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+  border-color: #007a5e;
+  color: #007a5e;
+  transform: scale(1.02);
+}
+
+/* Make it stay green after being clicked */
+.category-button:active,
+.category-button.clicked {
+  background-color: #b3e0d6 !important; /* Stay light green */
+  transform: scale(1.03); /* Slightly bigger */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  border-color: #007a5e;
+  color: #007a5e;
+}
+
+/* Ensure it stays green after click */
+.category-button.active {
+  background-color: #b3e0d6 !important; /* Keep light green */
+  transform: scale(1.03);
+}
+
+/* MEDIA QUERIES for responsiveness */
+@media (max-width: 768px) {
+  .category-button {
+    font-size: 1.3rem;
+    padding: 8px;
+  }
+  .category-button:hover {
+    transform: scale(1.01);
+  }
+  .category-button:active,
+  .category-button.active {
+    transform: scale(1.02);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+.diagnostic-question {
+    max-width: 600px; /* Adjust as needed to prevent excessive width */
+    width: 100%; /* Ensures responsiveness */
+    margin: 0 auto; /* Keeps it centered */
+    padding: 10px; /* Adds spacing */
+    box-sizing: border-box; /* Prevents it from expanding too much */
+}
+
+
+
+
+
+
+
+
+
+
+.blood-test-reference {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); /* Lighter, softer shadow */
+    font-family: Arial, sans-serif;
+    text-align: center; /* Centers heading */
+}
+
+.blood-test-reference h2 {
+    color: var(--primary-color);
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+/* Accordion Button */
+.accordion {
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    text-align: center; /* Centers button text */
+    font-size: 18px;
+    border-radius: 6px;
+    margin-top: 8px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.accordion:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Panel (Collapsible Content) */
+.panel {
+    display: none;
+    padding: 12px;
+    background-color: #ffffff; /* Full white background */
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.07); /* Softer shadow */
+    text-align: left; /* Keeps test descriptions aligned */
+}
+
+/* Unordered List inside Panels */
+.panel ul {
+    padding-left: 0; /* Removes default indentation */
+    list-style-type: none; /* Removes default bullets */
+}
+
+.panel ul li {
+    font-size: 16px;
+    padding: 6px 0;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 22px; /* Moves text slightly right */
+}
+
+/* Custom Bullet Points */
+.panel ul li::before {
+    content: "•"; /* Bullet point */
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    left: 0px; /* Aligns bullets properly */
+    top: 3px;
+}
+
+
+
+
+
+
+
+
+.site-footer {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--primary-color); /* Uses your primary theme color */
+  color: white;
+  font-size: 14px;
+  margin-top: 20px; /* Adds spacing from content */
+}
+
+
+footer {
+    width: 100%;
+    background-color: var(--accent-color);
+    padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
