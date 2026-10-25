@@ -26464,14 +26464,6 @@ function toggleCategory(categoryId) {
     let section = document.getElementById(categoryId);
     if (!section) return;
 
-    // toggleQuestions pins style.display on every .question-container,
-    // including #radiology-imaging. An inline display beats .hidden, so
-    // removing the class alone leaves Radiology closed. Release the pin
-    // and let the class control visibility.
-    function releaseInlineDisplay(el) {
-        if (el && el.style && el.style.display) el.style.display = "";
-    }
-
     if (section.classList.contains('hidden')) {
         // Hide every diagnostic body panel. Most categories use
         // .diagnostic-section; Renal / Hematology use .diagnostic-category
@@ -26483,18 +26475,14 @@ function toggleCategory(categoryId) {
         // reached interpretGastrointestinal / sectionAnalysis.gastrointestinal.
         document.querySelectorAll('.diagnostic-section').forEach(sec => {
             sec.classList.add('hidden');
-            releaseInlineDisplay(sec);
         });
         document.querySelectorAll('.diagnostic-category[id]').forEach(sec => {
             sec.classList.add('hidden');
-            releaseInlineDisplay(sec);
         });
 
         section.classList.remove('hidden');
-        releaseInlineDisplay(section);
     } else {
         section.classList.add('hidden');
-        releaseInlineDisplay(section);
     }
 }
 

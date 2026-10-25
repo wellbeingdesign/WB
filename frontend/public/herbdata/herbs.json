@@ -4,545 +4,114 @@
     "alt": "Edible wild flowers botanical atlas"
   },
   "herbs": [
-    {
-      "id": "acai-berry",
-      "image": "/photos/ACAI BERRY.webp",
-      "alt": "Acai berry medicinal herb"
-    },
-    {
-      "id": "agrimony",
-      "image": "/photos/AGRIMONY.webp",
-      "alt": "Agrimony medicinal herb"
-    },
-    {
-      "id": "angelica",
-      "image": "/photos/ANGELICA.webp",
-      "alt": "Angelica medicinal herb"
-    },
-    {
-      "id": "artichoke",
-      "image": "/photos/ARTICHOKE.webp",
-      "alt": "Artichoke leaf medicinal herb"
-    },
-    {
-      "id": "ashwagandha",
-      "image": "/photos/ASHWAGANDHA.webp",
-      "alt": "Ashwagandha medicinal herb"
-    },
-    {
-      "id": "bacopa",
-      "image": "/photos/BACOPA.webp",
-      "alt": "Bacopa medicinal herb"
-    },
-    {
-      "id": "barberry",
-      "image": "/photos/BARBERRY.webp",
-      "alt": "Barberry medicinal herb"
-    },
-    {
-      "id": "basil",
-      "image": "/photos/BASIL.webp",
-      "alt": "Basil medicinal herb"
-    },
-    {
-      "id": "belladonna",
-      "image": "/photos/BELLADONNA.webp",
-      "alt": "Belladonna medicinal herb"
-    },
-    {
-      "id": "birch-polypore",
-      "image": "/photos/BIRCHPOLYPORE.webp",
-      "alt": "Birch polypore medicinal mushroom"
-    },
-    {
-      "id": "birch-bark",
-      "image": "/photos/BIRCHBARK.webp",
-      "alt": "BIRCH BARK"
-    },
-    {
-      "id": "black-cumin",
-      "image": "/photos/BLACK CUMIN.webp",
-      "alt": "Black cumin medicinal herb"
-    },
-    {
-      "id": "black-pepper",
-      "image": "/photos/BLACK PEPPER.webp",
-      "alt": "Black pepper medicinal herb"
-    },
-    {
-      "id": "bladderwrack",
-      "image": "/photos/BLADDERWRACK.webp",
-      "alt": "Bladderwrack medicinal herb"
-    },
-    {
-      "id": "blue-lotus",
-      "image": "/photos/BLUE LOTUS.webp",
-      "alt": "Blue lotus medicinal herb"
-    },
-    {
-      "id": "boneset",
-      "image": "/photos/BONESET.webp",
-      "alt": "Boneset medicinal herb"
-    },
-    {
-      "id": "borage",
-      "image": "/photos/BORAGE.webp",
-      "alt": "Borage medicinal herb"
-    },
-    {
-      "id": "boswellia",
-      "image": "/photos/BOSWELLIA.webp",
-      "alt": "Boswellia medicinal herb"
-    },
-    {
-      "id": "calendula",
-      "image": "/photos/CALENDULA.webp",
-      "alt": "Calendula medicinal herb"
-    },
-    {
-      "id": "cannabis",
-      "image": "/photos/CANNABIS.webp",
-      "alt": "Cannabis medicinal herb"
-    },
-    {
-      "id": "chaga",
-      "image": "/photos/CHAGA.webp",
-      "alt": "Chaga medicinal mushroom"
-    },
-    {
-      "id": "chamomile",
-      "image": "/photos/CHAMOMILE.webp",
-      "alt": "Chamomile medicinal herb"
-    },
-    {
-      "id": "chicory",
-      "image": "/photos/CHICORY.webp",
-      "alt": "Chicory medicinal herb"
-    },
-    {
-      "id": "cinnamon",
-      "image": "/photos/CINNAMON.webp",
-      "alt": "Cinnamon medicinal herb"
-    },
-    {
-      "id": "cleavers",
-      "image": "/photos/CLEAVERS.webp",
-      "alt": "Cleavers medicinal herb"
-    },
-    {
-      "id": "comfrey",
-      "image": "/photos/COMFREY.webp",
-      "alt": "Comfrey medicinal herb"
-    },
-    {
-      "id": "cowslip",
-      "image": "/photos/COWSLIP.webp",
-      "alt": "Cowslip medicinal herb"
-    },
-    {
-      "id": "cranberry",
-      "image": "/photos/CRANBERRY.webp",
-      "alt": "Cranberry medicinal herb"
-    },
-    {
-      "id": "crimson-clover",
-      "image": "/photos/CRIMSON CLOVER.webp",
-      "alt": "Crimson clover medicinal herb"
-    },
-    {
-      "id": "dandelion",
-      "image": "/photos/DANDELION.webp",
-      "alt": "Dandelion medicinal herb"
-    },
-    {
-      "id": "dill",
-      "image": "/photos/DILL.webp",
-      "alt": "Dill medicinal herb"
-    },
-    {
-      "id": "echinacea",
-      "image": "/photos/ECHINACEA.webp",
-      "alt": "Echinacea medicinal herb"
-    },
-    {
-      "id": "elder",
-      "image": "/photos/ELDER.webp",
-      "alt": "Elder medicinal herb"
-    },
-    {
-      "id": "elderflower",
-      "image": "/photos/ELDEFLOWER.webp",
-      "alt": "Elderflower medicinal herb"
-    },
-    {
-      "id": "elecampane",
-      "image": "/photos/ELECAMPANE.webp",
-      "alt": "Elecampane medicinal herb"
-    },
-    {
-      "id": "ephedra-sinica",
-      "image": "/photos/EPHEDRA SINICA.webp",
-      "alt": "Ephedra sinica medicinal herb"
-    },
-    {
-      "id": "eyebright",
-      "image": "/photos/EYEBRIGHT.webp",
-      "alt": "Eyebright medicinal herb"
-    },
-    {
-      "id": "fenugreek",
-      "image": "/photos/FENUGREEK.webp",
-      "alt": "Fenugreek medicinal herb"
-    },
-    {
-      "id": "feverfew",
-      "image": "/photos/FEVERFEW.webp",
-      "alt": "Feverfew medicinal herb"
-    },
-    {
-      "id": "fireweed",
-      "image": "/photos/FIREWEED.webp",
-      "alt": "Fireweed medicinal herb"
-    },
-    {
-      "id": "flaxseed",
-      "image": "/photos/FLAXSEED.webp",
-      "alt": "Flaxseed medicinal herb"
-    },
-    {
-      "id": "foxglove",
-      "image": "/photos/FOXGLOVE.webp",
-      "alt": "Foxglove medicinal herb"
-    },
-    {
-      "id": "garlic",
-      "image": "/photos/GARLIC.webp",
-      "alt": "Garlic medicinal herb"
-    },
-    {
-      "id": "ginger",
-      "image": "/photos/GINGER.webp",
-      "alt": "Ginger medicinal herb"
-    },
-    {
-      "id": "ginkgo",
-      "image": "/photos/GINKGO.webp",
-      "alt": "Ginkgo medicinal herb"
-    },
-    {
-      "id": "goldenrod",
-      "image": "/photos/GOLDENROD.webp",
-      "alt": "Goldenrod medicinal herb"
-    },
-    {
-      "id": "goutweed",
-      "image": "/photos/GOUTWEED.webp",
-      "alt": "Goutweed medicinal herb"
-    },
-    {
-      "id": "greater-burdock",
-      "image": "/photos/GREATER BURDOCK.webp",
-      "alt": "Greater burdock medicinal herb"
-    },
-    {
-      "id": "hawthorn",
-      "image": "/photos/HAWTHORN.webp",
-      "alt": "Hawthorn medicinal herb"
-    },
-    {
-      "id": "heather",
-      "image": "/photos/HEATHER.webp",
-      "alt": "Heather medicinal herb"
-    },
-    {
-      "id": "henbane",
-      "image": "/photos/HENBANE.webp",
-      "alt": "Henbane medicinal herb"
-    },
-    {
-      "id": "hibiscus",
-      "image": "/photos/HIBISCUS.webp",
-      "alt": "Hibiscus medicinal herb"
-    },
-    {
-      "id": "horsetail",
-      "image": "/photos/HORSETAIL.webp",
-      "alt": "Horsetail medicinal herb"
-    },
-    {
-      "id": "hyssop",
-      "image": "/photos/HYSSOP.webp",
-      "alt": "Hyssop medicinal herb"
-    },
-    {
-      "id": "ivy",
-      "image": "/photos/IVYLEAF.webp",
-      "alt": "Ivy leaf medicinal herb"
-    },
-    {
-      "id": "jimsonweed",
-      "image": "/photos/BIELUN.webp",
-      "alt": "Jimsonweed medicinal herb"
-    },
-    {
-      "id": "juniper",
-      "image": "/photos/JUNIPER.webp",
-      "alt": "Juniper medicinal herb"
-    },
-    {
-      "id": "lavender",
-      "image": "/photos/LAVENDER.webp",
-      "alt": "Lavender medicinal herb"
-    },
-    {
-      "id": "lemon-balm",
-      "image": "/photos/LEMON BALM.webp",
-      "alt": "Lemon balm medicinal herb"
-    },
-    {
-      "id": "linden-flower",
-      "image": "/photos/LINDEN FLOWER.webp",
-      "alt": "Linden flower medicinal herb"
-    },
-    {
-      "id": "lions-mane",
-      "image": "/photos/LIONSMANE.webp",
-      "alt": "Lion's mane medicinal mushroom"
-    },
-    {
-      "id": "lovage",
-      "image": "/photos/LOVAGE.webp",
-      "alt": "Lovage medicinal herb"
-    },
-    {
-      "id": "lungwort",
-      "image": "/photos/LUNGWORT.webp",
-      "alt": "Lungwort medicinal herb"
-    },
-    {
-      "id": "mandrake",
-      "image": "/photos/MANDRAKE.webp",
-      "alt": "Mandrake medicinal herb"
-    },
-    {
-      "id": "marigold",
-      "image": "/photos/MARIGOLD.webp",
-      "alt": "Marigold medicinal herb"
-    },
-    {
-      "id": "marshmallow",
-      "image": "/photos/MARSHMALLOW.webp",
-      "alt": "Marshmallow medicinal herb"
-    },
-    {
-      "id": "meadow-sage",
-      "image": "/photos/MEADOW SAGE.webp",
-      "alt": "Meadow sage medicinal herb"
-    },
-    {
-      "id": "meadowsweet",
-      "image": "/photos/MEADOWSWEET.webp",
-      "alt": "Meadowsweet medicinal herb"
-    },
-    {
-      "id": "milk-thistle",
-      "image": "/photos/MILK THISTLE.webp",
-      "alt": "Milk thistle medicinal herb"
-    },
-    {
-      "id": "mint",
-      "image": "/photos/MINT.webp",
-      "alt": "Mint medicinal herb"
-    },
-    {
-      "id": "monkshood",
-      "image": "/photos/MONKSHOOD.webp",
-      "alt": "Monkshood medicinal herb"
-    },
-    {
-      "id": "motherwort",
-      "image": "/photos/MOTHERWORT.webp",
-      "alt": "Motherwort medicinal herb"
-    },
-    {
-      "id": "mugwort",
-      "image": "/photos/MUGWORT.webp",
-      "alt": "Mugwort medicinal herb"
-    },
-    {
-      "id": "mullein",
-      "image": "/photos/MULLEIN.webp",
-      "alt": "Mullein medicinal herb"
-    },
-    {
-      "id": "nettle",
-      "image": "/photos/NETTLE.webp",
-      "alt": "Nettle medicinal herb"
-    },
-    {
-      "id": "oliveleaf",
-      "image": "/photos/OLIVELEAF.webp",
-      "alt": "Olive leaf medicinal herb"
-    },
-    {
-      "id": "oregano",
-      "image": "/photos/OREGANO.webp",
-      "alt": "Oregano medicinal herb"
-    },
-    {
-      "id": "pasque-flower",
-      "image": "/photos/PASQUE FLOWER.webp",
-      "alt": "Pasque flower medicinal herb"
-    },
-    {
-      "id": "pennyroyal",
-      "image": "/photos/PENNYROYAL.webp",
-      "alt": "Pennyroyal medicinal herb"
-    },
-    {
-      "id": "plantain",
-      "image": "/photos/PLANTAIN.webp",
-      "alt": "Plantain medicinal herb"
-    },
-    {
-      "id": "psilocybe",
-      "image": "/photos/PSILOCYBE.webp",
-      "alt": "Psilocybe cubensis medicinal mushroom"
-    },
-    {
-      "id": "psyllium",
-      "image": "/photos/PSYLLIUM.webp",
-      "alt": "Psyllium medicinal herb"
-    },
-    {
-      "id": "red-clover",
-      "image": "/photos/RED CLOVER.webp",
-      "alt": "Red clover medicinal herb"
-    },
-    {
-      "id": "red-onion",
-      "image": "/photos/RED ONION.webp",
-      "alt": "Red onion medicinal herb"
-    },
-    {
-      "id": "root-mullein",
-      "image": "/photos/ROOT MULLEIN.webp",
-      "alt": "Root mullein medicinal herb"
-    },
-    {
-      "id": "rue-anise",
-      "image": "/photos/RUE ANISE.webp",
-      "alt": "Rue anise medicinal herb"
-    },
-    {
-      "id": "sage",
-      "image": "/photos/SAGE.webp",
-      "alt": "Sage medicinal herb"
-    },
-    {
-      "id": "self-heal",
-      "image": "/photos/SELF-HEAL.webp",
-      "alt": "Self-heal medicinal herb"
-    },
-    {
-      "id": "skullcap",
-      "image": "/photos/SCULLCUP.webp",
-      "alt": "Skullcap medicinal herb"
-    },
-    {
-      "id": "soapwort",
-      "image": "/photos/SOAPWORT.webp",
-      "alt": "Soapwort medicinal herb"
-    },
-    {
-      "id": "st-johns-wort",
-      "image": "/photos/STJOHNSWART.webp",
-      "alt": "St John's wort medicinal herb"
-    },
-    {
-      "id": "sweet-cicely",
-      "image": "/photos/SWEET CICELY.webp",
-      "alt": "Sweet cicely medicinal herb"
-    },
-    {
-      "id": "sweet-violet",
-      "image": "/photos/SWEET VIOLET.webp",
-      "alt": "Sweet violet medicinal herb"
-    },
-    {
-      "id": "tansy",
-      "image": "/photos/TANCY.webp",
-      "alt": "Tansy medicinal herb"
-    },
-    {
-      "id": "tobacco",
-      "image": "/photos/TOBACCO.webp",
-      "alt": "Tobacco medicinal herb"
-    },
-    {
-      "id": "turkey-tail",
-      "image": "/photos/TURKEYTAIL.webp",
-      "alt": "Turkey tail medicinal herb"
-    },
-    {
-      "id": "turmeric",
-      "image": "/photos/TUMERIC.webp",
-      "alt": "Turmeric medicinal herb"
-    },
-    {
-      "id": "valerian",
-      "image": "/photos/VALERIAN.webp",
-      "alt": "Valerian medicinal herb"
-    },
-    {
-      "id": "walnut",
-      "image": "/photos/WALLNUT.webp",
-      "alt": "Walnut medicinal herb"
-    },
-    {
-      "id": "wild-garlic-flowers",
-      "image": "/photos/WILD GARLIC FLOWERS.webp",
-      "alt": "Wild garlic flowers medicinal herb"
-    },
-    {
-      "id": "wild-rose",
-      "image": "/photos/WILD ROSE.webp",
-      "alt": "Wild rose medicinal herb"
-    },
-    {
-      "id": "wild-thyme",
-      "image": "/photos/WILD THYME.webp",
-      "alt": "Wild thyme medicinal herb"
-    },
-    {
-      "id": "wood-betony",
-      "image": "/photos/WOOD BETONY.webp",
-      "alt": "Wood betony medicinal herb"
-    },
-    {
-      "id": "woodruff",
-      "image": "/photos/WOODRUFF.webp",
-      "alt": "Woodruff medicinal herb"
-    },
-    {
-      "id": "wormwood",
-      "image": "/photos/WORMWOOD.webp",
-      "alt": "Wormwood medicinal herb"
-    },
-    {
-      "id": "yarrow",
-      "image": "/photos/YARROW.webp",
-      "alt": "Yarrow medicinal herb"
-    },
-    {
-      "id": "yellow-dock",
-      "image": "/photos/YELLOW DOCK.webp",
-      "alt": "Yellow dock medicinal herb"
-    },
-    {
-      "id": "young-barley",
-      "image": "/photos/young_barley_150kb.webp",
-      "alt": "Young barley medicinal herb"
-    }
+    { "id": "acai-berry", "image": "/photos/ACAI BERRY.webp", "alt": "Acai berry medicinal herb" },
+    { "id": "agrimony", "image": "/photos/AGRIMONY.webp", "alt": "Agrimony medicinal herb" },
+    { "id": "angelica", "image": "/photos/ANGELICA.webp", "alt": "Angelica medicinal herb" },
+    { "id": "artichoke", "image": "/photos/ARTICHOKE.webp", "alt": "Artichoke leaf medicinal herb" },
+    { "id": "ashwagandha", "image": "/photos/ASHWAGANDHA.webp", "alt": "Ashwagandha medicinal herb" },
+    { "id": "bacopa", "image": "/photos/BACOPA.webp", "alt": "Bacopa medicinal herb" },
+    { "id": "barberry", "image": "/photos/BARBERRY.webp", "alt": "Barberry medicinal herb" },
+    { "id": "basil", "image": "/photos/BASIL.webp", "alt": "Basil medicinal herb" },
+    { "id": "belladonna", "image": "/photos/BELLADONNA.webp", "alt": "Belladonna medicinal herb" },
+    { "id": "birch-bark", "image": "/photos/BIRCHBARK.webp", "alt": "Birch bark medicinal herb" },
+    { "id": "birch-polypore", "image": "/photos/BIRCHPOLYPORE.webp", "alt": "Birch polypore medicinal mushroom" },
+    { "id": "black-cumin", "image": "/photos/BLACK CUMIN.webp", "alt": "Black cumin medicinal herb" },
+    { "id": "black-pepper", "image": "/photos/BLACK PEPPER.webp", "alt": "Black pepper medicinal herb" },
+    { "id": "bladderwrack", "image": "/photos/BLADDERWRACK.webp", "alt": "Bladderwrack medicinal herb" },
+    { "id": "blue-lotus", "image": "/photos/BLUE LOTUS.webp", "alt": "Blue lotus medicinal herb" },
+    { "id": "boneset", "image": "/photos/BONESET.webp", "alt": "Boneset medicinal herb" },
+    { "id": "borage", "image": "/photos/BORAGE.webp", "alt": "Borage medicinal herb" },
+    { "id": "boswellia", "image": "/photos/BOSWELLIA.webp", "alt": "Boswellia medicinal herb" },
+    { "id": "calendula", "image": "/photos/CALENDULA.webp", "alt": "Calendula medicinal herb" },
+    { "id": "cannabis", "image": "/photos/CANNABIS.webp", "alt": "Cannabis medicinal herb" },
+    { "id": "chaga", "image": "/photos/CHAGA.webp", "alt": "Chaga medicinal mushroom" },
+    { "id": "chamomile", "image": "/photos/CHAMOMILE.webp", "alt": "Chamomile medicinal herb" },
+    { "id": "chicory", "image": "/photos/CHICORY.webp", "alt": "Chicory medicinal herb" },
+    { "id": "cinnamon", "image": "/photos/CINNAMON.webp", "alt": "Cinnamon medicinal herb" },
+    { "id": "cleavers", "image": "/photos/CLEAVERS.webp", "alt": "Cleavers medicinal herb" },
+    { "id": "comfrey", "image": "/photos/COMFREY.webp", "alt": "Comfrey medicinal herb" },
+    { "id": "cowslip", "image": "/photos/COWSLIP.webp", "alt": "Cowslip medicinal herb" },
+    { "id": "cranberry", "image": "/photos/CRANBERRY.webp", "alt": "Cranberry medicinal herb" },
+    { "id": "crimson-clover", "image": "/photos/CRIMSON CLOVER.webp", "alt": "Crimson clover medicinal herb" },
+    { "id": "dandelion", "image": "/photos/DANDELION.webp", "alt": "Dandelion medicinal herb" },
+    { "id": "dill", "image": "/photos/DILL.webp", "alt": "Dill medicinal herb" },
+    { "id": "echinacea", "image": "/photos/ECHINACEA.webp", "alt": "Echinacea medicinal herb" },
+    { "id": "elder", "image": "/photos/ELDER.webp", "alt": "Elder medicinal herb" },
+    { "id": "elderflower", "image": "/photos/ELDEFLOWER.webp", "alt": "Elderflower medicinal herb" },
+    { "id": "elecampane", "image": "/photos/ELECAMPANE.webp", "alt": "Elecampane medicinal herb" },
+    { "id": "ephedra-sinica", "image": "/photos/EPHEDRA SINICA.webp", "alt": "Ephedra sinica medicinal herb" },
+    { "id": "eyebright", "image": "/photos/EYEBRIGHT.webp", "alt": "Eyebright medicinal herb" },
+    { "id": "fenugreek", "image": "/photos/FENUGREEK.webp", "alt": "Fenugreek medicinal herb" },
+    { "id": "feverfew", "image": "/photos/FEVERFEW.webp", "alt": "Feverfew medicinal herb" },
+    { "id": "fireweed", "image": "/photos/FIREWEED.webp", "alt": "Fireweed medicinal herb" },
+    { "id": "flaxseed", "image": "/photos/FLAXSEED.webp", "alt": "Flaxseed medicinal herb" },
+    { "id": "foxglove", "image": "/photos/FOXGLOVE.webp", "alt": "Foxglove medicinal herb" },
+    { "id": "garlic", "image": "/photos/GARLIC.webp", "alt": "Garlic medicinal herb" },
+    { "id": "ginger", "image": "/photos/GINGER.webp", "alt": "Ginger medicinal herb" },
+    { "id": "ginkgo", "image": "/photos/GINKGO.webp", "alt": "Ginkgo medicinal herb" },
+    { "id": "goldenrod", "image": "/photos/GOLDENROD.webp", "alt": "Goldenrod medicinal herb" },
+    { "id": "goutweed", "image": "/photos/GOUTWEED.webp", "alt": "Goutweed medicinal herb" },
+    { "id": "greater-burdock", "image": "/photos/GREATER BURDOCK.webp", "alt": "Greater burdock medicinal herb" },
+    { "id": "hawthorn", "image": "/photos/HAWTHORN.webp", "alt": "Hawthorn medicinal herb" },
+    { "id": "heather", "image": "/photos/HEATHER.webp", "alt": "Heather medicinal herb" },
+    { "id": "henbane", "image": "/photos/HENBANE.webp", "alt": "Henbane medicinal herb" },
+    { "id": "hibiscus", "image": "/photos/HIBISCUS.webp", "alt": "Hibiscus medicinal herb" },
+    { "id": "horsetail", "image": "/photos/HORSETAIL.webp", "alt": "Horsetail medicinal herb" },
+    { "id": "hyssop", "image": "/photos/HYSSOP.webp", "alt": "Hyssop medicinal herb" },
+    { "id": "ivy", "image": "/photos/IVYLEAF.webp", "alt": "Ivy leaf medicinal herb" },
+    { "id": "jimsonweed", "image": "/photos/BIELUN.webp", "alt": "Jimsonweed medicinal herb" },
+    { "id": "juniper", "image": "/photos/JUNIPER.webp", "alt": "Juniper medicinal herb" },
+    { "id": "lavender", "image": "/photos/LAVENDER.webp", "alt": "Lavender medicinal herb" },
+    { "id": "lemon-balm", "image": "/photos/LEMON BALM.webp", "alt": "Lemon balm medicinal herb" },
+    { "id": "linden-flower", "image": "/photos/LINDEN FLOWER.webp", "alt": "Linden flower medicinal herb" },
+    { "id": "lions-mane", "image": "/photos/LIONSMANE.webp", "alt": "Lion's mane medicinal mushroom" },
+    { "id": "lovage", "image": "/photos/LOVAGE.webp", "alt": "Lovage medicinal herb" },
+    { "id": "lungwort", "image": "/photos/LUNGWORT.webp", "alt": "Lungwort medicinal herb" },
+    { "id": "mandrake", "image": "/photos/MANDRAKE.webp", "alt": "Mandrake medicinal herb" },
+    { "id": "marigold", "image": "/photos/MARIGOLD.webp", "alt": "Marigold medicinal herb" },
+    { "id": "marshmallow", "image": "/photos/MARSHMALLOW.webp", "alt": "Marshmallow medicinal herb" },
+    { "id": "meadow-sage", "image": "/photos/MEADOW SAGE.webp", "alt": "Meadow sage medicinal herb" },
+    { "id": "meadowsweet", "image": "/photos/MEADOWSWEET.webp", "alt": "Meadowsweet medicinal herb" },
+    { "id": "milk-thistle", "image": "/photos/MILK THISTLE.webp", "alt": "Milk thistle medicinal herb" },
+    { "id": "mint", "image": "/photos/MINT.webp", "alt": "Mint medicinal herb" },
+    { "id": "monkshood", "image": "/photos/MONKSHOOD.webp", "alt": "Monkshood medicinal herb" },
+    { "id": "motherwort", "image": "/photos/MOTHERWORT.webp", "alt": "Motherwort medicinal herb" },
+    { "id": "mugwort", "image": "/photos/MUGWORT.webp", "alt": "Mugwort medicinal herb" },
+    { "id": "mullein", "image": "/photos/MULLEIN.webp", "alt": "Mullein medicinal herb" },
+    { "id": "nettle", "image": "/photos/NETTLE.webp", "alt": "Nettle medicinal herb" },
+    { "id": "oliveleaf", "image": "/photos/OLIVELEAF.webp", "alt": "Olive leaf medicinal herb" },
+    { "id": "oregano", "image": "/photos/OREGANO.webp", "alt": "Oregano medicinal herb" },
+    { "id": "pasque-flower", "image": "/photos/PASQUE FLOWER.webp", "alt": "Pasque flower medicinal herb" },
+    { "id": "pennyroyal", "image": "/photos/PENNYROYAL.webp", "alt": "Pennyroyal medicinal herb" },
+    { "id": "plantain", "image": "/photos/PLANTAIN.webp", "alt": "Plantain medicinal herb" },
+    { "id": "psilocybe", "image": "/photos/PSILOCYBE.webp", "alt": "Psilocybe cubensis medicinal mushroom" },
+    { "id": "psyllium", "image": "/photos/PSYLLIUM.webp", "alt": "Psyllium medicinal herb" },
+    { "id": "red-clover", "image": "/photos/RED CLOVER.webp", "alt": "Red clover medicinal herb" },
+    { "id": "red-onion", "image": "/photos/RED ONION.webp", "alt": "Red onion medicinal herb" },
+    { "id": "root-mullein", "image": "/photos/ROOT MULLEIN.webp", "alt": "Root mullein medicinal herb" },
+    { "id": "rue-anise", "image": "/photos/RUE ANISE.webp", "alt": "Rue anise medicinal herb" },
+    { "id": "sage", "image": "/photos/SAGE.webp", "alt": "Sage medicinal herb" },
+    { "id": "self-heal", "image": "/photos/SELF-HEAL.webp", "alt": "Self-heal medicinal herb" },
+    { "id": "skullcap", "image": "/photos/SCULLCUP.webp", "alt": "Skullcap medicinal herb" },
+    { "id": "soapwort", "image": "/photos/SOAPWORT.webp", "alt": "Soapwort medicinal herb" },
+    { "id": "st-johns-wort", "image": "/photos/STJOHNSWART.webp", "alt": "St John's wort medicinal herb" },
+    { "id": "sweet-cicely", "image": "/photos/SWEET CICELY.webp", "alt": "Sweet cicely medicinal herb" },
+    { "id": "sweet-violet", "image": "/photos/SWEET VIOLET.webp", "alt": "Sweet violet medicinal herb" },
+    { "id": "tansy", "image": "/photos/TANCY.webp", "alt": "Tansy medicinal herb" },
+    { "id": "tobacco", "image": "/photos/TOBACCO.webp", "alt": "Tobacco medicinal herb" },
+    { "id": "turkey-tail", "image": "/photos/TURKEYTAIL.webp", "alt": "Turkey tail medicinal mushroom" },
+    { "id": "turmeric", "image": "/photos/TUMERIC.webp", "alt": "Turmeric medicinal herb" },
+    { "id": "valerian", "image": "/photos/VALERIAN.webp", "alt": "Valerian medicinal herb" },
+    { "id": "walnut", "image": "/photos/WALLNUT.webp", "alt": "Walnut medicinal herb" },
+    { "id": "wild-garlic-flowers", "image": "/photos/WILD GARLIC FLOWERS.webp", "alt": "Wild garlic flowers medicinal herb" },
+    { "id": "wild-rose", "image": "/photos/WILD ROSE.webp", "alt": "Wild rose medicinal herb" },
+    { "id": "wild-thyme", "image": "/photos/WILD THYME.webp", "alt": "Wild thyme medicinal herb" },
+    { "id": "wood-betony", "image": "/photos/WOOD BETONY.webp", "alt": "Wood betony medicinal herb" },
+    { "id": "woodruff", "image": "/photos/WOODRUFF.webp", "alt": "Woodruff medicinal herb" },
+    { "id": "wormwood", "image": "/photos/WORMWOOD.webp", "alt": "Wormwood medicinal herb" },
+    { "id": "yarrow", "image": "/photos/YARROW.webp", "alt": "Yarrow medicinal herb" },
+    { "id": "yellow-dock", "image": "/photos/YELLOW DOCK.webp", "alt": "Yellow dock medicinal herb" },
+    { "id": "young-barley", "image": "/photos/young_barley_150kb.webp", "alt": "Young barley medicinal herb" }
   ]
 }
+

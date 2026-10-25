@@ -77,7 +77,6 @@
       "Unsupervised combination with potent hypotensive regimens"
     ],
     "traditionalUses": "Traditionally used as a cardiotonic and circulatory support plant.",
-    "properties": "Hawthorn leaf and flower is a traditional European cardiotonic used in the context of circulatory strain and mild cardiac workload. Oligomeric procyanidins and vitexin-related flavonoids are the best-characterised constituents associated with vascular-tone effects. Traditional use and limited clinical work are not equivalent to ACE inhibitors, ARBs or calcium-channel blockers, and berry products are not the same herbal substance as leaf-and-flower.",
     "activeConstituents": [
       "oligomeric procyanidins",
       "flavonoids (vitexin-related)"
@@ -146,7 +145,6 @@
       "Symptomatic hypotension"
     ],
     "traditionalUses": "Culinary and traditional circulatory / antimicrobial plant.",
-    "properties": "Garlic bulb is used as food and as a traditional circulatory plant. Organosulfur compounds formed from alliin (including allicin-related chemistry in crushed clove) can affect platelet reactivity and vascular tone in experimental and limited clinical settings. Culinary clove, powder, oil macerate and aged extracts are not equivalent. This is not an antihypertensive or antiplatelet drug.",
     "activeConstituents": [
       "allicin",
       "organosulfur compounds"
@@ -205,7 +203,6 @@
       "Unsupervised combination with intensive antihyperglycaemic regimens"
     ],
     "traditionalUses": "Traditional metabolic and digestive spice.",
-    "properties": "Cinnamon bark is a culinary spice with traditional metabolic and digestive use. Ceylon cinnamon (Cinnamomum verum) and cassia (C. cassia / C. aromaticum) are not equivalent: cassia is richer in coumarin. Traditional and limited glycaemic-support observations are not metformin replacement.",
     "activeConstituents": [
       "cinnamaldehyde",
       "procyanidins",
@@ -269,7 +266,6 @@
       "Bleeding tendency with anticoagulants"
     ],
     "traditionalUses": "Traditional anti-inflammatory culinary rhizome.",
-    "properties": "Turmeric is the dried rhizome of Curcuma longa, used as spice and as a traditional anti-inflammatory bitter. Curcuminoids are the best-known polyphenols; they are poorly absorbed as kitchen powder and are not equivalent to standardised extracts or to anti-inflammatory medicines.",
     "activeConstituents": [
       "curcuminoids"
     ],
@@ -346,7 +342,6 @@
       "Need for unimpaired alertness"
     ],
     "traditionalUses": "Traditional nervine and sleep-support root.",
-    "properties": "Valerian medicinal material is the dried root/rhizome, used traditionally as a sleep and restlessness herb. Valerenic acids and related sesquiterpenes are characteristic root constituents. Traditional nervine use is not equivalent to licensed hypnotics or benzodiazepines. Aerial parts are not this herbal substance.",
     "activeConstituents": [
       "valerenic acids",
       "iridoids"
@@ -419,7 +414,6 @@
       "Unsupervised high-dose use with anticoagulants"
     ],
     "traditionalUses": "Traditional antiemetic and digestive rhizome.",
-    "properties": "Ginger rhizome is a traditional antiemetic and digestive spice. Gingerols in the fresh rhizome and shogaols formed on drying/heating are the principal pungent phenolics. Traditional and some clinical antiemetic use is not a licence to replace antiemetic medicines in high-risk settings.",
     "activeConstituents": [
       "gingerols",
       "shogaols"
@@ -487,7 +481,6 @@
       "Need for unimpaired alertness"
     ],
     "traditionalUses": "Traditional calming flower.",
-    "properties": "Lavender flower is a traditional calming aromatic. Linalool and linalyl acetate dominate the essential oil; the herbal substance (flower) and steam-distilled oil are different preparations. Traditional calming use is not equivalent to anxiolytic medicines.",
     "activeConstituents": [
       "linalool",
       "linalyl acetate"
@@ -563,7 +556,6 @@
       "Thyroid-context use without clinician review if already on levothyroxine"
     ],
     "traditionalUses": "Traditional nervine lemon-scented leaf.",
-    "properties": "Lemon balm leaf is a traditional lemon-scented nervine and digestive. Rosmarinic acid and citral-rich essential oil are typical labiate constituents. Traditional calming use is not an SSRI or licensed anxiolytic.",
     "activeConstituents": [
       "rosmarinic acid",
       "citral-related volatiles"
@@ -631,7 +623,6 @@
       "Hormone-sensitive context unless clinician reviews (theoretical lignan activity)"
     ],
     "traditionalUses": "Traditional hepatic trophorestorative seed.",
-    "properties": "Milk thistle seed is a traditional hepatic trophorestorative. The silymarin flavonolignan complex (including silybin) is the characterised fraction of standardised products. Traditional liver support and extract data are not equivalent to treating established liver failure or replacing indicated hepatology care.",
     "activeConstituents": [
       "silymarin",
       "silybin"
@@ -716,7 +707,6 @@
       "Unsupervised high-dose oil with bleeding diathesis"
     ],
     "traditionalUses": "Traditional oilseed for metabolic and bowel bulk.",
-    "properties": "Flax seed is used as a mucilaginous food seed and as a source of alpha-linolenic acid and lignans. Whole seed, ground seed and expressed oil are not the same article. Traditional bulk and lipid uses are not statin or laxative-drug equivalents.",
     "activeConstituents": [
       "alpha-linolenic acid",
       "lignans",
@@ -789,7 +779,6 @@
       "Bipolar mania risk"
     ],
     "traditionalUses": "Traditional nervine for low mood.",
-    "properties": "St John's wort flowering tops are a traditional nervine for low mood. Hypericin and hyperforin are the best-known constituents; hyperforin in particular induces drug-metabolising enzymes. Traditional mood use is not equivalent to an SSRI, and unsupervised combination with medicines is a recognised interaction risk.",
     "activeConstituents": [
       "hypericin",
       "hyperforin",
@@ -839,12 +828,6 @@
       }
     ],
     "traditionalUses": "Historical or folkloric mentions do not authorise household preparation.",
-    "properties": "Deadly nightshade is an educational toxic botanical, not a self-care herb. Tropane alkaloids block muscarinic receptors and can cause dry mucosa, mydriasis, tachycardia, fever, urinary retention and delirium. Historical pharmaceutical atropine is a controlled medicine, not a garden tea. Toxicity dominates; self-care evidence is inapplicable.",
-    "activeConstituents": [
-      "atropine",
-      "hyoscyamine",
-      "scopolamine"
-    ],
     "notAReplacement": true,
     "galleryKey": "belladonna",
     "id": "belladonna"
@@ -891,10 +874,6 @@
       }
     ],
     "traditionalUses": "Historical or folkloric mentions do not authorise household preparation.",
-    "properties": "Foxglove leaf is the classic source of cardiac glycosides. These inhibit sodium-potassium ATPase in heart muscle, with a narrow toxic index (arrhythmia, gastrointestinal upset, visual disturbance). Licensed digoxin is a medicine. Unsupervised leaf preparation is a poisoning pathway, not a cardiotonic tea.",
-    "activeConstituents": [
-      "cardiac glycosides (digitoxin / lanatosides)"
-    ],
     "notAReplacement": true,
     "galleryKey": "foxglove",
     "id": "foxglove"
@@ -941,11 +920,6 @@
       }
     ],
     "traditionalUses": "Historical or folkloric mentions do not authorise household preparation.",
-    "properties": "Henbane is a tropane-alkaloid nightshade used historically in pharmacy, not in household tea. Hyoscyamine and scopolamine produce antimuscarinic delirium and autonomic poisoning. Keep as an educational toxic monograph; do not self-prepare.",
-    "activeConstituents": [
-      "hyoscyamine",
-      "scopolamine"
-    ],
     "notAReplacement": true,
     "galleryKey": "henbane",
     "id": "henbane"
@@ -992,12 +966,6 @@
       }
     ],
     "traditionalUses": "Historical or folkloric mentions do not authorise household preparation.",
-    "properties": "Datura stramonium (jimsonweed) contains tropane alkaloids similar in class to belladonna. Accidental or experimental ingestion is a recognised cause of severe anticholinergic poisoning. This is a toxicology plant, not a recreational or home-medicine herb.",
-    "activeConstituents": [
-      "atropine",
-      "hyoscyamine",
-      "scopolamine"
-    ],
     "notAReplacement": true,
     "galleryKey": "jimsonweed",
     "id": "jimsonweed"
@@ -1044,10 +1012,6 @@
       }
     ],
     "traditionalUses": "Historical or folkloric mentions do not authorise household preparation.",
-    "properties": "Aconite (monkshood) contains diterpenoid alkaloids such as aconitine that open sodium channels and can cause rapidly fatal cardiac and neurological toxicity. Historical arrow-poison and pharmacy mentions do not authorise any household medicinal use.",
-    "activeConstituents": [
-      "aconitine and related diterpenoid alkaloids"
-    ],
     "notAReplacement": true,
     "galleryKey": "monkshood",
     "id": "monkshood"
@@ -1094,10 +1058,6 @@
       }
     ],
     "traditionalUses": "Historical or folkloric mentions do not authorise household preparation.",
-    "properties": "European mandrake root is a tropane-alkaloid nightshade of folklore and historical pharmacy. Alkaloid content is unpredictable and poisoning is anticholinergic. Folklore does not make a kitchen dose. Unsupervised preparation is inappropriate.",
-    "activeConstituents": [
-      "tropane alkaloids (hyoscyamine, scopolamine)"
-    ],
     "notAReplacement": true,
     "galleryKey": "mandrake",
     "id": "mandrake"
@@ -1144,10 +1104,6 @@
       }
     ],
     "traditionalUses": "Historical or folkloric mentions do not authorise household preparation.",
-    "properties": "Tobacco leaf is the source of nicotine, a potent nicotinic-receptor agonist and dependence-forming alkaloid. This monograph is educational. It is not a herbal wellness tea and is not a nicotine-replacement product.",
-    "activeConstituents": [
-      "nicotine"
-    ],
     "notAReplacement": true,
     "galleryKey": "tobacco",
     "id": "tobacco"
@@ -1194,11 +1150,6 @@
       }
     ],
     "traditionalUses": "Historical or folkloric mentions do not authorise household preparation.",
-    "properties": "Ephedra sinica stem historically yielded ephedrine alkaloids used as sympathomimetics. Cardiovascular and CNS stimulation, stroke and arrhythmia risk make unsupervised medicinal use inappropriate. Restricted or banned as a dietary stimulant in many jurisdictions. Educational toxicology context only.",
-    "activeConstituents": [
-      "ephedrine",
-      "pseudoephedrine"
-    ],
     "notAReplacement": true,
     "galleryKey": "ephedra-sinica",
     "id": "ephedra-sinica"
@@ -1245,10 +1196,6 @@
       }
     ],
     "traditionalUses": "Historical or folkloric mentions do not authorise household preparation.",
-    "properties": "Pennyroyal (Mentha pulegium) oil and concentrated leaf preparations contain pulegone, a hepatotoxic monoterpene. Historical abortifacient folklore is a poisoning history, not a method. Unsupervised medicinal preparation, especially of the essential oil, is inappropriate.",
-    "activeConstituents": [
-      "pulegone"
-    ],
     "notAReplacement": true,
     "galleryKey": "pennyroyal",
     "id": "pennyroyal"
@@ -1295,11 +1242,6 @@
       }
     ],
     "traditionalUses": "Historical or folkloric mentions do not authorise household preparation.",
-    "properties": "Tansy is a traditional bitter and insect-repellent composite whose essential oil can be rich in thujone. Internal folk use as a worming tea is not a safe household practice. Educational bitter/toxic-oil context; no internal recipe is appropriate.",
-    "activeConstituents": [
-      "thujone (essential oil, variable)",
-      "sesquiterpene lactones"
-    ],
     "notAReplacement": true,
     "galleryKey": "tansy",
     "id": "tansy"
@@ -1346,11 +1288,6 @@
       }
     ],
     "traditionalUses": "Historical or folkloric mentions do not authorise household preparation.",
-    "properties": "Comfrey leaf and root are traditional topical vulneraries (allantoin-associated folklore). Internal use is inappropriate because of hepatotoxic pyrrolizidine alkaloids. This is an educational PA-risk plant, not an internal tea.",
-    "activeConstituents": [
-      "pyrrolizidine alkaloids",
-      "allantoin (traditional topical context)"
-    ],
     "notAReplacement": true,
     "galleryKey": "comfrey",
     "id": "comfrey"
@@ -1397,11 +1334,6 @@
       }
     ],
     "traditionalUses": "Historical or folkloric mentions do not authorise household preparation.",
-    "properties": "Cannabis is an educational phytochemical and legal-context monograph. Delta-9-tetrahydrocannabinol (THC) is intoxicating; cannabidiol (CBD) is a distinct non-intoxicating cannabinoid in many chemotypes. Licensed cannabis-based medicines, where they exist, are not the same as unsupervised plant material. No cultivation, extraction or dosing method is provided.",
-    "activeConstituents": [
-      "delta-9-tetrahydrocannabinol (THC)",
-      "cannabidiol (CBD)"
-    ],
     "notAReplacement": true,
     "galleryKey": "cannabis",
     "id": "cannabis"
@@ -1448,10 +1380,6 @@
       }
     ],
     "traditionalUses": "Historical or folkloric mentions do not authorise household preparation.",
-    "properties": "Pasque flower is a Ranunculaceae plant. Fresh material can yield protoanemonin, a vesicant irritant; dried material is a different, still not household-dose, article. Traditional Pulsatilla use in some herbal systems does not authorise unsupervised fresh-plant preparation.",
-    "activeConstituents": [
-      "ranunculin / protoanemonin (fresh plant)"
-    ],
     "notAReplacement": true,
     "galleryKey": "pasque-flower",
     "id": "pasque-flower"
@@ -1498,11 +1426,6 @@
       }
     ],
     "traditionalUses": "Historical or folkloric mentions do not authorise household preparation.",
-    "properties": "Borage leaf is a traditional cooling herb; seed oil is a separate gamma-linolenic-acid food oil. Aerial parts may contain pyrrolizidine alkaloids, so internal leaf tea is not treated here as a safe household medicine. Seed oil is not leaf.",
-    "activeConstituents": [
-      "gamma-linolenic acid (seed oil)",
-      "pyrrolizidine alkaloids (aerial parts, risk context)"
-    ],
     "notAReplacement": true,
     "galleryKey": "borage",
     "id": "borage"
@@ -1567,12 +1490,6 @@
       }
     ],
     "traditionalUses": "Traditional gastrointestinal and soothing tea.",
-    "properties": "German chamomile flower-heads are a traditional calming and digestive tisane. Bisabolol, chamazulene-related oils and apigenin glycosides are typical. Asteraceae allergy applies. Traditional soothing use is not a licensed sedative or anti-ulcer drug.",
-    "activeConstituents": [
-      "apigenin glycosides",
-      "alpha-bisabolol",
-      "chamazulene-related oils"
-    ],
     "notAReplacement": true,
     "galleryKey": "chamomile",
     "id": "chamomile"
@@ -1621,12 +1538,6 @@
       }
     ],
     "traditionalUses": "Traditional skin-soothing flower.",
-    "properties": "Calendula flower is a traditional skin-soothing and mild anti-inflammatory topical and occasional tea. Triterpene saponins, flavonoids and carotenoids are characteristic. Traditional dermal use is not equivalent to topical corticosteroids.",
-    "activeConstituents": [
-      "triterpene saponins",
-      "flavonoids",
-      "carotenoids"
-    ],
     "notAReplacement": true,
     "galleryKey": "calendula",
     "id": "calendula"
@@ -1670,12 +1581,6 @@
       }
     ],
     "traditionalUses": "Name overlap with calendula.",
-    "properties": "This gallery identity is treated as Calendula officinalis (pot marigold), not Tagetes kitchen marigold unless a specimen is identified otherwise. Properties follow calendula flower: traditional topical soothing, not a steroid equivalent.",
-    "activeConstituents": [
-      "triterpene saponins",
-      "flavonoids",
-      "carotenoids"
-    ],
     "notAReplacement": true,
     "galleryKey": "marigold",
     "id": "marigold"
@@ -1728,11 +1633,6 @@
       }
     ],
     "traditionalUses": "Traditional throat and digestive leaf.",
-    "properties": "Garden sage leaf is a traditional throat, digestive and culinary labiate. Rosmarinic acid and a thujone-containing essential oil are typical; prolonged high-thujone internal use is not a household goal. Traditional gargle/tea use is not an antibiotic.",
-    "activeConstituents": [
-      "rosmarinic acid",
-      "thujone-containing essential oil (variable)"
-    ],
     "notAReplacement": true,
     "galleryKey": "sage",
     "id": "sage"
@@ -1775,10 +1675,6 @@
       }
     ],
     "traditionalUses": "Folk use is not a verified monograph.",
-    "properties": "Meadow sage (Salvia pratensis) is a related labiate, not automatically equivalent to Salvia officinalis monograph data. Folk use as a sage-like leaf does not establish the same thujone/rosmarinic profile or the same evidence. Culinary/folk context only unless a labelled product specifies the species.",
-    "activeConstituents": [
-      "labiate phenolics (species not assumed identical to S. officinalis)"
-    ],
     "notAReplacement": true,
     "galleryKey": "meadow-sage",
     "id": "meadow-sage"
@@ -1841,12 +1737,6 @@
       }
     ],
     "traditionalUses": "Traditional leaf and distinct root uses.",
-    "properties": "Stinging nettle leaf is a traditional mineral-rich spring green and joint/urinary folk herb; root is a separate prostate-related article in some products. Fresh sting contains amines; dried leaf tea is not the sting. Traditional use is not an NSAID or tamsulosin equivalent.",
-    "activeConstituents": [
-      "flavonoids",
-      "minerals",
-      "amines in fresh sting (histamine-related)"
-    ],
     "notAReplacement": true,
     "galleryKey": "nettle",
     "id": "nettle"
@@ -1898,11 +1788,6 @@
       }
     ],
     "traditionalUses": "Traditional diuretic aerial stems.",
-    "properties": "Field horsetail sterile stems are a traditional diuretic and silica-containing herb. Equisetum palustre confusion is a toxicity identification issue. Traditional silica folklore is not a treatment for osteoporosis. Prolonged internal use needs identity-certainty.",
-    "activeConstituents": [
-      "silica / silicic-acid related minerals",
-      "flavonoids"
-    ],
     "notAReplacement": true,
     "galleryKey": "horsetail",
     "id": "horsetail"
@@ -1955,11 +1840,6 @@
       }
     ],
     "traditionalUses": "Traditional flowering-tops tea.",
-    "properties": "Yarrow flowering tops are a traditional diaphoretic and mild astringent wound herb. Sesquiterpene lactones and essential-oil constituents (including chamazulene-related chemistry in some chemotypes) underlie bitterness and Asteraceae allergy. Not a licensed haemostatic drug.",
-    "activeConstituents": [
-      "sesquiterpene lactones",
-      "essential-oil constituents"
-    ],
     "notAReplacement": true,
     "galleryKey": "yarrow",
     "id": "yarrow"
@@ -2013,11 +1893,6 @@
       }
     ],
     "traditionalUses": "Traditional bitter aerial parts.",
-    "properties": "Wormwood aerial parts are a traditional intense bitter (absinthe plant). Absinthin-type bitters stimulate digestive secretions; the essential oil may contain thujone. Traditional bitter use is not a safe path to distilled oil or abortifacient folklore.",
-    "activeConstituents": [
-      "absinthin-type bitter sesquiterpene lactones",
-      "thujone (essential oil, variable)"
-    ],
     "notAReplacement": true,
     "galleryKey": "wormwood",
     "id": "wormwood"
@@ -2068,11 +1943,6 @@
       }
     ],
     "traditionalUses": "Traditional demulcent leaf.",
-    "properties": "Ribwort plantain leaf is a traditional demulcent and mild astringent for irritated mucosa (cough/topical folklore). Mucilage and iridoid glycosides such as aucubin are typical. This is Plantago lanceolata leaf, not psyllium seed husk (P. ovata).",
-    "activeConstituents": [
-      "mucilage polysaccharides",
-      "iridoid glycosides (aucubin)"
-    ],
     "notAReplacement": true,
     "galleryKey": "plantain",
     "id": "plantain"
@@ -2124,11 +1994,6 @@
       }
     ],
     "traditionalUses": "Traditional flower tea.",
-    "properties": "Mullein flowers (and sometimes leaf) are a traditional respiratory demulcent tisane. Mucilage and saponins are the usual phytochemical frame. Fine hairs can irritate; straining flower tea is traditional practice, not a dose table. Not an antibiotic or asthma inhaler.",
-    "activeConstituents": [
-      "mucilage",
-      "saponins"
-    ],
     "notAReplacement": true,
     "galleryKey": "mullein",
     "id": "mullein"
@@ -2171,10 +2036,6 @@
       }
     ],
     "traditionalUses": "Folk root use, not equated to flower tea.",
-    "properties": "This gallery item is mullein root, a harder tissue than the flower. Traditional root use is less standardised than flower tea and is not a Verbascum flower monograph. Expect decoction of root rather than a delicate infusion; evidence remains traditional.",
-    "activeConstituents": [
-      "root saponins / mucilage (less characterised than flower tea)"
-    ],
     "notAReplacement": true,
     "galleryKey": "root-mullein",
     "id": "root-mullein"
@@ -2226,10 +2087,6 @@
       }
     ],
     "traditionalUses": "Traditional mucilage root.",
-    "properties": "Marshmallow root (and sometimes leaf) is a classic mucilage demulcent for dry irritated mucosa. Cold maceration of root is the traditional way to extract slime without excessive starch gelatinisation. This is soothing folklore, not a PPI or antibiotic.",
-    "activeConstituents": [
-      "mucilage polysaccharides"
-    ],
     "notAReplacement": true,
     "galleryKey": "marshmallow",
     "id": "marshmallow"
@@ -2282,11 +2139,6 @@
       }
     ],
     "traditionalUses": "Traditional salicylate-containing flowering tops.",
-    "properties": "Meadowsweet flowering tops are a traditional anti-rheumatic and stomach herb containing salicylate glycosides and tannins. This is not pharmaceutical aspirin, not antiplatelet therapy, and not appropriate where salicylate allergy or Reye-risk situations apply.",
-    "activeConstituents": [
-      "salicylate glycosides",
-      "tannins"
-    ],
     "notAReplacement": true,
     "galleryKey": "meadowsweet",
     "id": "meadowsweet"
@@ -2349,11 +2201,6 @@
       }
     ],
     "traditionalUses": "Traditional flower tea.",
-    "properties": "Linden (lime-tree) flowers are a traditional calming diaphoretic tisane. Mucilage and flavonoids are typical. Traditional restlessness/cold-tea use is not a licensed hypnotic.",
-    "activeConstituents": [
-      "mucilage",
-      "flavonoids"
-    ],
     "notAReplacement": true,
     "galleryKey": "linden-flower",
     "id": "linden-flower"
@@ -2405,11 +2252,6 @@
       }
     ],
     "traditionalUses": "Traditional flower tea.",
-    "properties": "Elder inflorescence (Sambucus nigra flos) is a traditional diaphoretic cold-and-catarrh tea. Flavonoids and phenolic acids are typical. Flowers are not raw berries; uncooked berries and other plant parts have different cyanogenic risk.",
-    "activeConstituents": [
-      "flavonoids",
-      "phenolic acids"
-    ],
     "notAReplacement": true,
     "galleryKey": "elderflower",
     "id": "elderflower"
@@ -2452,11 +2294,6 @@
       }
     ],
     "traditionalUses": "Folk ‘elder’ is ambiguous.",
-    "properties": "Gallery ‘elder’ is ambiguous as to flower, cooked berry or other parts. Sambucus nigra flowers and properly processed berries are traditional foods/teas; raw berries, leaves and bark can contain cyanogenic glycosides. Identity of the article matters more than the English name.",
-    "activeConstituents": [
-      "flavonoids (flower)",
-      "cyanogenic glycosides in some raw parts (sambunigrin-related)"
-    ],
     "notAReplacement": true,
     "galleryKey": "elder",
     "id": "elder"
@@ -2522,11 +2359,6 @@
       }
     ],
     "traditionalUses": "Traditional leaf and root, distinct.",
-    "properties": "Dandelion leaf is a traditional bitter diuretic green; root is a separate inulin-rich bitter. Sesquiterpene lactones give bitterness; root inulin is a food fructan, not a liver-cleanse drug. Leaf and root are not interchangeable.",
-    "activeConstituents": [
-      "sesquiterpene lactones",
-      "inulin (root)"
-    ],
     "notAReplacement": true,
     "galleryKey": "dandelion",
     "id": "dandelion"
@@ -2573,10 +2405,6 @@
       }
     ],
     "traditionalUses": "Traditional migraine-associated leaf.",
-    "properties": "Feverfew leaf is a traditional migraine-associated herb. Parthenolide, a sesquiterpene lactone, is the best-known constituent. Traditional use and limited clinical work are not triptan replacement. Mouth ulceration from fresh leaf is a recognised nuisance effect. Asteraceae allergy applies.",
-    "activeConstituents": [
-      "parthenolide"
-    ],
     "notAReplacement": true,
     "galleryKey": "feverfew",
     "id": "feverfew"
@@ -2628,10 +2456,6 @@
       }
     ],
     "traditionalUses": "Traditional leaf tea, species-dependent.",
-    "properties": "Mentha leaves (typically peppermint or spearmint chemotypes) are culinary and traditional digestive carminatives. Menthol and related monoterpenes dominate peppermint oil; leaf tea is not enteric-coated peppermint-oil capsules. GORD can be aggravated by mint in some people.",
-    "activeConstituents": [
-      "menthol and related monoterpenes (chemotype-dependent)"
-    ],
     "notAReplacement": true,
     "galleryKey": "mint",
     "id": "mint"
@@ -2680,11 +2504,6 @@
       }
     ],
     "traditionalUses": "Traditional wild-thyme tea.",
-    "properties": "Wild thyme aerial parts are a traditional aromatic respiratory and culinary thyme. Thymol and carvacrol are typical phenolic monoterpenes, as in garden thyme, but wild chemotypes vary. Traditional thyme tea is not an antibiotic.",
-    "activeConstituents": [
-      "thymol",
-      "carvacrol"
-    ],
     "notAReplacement": true,
     "galleryKey": "wild-thyme",
     "id": "wild-thyme"
@@ -2735,11 +2554,6 @@
       }
     ],
     "traditionalUses": "Culinary and folk digestive leaf.",
-    "properties": "Oregano leaf is a culinary Lamiaceae spice with carvacrol-rich essential oil in many chemotypes. Folk digestive and antimicrobial folklore is not a systemic antibiotic. Culinary amounts and concentrated oil are different exposures.",
-    "activeConstituents": [
-      "carvacrol",
-      "thymol"
-    ],
     "notAReplacement": true,
     "galleryKey": "oregano",
     "id": "oregano"
@@ -2784,10 +2598,6 @@
       }
     ],
     "traditionalUses": "Culinary.",
-    "properties": "Sweet basil is primarily a culinary leaf. Eugenol- or linalool-rich chemotypes exist. Traditional digestive use is food-level, not a characterised medicinal extract.",
-    "activeConstituents": [
-      "eugenol or linalool-rich essential oil (chemotype-dependent)"
-    ],
     "notAReplacement": true,
     "galleryKey": "basil",
     "id": "basil"
@@ -2838,11 +2648,6 @@
       }
     ],
     "traditionalUses": "Traditional seed carminative.",
-    "properties": "Dill seed is a traditional carminative; the herb (leaf) is mainly culinary. Carvone and limonene are typical seed volatiles. Traditional wind-and-digestive use is not an antispasmodic drug.",
-    "activeConstituents": [
-      "carvone",
-      "limonene"
-    ],
     "notAReplacement": true,
     "galleryKey": "dill",
     "id": "dill"
@@ -2895,10 +2700,6 @@
       }
     ],
     "traditionalUses": "Traditional berry diuretic.",
-    "properties": "Juniper ‘berries’ (seed cones) are a traditional diuretic and culinary gin flavouring. Volatile oils (pinene-related) can irritate kidney tissue in concentrated use. Traditional berry use is not a loop diuretic and is cautioned in established kidney disease.",
-    "activeConstituents": [
-      "volatile oils (pinene-related)"
-    ],
     "notAReplacement": true,
     "galleryKey": "juniper",
     "id": "juniper"
@@ -2950,11 +2751,6 @@
       }
     ],
     "traditionalUses": "Traditional respiratory herb.",
-    "properties": "Hyssop aerial parts are a traditional respiratory aromatic. Pinocamphone-related ketones in the essential oil are a neurotoxicity caution if oils are misused. Leaf tea folklore is not a reason to ingest essential oil.",
-    "activeConstituents": [
-      "pinocamphone-related monoterpene ketones (oil)",
-      "labiate phenolics"
-    ],
     "notAReplacement": true,
     "galleryKey": "hyssop",
     "id": "hyssop"
@@ -3006,10 +2802,6 @@
       }
     ],
     "traditionalUses": "Traditional astringent herb.",
-    "properties": "Agrimony aerial parts are a traditional astringent for mild diarrhoea and sore throat folklore. Tannins supply the drying effect. This is not an antibiotic or IBD drug.",
-    "activeConstituents": [
-      "tannins"
-    ],
     "notAReplacement": true,
     "galleryKey": "agrimony",
     "id": "agrimony"
@@ -3056,11 +2848,6 @@
       }
     ],
     "traditionalUses": "Traditional bitter root.",
-    "properties": "Garden angelica root is a traditional aromatic bitter for digestion. Furanocoumarins add phototoxicity caution. Root, seed and leaf are different articles. Traditional bitter is not a PPI.",
-    "activeConstituents": [
-      "furanocoumarins",
-      "bitter essential oil"
-    ],
     "notAReplacement": true,
     "galleryKey": "angelica",
     "id": "angelica"
@@ -3107,11 +2894,6 @@
       }
     ],
     "traditionalUses": "Traditional respiratory root.",
-    "properties": "Elecampane root is a traditional respiratory bitter-aromatic. Inulin and sesquiterpene lactones (alantolactone-type) are typical. Traditional cough-root use is not an antibiotic or asthma preventer. Asteraceae allergy applies.",
-    "activeConstituents": [
-      "inulin",
-      "alantolactone-type sesquiterpene lactones"
-    ],
     "notAReplacement": true,
     "galleryKey": "elecampane",
     "id": "elecampane"
@@ -3162,11 +2944,6 @@
       }
     ],
     "traditionalUses": "Traditional aerial herb; eyes need sterile licensed products.",
-    "properties": "Eyebright aerial parts are a traditional astringent for catarrh; the English name is not an instruction to put unsterile tea in the eye. Iridoids and tannins are the usual frame. Evidence is traditional, not ophthalmology.",
-    "activeConstituents": [
-      "iridoid glycosides",
-      "tannins"
-    ],
     "notAReplacement": true,
     "galleryKey": "eyebright",
     "id": "eyebright"
@@ -3218,11 +2995,6 @@
       }
     ],
     "traditionalUses": "Traditional diuretic aerial parts.",
-    "properties": "European goldenrod aerial parts are a traditional diuretic and urinary-flush herb. Flavonoids and saponins are typical. Traditional use is not an antibiotic for pyelonephritis. Asteraceae allergy applies.",
-    "activeConstituents": [
-      "flavonoids",
-      "saponins"
-    ],
     "notAReplacement": true,
     "galleryKey": "goldenrod",
     "id": "goldenrod"
@@ -3269,11 +3041,6 @@
       }
     ],
     "traditionalUses": "Traditional root.",
-    "properties": "Greater burdock root is a traditional ‘blood cleanser’ bitter and food root (gobo). Inulin and polyacetylenes are typical root constituents. Traditional alterative use is not a detoxification of laboratory toxins and is not an antibiotic.",
-    "activeConstituents": [
-      "inulin",
-      "polyacetylenes"
-    ],
     "notAReplacement": true,
     "galleryKey": "greater-burdock",
     "id": "greater-burdock"
@@ -3317,7 +3084,6 @@
       }
     ],
     "traditionalUses": "Folk culinary green.",
-    "properties": "Ground elder is mainly a spring culinary green in the carrot family. Historical gout folklore is in the name, not a urate-lowering trial. No distinctive licensed-herb constituent set is assumed here beyond ordinary Apiaceae food chemistry.",
     "notAReplacement": true,
     "galleryKey": "goutweed",
     "id": "goutweed"
@@ -3368,11 +3134,6 @@
       }
     ],
     "traditionalUses": "Folk flowering-tops tea.",
-    "properties": "Heather flowering tips are a traditional urinary and tea plant of moorland. Phenolics and tannins give astringency. Folk use is not a urinary-antiseptic drug.",
-    "activeConstituents": [
-      "phenolics",
-      "tannins"
-    ],
     "notAReplacement": true,
     "galleryKey": "heather",
     "id": "heather"
@@ -3420,11 +3181,6 @@
       }
     ],
     "traditionalUses": "Traditional root.",
-    "properties": "Lovage root is a traditional aromatic diuretic and stock-flavour Apiaceae. Phthalides and coumarins are typical. Traditional root use is not a prescription diuretic. Phototoxicity/coumarin cautions apply in principle as with related aromatics.",
-    "activeConstituents": [
-      "phthalides",
-      "coumarins"
-    ],
     "notAReplacement": true,
     "galleryKey": "lovage",
     "id": "lovage"
@@ -3469,11 +3225,6 @@
       }
     ],
     "traditionalUses": "Folk ‘lung’ plant; not a diagnosis.",
-    "properties": "Lungwort is a traditional demulcent named by Doctrine of Signatures (spotted leaf ~ lung). Mucilage and silica-related folklore do not diagnose or treat lung disease. Traditional tea is not an inhaler or antibiotic.",
-    "activeConstituents": [
-      "mucilage",
-      "silica-related minerals"
-    ],
     "notAReplacement": true,
     "galleryKey": "lungwort",
     "id": "lungwort"
@@ -3525,11 +3276,6 @@
       }
     ],
     "traditionalUses": "Traditional aerial nervine.",
-    "properties": "Motherwort aerial parts are a traditional cardiac nervine for palpitations-with-anxiety folklore. Labdane diterpenes and, in some Leonurus species, leonurine-type alkaloids are discussed in the literature. This is not a beta-blocker, not digoxin, and not obstetric advice.",
-    "activeConstituents": [
-      "labdane diterpenes",
-      "leonurine-type alkaloids (species-dependent)"
-    ],
     "notAReplacement": true,
     "galleryKey": "motherwort",
     "id": "motherwort"
@@ -3575,11 +3321,6 @@
       }
     ],
     "traditionalUses": "Folk aerial herb; unsafe for pregnancy-directed use.",
-    "properties": "Mugwort aerial parts are a traditional bitter and dream/moxa plant. Thujone-containing oil and bitter sesquiterpenes are the caution-and-bitterness frame. Culinary young leaf in some cuisines is not a concentrated oil. Not an abortifacient method.",
-    "activeConstituents": [
-      "thujone-containing essential oil (variable)",
-      "bitter sesquiterpenes"
-    ],
     "notAReplacement": true,
     "galleryKey": "mugwort",
     "id": "mugwort"
@@ -3632,10 +3373,6 @@
       }
     ],
     "traditionalUses": "Traditional nervine, species-dependent.",
-    "properties": "Western skullcap (typically Scutellaria lateriflora) is a traditional nervine. Flavonoids are the usual phytochemical class; baicalin-rich profiles are better established for S. baicalensis, which is a different species. Adulteration of skullcap products is a documented quality problem. Not a benzodiazepine.",
-    "activeConstituents": [
-      "flavonoids (species-dependent; not assumed identical to S. baicalensis baicalin extracts)"
-    ],
     "notAReplacement": true,
     "galleryKey": "skullcap",
     "id": "skullcap"
@@ -3686,11 +3423,6 @@
       }
     ],
     "traditionalUses": "Folk aerial herb.",
-    "properties": "Self-heal aerial parts are a traditional astringent wound and throat herb. Rosmarinic acid and other phenolics are reported. The English name is folklore, not a wound-closure claim.",
-    "activeConstituents": [
-      "rosmarinic acid",
-      "flavonoids"
-    ],
     "notAReplacement": true,
     "galleryKey": "self-heal",
     "id": "self-heal"
@@ -3735,10 +3467,6 @@
       }
     ],
     "traditionalUses": "Historical soap plant; not a tea recommendation.",
-    "properties": "Soapwort root and sometimes leaf contain saponins that foam in water — historically a washing plant and occasional traditional expectorant. Internal saponin-rich use can irritate mucosa. This is not a household medicine recipe.",
-    "activeConstituents": [
-      "saponins"
-    ],
     "notAReplacement": true,
     "galleryKey": "soapwort",
     "id": "soapwort"
@@ -3782,10 +3510,6 @@
       }
     ],
     "traditionalUses": "Culinary.",
-    "properties": "Sweet cicely is mainly a culinary anise-scented Apiaceae herb. Anethole-like aromatics flavour leaf and seed. Food use is not a medicinal liquorice or anise monograph.",
-    "activeConstituents": [
-      "anethole-like aromatic compounds"
-    ],
     "notAReplacement": true,
     "galleryKey": "sweet-cicely",
     "id": "sweet-cicely"
@@ -3836,11 +3560,6 @@
       }
     ],
     "traditionalUses": "Traditional flower/leaf.",
-    "properties": "Sweet violet flower and leaf are traditional demulcent cough and cosmetic plants. Mucilage and phenolic glycosides are the usual frame. Traditional syrup folklore is not an antibiotic.",
-    "activeConstituents": [
-      "mucilage",
-      "phenolic glycosides"
-    ],
     "notAReplacement": true,
     "galleryKey": "sweet-violet",
     "id": "sweet-violet"
@@ -3887,12 +3606,6 @@
       }
     ],
     "traditionalUses": "Traditional leaf; food nut separate.",
-    "properties": "Walnut leaf is a traditional astringent; the seed is a food nut (oils, vitamin E) and is a different article. Leaf/hull naphthoquinones such as juglone are relevant to topical folklore and to garden-allelopathy, not to eating the kernel.",
-    "activeConstituents": [
-      "juglone (leaf/hull)",
-      "tannins (leaf)",
-      "fatty acids (seed food)"
-    ],
     "notAReplacement": true,
     "galleryKey": "walnut",
     "id": "walnut"
@@ -3943,10 +3656,6 @@
       }
     ],
     "traditionalUses": "Folk aerial nervine.",
-    "properties": "Wood betony aerial parts are a traditional European nervine and head-pain folklore plant. Tannins are the most securely stated constituents; a dramatic alkaloid story is not required. Traditional use is not a triptan or analgesic drug.",
-    "activeConstituents": [
-      "tannins"
-    ],
     "notAReplacement": true,
     "galleryKey": "wood-betony",
     "id": "wood-betony"
@@ -3991,10 +3700,6 @@
       }
     ],
     "traditionalUses": "Culinary dried herb.",
-    "properties": "Sweet woodruff is a culinary dried herb (May wine) that develops coumarin aroma on drying. Coumarin in excess is a liver and anticoagulation-context caution. Culinary sprig use is not a warfarin analogue and is not a concentrated extract.",
-    "activeConstituents": [
-      "coumarin (especially after drying)"
-    ],
     "notAReplacement": true,
     "galleryKey": "woodruff",
     "id": "woodruff"
@@ -4039,10 +3744,6 @@
       }
     ],
     "traditionalUses": "Folk root; not a detox indication.",
-    "properties": "Yellow dock root is a traditional bitter laxative and ‘blood cleanser’. Hydroxyanthraquinones (emodin-type) explain the laxative effect. Traditional use is not a detox of laboratory toxins and is not appropriate as chronic stimulant laxation.",
-    "activeConstituents": [
-      "hydroxyanthraquinones (emodin-type)"
-    ],
     "notAReplacement": true,
     "galleryKey": "yellow-dock",
     "id": "yellow-dock"
@@ -4086,11 +3787,6 @@
       }
     ],
     "traditionalUses": "Folk fresh herb.",
-    "properties": "Cleavers (goosegrass) is a traditional spring lymphatic and diuretic succulent. Iridoids and tannins are reported. Fresh juice folklore is not an oncology lymphatic treatment.",
-    "activeConstituents": [
-      "iridoid glycosides",
-      "tannins"
-    ],
     "notAReplacement": true,
     "galleryKey": "cleavers",
     "id": "cleavers"
@@ -4142,11 +3838,6 @@
       }
     ],
     "traditionalUses": "Traditional flower; distinct root.",
-    "properties": "Cowslip flowers are a traditional calming tisane; root is a separate saponin-rich traditional cough article. The two parts are not equivalent. Traditional use is not a licensed expectorant tablet.",
-    "activeConstituents": [
-      "flavonoids (flower)",
-      "saponins (especially root)"
-    ],
     "notAReplacement": true,
     "galleryKey": "cowslip",
     "id": "cowslip"
@@ -4189,10 +3880,6 @@
       }
     ],
     "traditionalUses": "Not a substitute for red clover products.",
-    "properties": "Crimson clover is primarily a forage/green-manure Trifolium. It is not automatically equivalent to red clover (T. pratense) isoflavone products. Do not assume the same phyto-oestrogen profile.",
-    "activeConstituents": [
-      "Trifolium phenolics not assumed identical to red-clover isoflavone extracts"
-    ],
     "notAReplacement": true,
     "galleryKey": "crimson-clover",
     "id": "crimson-clover"
@@ -4244,10 +3931,6 @@
       }
     ],
     "traditionalUses": "Traditional flowering tops; extracts separate.",
-    "properties": "Red clover flowering tops are a traditional women’s herb and a source of isoflavones (formononetin, biochanin A). Traditional and product-based hormonal folklore is not HRT, not tamoxifen, and not a reason to ignore oestrogen-sensitive disease questions.",
-    "activeConstituents": [
-      "isoflavones (formononetin, biochanin A)"
-    ],
     "notAReplacement": true,
     "galleryKey": "red-clover",
     "id": "red-clover"
@@ -4298,10 +3981,6 @@
       }
     ],
     "traditionalUses": "Traditional aerial herb.",
-    "properties": "Rosebay willowherb aerial parts are a traditional European gastrointestinal astringent. Ellagitannins such as oenothein B are reported in the Epilobium/Chamaenerion literature. Traditional use is not a prostate-drug equivalent unless a specific authorised product says otherwise.",
-    "activeConstituents": [
-      "ellagitannins (oenothein B reported in the genus)"
-    ],
     "notAReplacement": true,
     "galleryKey": "fireweed",
     "id": "fireweed"
@@ -4348,12 +4027,6 @@
       }
     ],
     "traditionalUses": "Traditional seaweed; iodine is the risk.",
-    "properties": "Bladderwrack is a brown seaweed traditionally used for thyroid-folklore and as a mineral-rich food. Iodine content is real and variable — the practical risk is iodine excess or contamination, not a licensed thyroxine replacement. Fucoidan and alginates are typical polysaccharides.",
-    "activeConstituents": [
-      "iodine (variable)",
-      "fucoidan",
-      "alginates"
-    ],
     "notAReplacement": true,
     "galleryKey": "bladderwrack",
     "id": "bladderwrack"
@@ -4409,11 +4082,6 @@
       }
     ],
     "traditionalUses": "Culinary seed; oil is separate.",
-    "properties": "Nigella seed is a culinary spice; expressed oil is a separate article. Thymoquinone is the best-known constituent of the oil. Traditional metabolic and respiratory folklore is not metformin or inhaler replacement.",
-    "activeConstituents": [
-      "thymoquinone",
-      "seed fixed oil"
-    ],
     "notAReplacement": true,
     "galleryKey": "black-cumin",
     "id": "black-cumin"
@@ -4458,10 +4126,6 @@
       }
     ],
     "traditionalUses": "Culinary spice.",
-    "properties": "Black pepper fruit is a culinary spice. Piperine is the pungent alkaloid and can affect drug absorption. Kitchen pepper is not a standardised bioavailability drug and is not an anti-inflammatory medicine.",
-    "activeConstituents": [
-      "piperine"
-    ],
     "notAReplacement": true,
     "galleryKey": "black-pepper",
     "id": "black-pepper"
@@ -4508,10 +4172,6 @@
       }
     ],
     "traditionalUses": "Historical/ritual mentions do not equal safety.",
-    "properties": "Nymphaea caerulea is an educational aquatic plant of traditional North African/ritual mention. Aporphine alkaloids are discussed in the research and grey literature; that is not a recreational-dosing monograph. No extraction or smoking recipe is provided.",
-    "activeConstituents": [
-      "aporphine alkaloids (research context)"
-    ],
     "notAReplacement": true,
     "galleryKey": "blue-lotus",
     "id": "blue-lotus"
@@ -4558,11 +4218,6 @@
       }
     ],
     "traditionalUses": "Folk name; not osteology.",
-    "properties": "Boneset is a traditional North American fever herb (Eupatorium perfoliatum). Sesquiterpene lactones are typical; pyrrolizidine-alkaloid risk is the reason internal folk use is not treated as a safe household tea. The name does not set bones.",
-    "activeConstituents": [
-      "sesquiterpene lactones",
-      "pyrrolizidine alkaloids (risk context)"
-    ],
     "notAReplacement": true,
     "galleryKey": "boneset",
     "id": "boneset"
@@ -4607,10 +4262,6 @@
       }
     ],
     "traditionalUses": "Amazonian food fruit.",
-    "properties": "Açaí is a food fruit (palm berry) marketed for anthocyanin-rich pulp. Food-antioxidant chemistry is not a disease treatment. Pulp, juice and freeze-dried powder are food forms, not a standardised drug.",
-    "activeConstituents": [
-      "anthocyanins"
-    ],
     "notAReplacement": true,
     "galleryKey": "acai-berry",
     "id": "acai-berry"
@@ -4655,11 +4306,6 @@
       }
     ],
     "traditionalUses": "Culinary bulb.",
-    "properties": "Red onion bulb is food. Quercetin-type flavonols and organosulfur compounds are typical Allium chemistry. Culinary onion is not an antihypertensive drug or an antibiotic.",
-    "activeConstituents": [
-      "quercetin-type flavonols",
-      "organosulfur compounds"
-    ],
     "notAReplacement": true,
     "galleryKey": "red-onion",
     "id": "red-onion"
@@ -4704,10 +4350,6 @@
       }
     ],
     "traditionalUses": "Culinary wild Allium, part-specific.",
-    "properties": "Ramsons flowers are a seasonal culinary Allium, not garlic bulb (A. sativum) and not a standardised allicin product. Sulfur compounds give the garlic scent. Food-level use is not a cardiovascular medicine.",
-    "activeConstituents": [
-      "organosulfur compounds"
-    ],
     "notAReplacement": true,
     "galleryKey": "wild-garlic-flowers",
     "id": "wild-garlic-flowers"
@@ -4757,11 +4399,6 @@
       }
     ],
     "traditionalUses": "Traditional hips; petals separate.",
-    "properties": "Dog rose hips are a traditional vitamin-C-rich food and tea; petals are a separate, milder aromatic article. Hips contain ascorbic acid and other fruit acids/phenolics. Traditional winter hip tea is not an antiviral drug.",
-    "activeConstituents": [
-      "ascorbic acid (hips)",
-      "fruit phenolics"
-    ],
     "notAReplacement": true,
     "galleryKey": "wild-rose",
     "id": "wild-rose"
@@ -4807,7 +4444,6 @@
       }
     ],
     "traditionalUses": "Name is not a plant.",
-    "properties": "This gallery label is not a single verified botanical. Rue (Ruta graveolens), anise (Pimpinella anisum) and star anise (Illicium) are different plants with different risks (phototoxic furanocoumarins vs anethole vs star-anise adulteration issues). No species-specific constituent list is assigned until the specimen is identified.",
     "notAReplacement": true,
     "galleryKey": "rue-anise",
     "id": "rue-anise"
@@ -4866,11 +4502,6 @@
       }
     ],
     "traditionalUses": "Young cereal-grass food powder.",
-    "properties": "Young barley is the harvested green shoot of Hordeum vulgare before grain fill, used as a food-form powder, juice or tablet. It is valued as a chlorophyll- and mineral-containing cereal grass, not as a medicinal barley-grain decoction and not as a drug for acid–base disorders.",
-    "activeConstituents": [
-      "chlorophyll",
-      "cereal-grass minerals and vitamins"
-    ],
     "notAReplacement": true,
     "galleryKey": "young-barley",
     "id": "young-barley"
@@ -4918,11 +4549,6 @@
       }
     ],
     "traditionalUses": "Traditional bitter root; roasted food drink separate.",
-    "properties": "Chicory leaf is a bitter salad; roasted root is a coffee-substitute food; medicinal root extracts are another article. Inulin (root) and sesquiterpene lactones (bitterness) are typical. Roasted drink is not a liver-cleanse drug.",
-    "activeConstituents": [
-      "inulin (root)",
-      "sesquiterpene lactones"
-    ],
     "notAReplacement": true,
     "galleryKey": "chicory",
     "id": "chicory"
@@ -4986,7 +4612,6 @@
       }
     ],
     "traditionalUses": "Traditional European birch polypore; styptic and folk antimicrobial lore.",
-    "properties": "Birch polypore is a birch-restricted bracket fungus. Traditional European use of the dried fruiting body includes styptic folklore and hard-tissue decoction, not a delicate floral infusion. Polyporenic acids, piptamine-type metabolites and fungal beta-glucans appear in laboratory work. That is not beta-lactam pharmacology and not a reason to delay indicated antibiotics. Correct identification versus other white brackets is essential.",
     "activeConstituents": [
       "polyporenic acids",
       "piptamine-type metabolites (research context)",
@@ -5057,7 +4682,6 @@
       }
     ],
     "traditionalUses": "Traditional birch-sclerotium tonic decoction.",
-    "properties": "Chaga is the sterile black sclerotium of Inonotus obliquus on birch, not the fertile crust and not charcoal. Traditional Siberian use is a long decoction of hard sclerotium chunks. Melanins, fungal polysaccharides and lanostane triterpenes (including inotodiol), plus betulin-related compounds from the birch association, frame the chemistry. Kitchen chaga is not chemotherapy. Concentrated products carry an oxalate-nephropathy caution in case reports.",
     "activeConstituents": [
       "melanins",
       "fungal polysaccharides",
@@ -5122,7 +4746,6 @@
       }
     ],
     "traditionalUses": "East Asian culinary and traditional medicinal fruiting body.",
-    "properties": "Lion’s mane is a culinary tooth fungus. The fruiting body is cooked as food; grain mycelium powders are a different article (hericenones more associated with fruiting body, erinacines more with mycelium in the research literature). Limited small trials on specific extracts for subjective cognition are not acetylcholinesterase-inhibitor or antidepressant medicines.",
     "activeConstituents": [
       "hericenones (fruiting-body research context)",
       "erinacines (mycelium research context)",
@@ -5177,7 +4800,6 @@
       }
     ],
     "traditionalUses": "Historical ceremonial mentions do not authorise household preparation or United Kingdom self-supply.",
-    "properties": "Psilocybe cubensis is an educational mycology monograph for the gallery image species. Psilocybin is a prodrug converted to psilocin, a serotonin 2A (5-HT2A) agonist. That is not SSRI pharmacology. In the United Kingdom psilocybin and psilocin are controlled Class A substances. Trial evidence for pharmaceutical psilocybin with psychological support does not apply to foraged material. No cultivation, extraction or dosing instruction is provided.",
     "activeConstituents": [
       "psilocybin",
       "psilocin"
@@ -5247,7 +4869,6 @@
       }
     ],
     "traditionalUses": "Traditional Yun Zhi fruiting body; industrial PSK/PSP are separate articles.",
-    "properties": "Turkey tail is a thin, zoned polypore. Traditional East Asian use decocts the tough fruiting body. Beta-glucans are typical fungal wall polysaccharides. Characterised protein-bound fractions PSK (Krestin) and PSP are industrial extracts used as oncology adjuncts in some jurisdictions — a homemade decoction is not PSK/PSP and is not chemotherapy, radiotherapy or checkpoint-inhibitor treatment.",
     "activeConstituents": [
       "beta-glucans",
       "protein-bound polysaccharides (PSK/PSP in manufactured extracts only)"
@@ -5319,7 +4940,6 @@
       "Active gallstone crisis"
     ],
     "traditionalUses": "Traditional bitter for dyspepsia and bile flow.",
-    "properties": "Globe artichoke leaf is a traditional bitter for dyspepsia and bile-flow folklore. Caffeoylquinic acids (including chlorogenic-acid related compounds) and cynaropicrin-type bitters are typical. Traditional digestive use is not ursodeoxycholic acid or a bile-duct procedure.",
     "activeConstituents": [
       "cynarin",
       "chlorogenic acid"
@@ -5391,7 +5011,6 @@
       "Autoimmune disease unless clinician reviews"
     ],
     "traditionalUses": "Traditional Rasayana root for stress load.",
-    "properties": "Ashwagandha root is a traditional Ayurvedic adaptogen. Withanolides are the characteristic steroidal lactones of standardised products. Traditional vitality use and limited clinical stress/sleep work are not equivalent to licensed hormones, SSRIs or thyroid replacement.",
     "activeConstituents": [
       "withanolides"
     ],
@@ -5441,7 +5060,6 @@
       "Unidentified ‘Brahmi’ material"
     ],
     "traditionalUses": "Traditional Ayurvedic medhya rasayana aerial herb.",
-    "properties": "Bacopa aerial parts are a traditional Ayurvedic memory herb. Bacosides (dammarane saponins) are the usual marked fraction. Limited cognitive-product research is not a dementia-drug or stimulant equivalent.",
     "activeConstituents": [
       "bacosides"
     ],
@@ -5500,7 +5118,6 @@
       "Unsupervised combination with intensive insulin / sulfonylurea regimens"
     ],
     "traditionalUses": "Traditional bitter bark / root used metabolically in several systems.",
-    "properties": "Barberry root bark (and related Berberis/Mahonia barks) are traditional bitter antimicrobials in folk systems. Berberine-type isoquinoline alkaloids are the distinctive constituents. This is not an antibiotic prescription and has recognised drug-interaction and glucose-context cautions in concentrated products.",
     "activeConstituents": [
       "berberine"
     ],
@@ -5552,7 +5169,6 @@
       "Active GI bleeding"
     ],
     "traditionalUses": "Traditional resin for joint inflammatory load.",
-    "properties": "Frankincense resin from Boswellia serrata is a traditional anti-inflammatory oleogum resin. Boswellic acids are the marked triterpenes of standardised extracts. Traditional joint use is not an NSAID or DMARD equivalent.",
     "activeConstituents": [
       "boswellic acids"
     ],
@@ -5604,7 +5220,6 @@
       "Warfarin instability without INR review"
     ],
     "traditionalUses": "Traditional berry for urinary comfort / adhesion load.",
-    "properties": "Cranberry fruit is a food used in urinary folklore. Proanthocyanidins (A-type) are the constituents discussed for bacterial anti-adhesion in vitro. Juice and standardised products are not an antibiotic for pyelonephritis.",
     "activeConstituents": [
       "A-type proanthocyanidins"
     ],
@@ -5657,7 +5272,6 @@
       "Asteraceae allergy"
     ],
     "traditionalUses": "Traditional host-response plant for early infectious load.",
-    "properties": "Echinacea root and/or herb (species and part must match the product) is a traditional cold-shortening immune herb. Alkamides, caffeic-acid derivatives and polysaccharides differ by species and organ. Traditional use is not an antiviral drug or a reason to ignore serious infection.",
     "activeConstituents": [
       "alkamides",
       "caffeic acid derivatives",
@@ -5715,7 +5329,6 @@
       "Allergy to Fabaceae"
     ],
     "traditionalUses": "Traditional metabolic and culinary seed.",
-    "properties": "Fenugreek seed is a culinary bitter and traditional metabolic/galactagogue seed. Galactomannan fibre and steroidal saponins (including diosgenin-related chemistry) are typical. Traditional use is not metformin or a lactation-drug prescription.",
     "activeConstituents": [
       "galactomannan fibre",
       "4-hydroxyisoleucine"
@@ -5767,7 +5380,6 @@
       "Active bleeding / haemorrhagic context"
     ],
     "traditionalUses": "Leaf extracts in contemporary phytotherapy; traditional seed food is a different, potentially toxic article.",
-    "properties": "Ginkgo leaf extracts used in European phytotherapy are standardised on flavone glycosides and terpene lactones (ginkgolides, bilobalide). Seed is a different, potentially toxic food if misprepared. Leaf-extract cognitive/circulation folklore is not a licensed dementia cure and has bleeding-context cautions with anticoagulants.",
     "activeConstituents": [
       "ginkgo flavone glycosides",
       "terpene lactones"
@@ -5828,7 +5440,6 @@
       "Pregnancy unless a clinician explicitly reviews"
     ],
     "traditionalUses": "Traditional sour tea used as circulatory support.",
-    "properties": "Hibiscus calyces are a traditional tart tea used in some cultures for refreshment and blood-pressure folklore. Anthocyanins and organic acids give colour and sourness. Traditional tea is not an ACE inhibitor.",
     "activeConstituents": [
       "anthocyanins",
       "hibiscus acids"
@@ -5880,7 +5491,6 @@
       "Known Hedera allergy"
     ],
     "traditionalUses": "Traditional leaf for productive cough / bronchial load.",
-    "properties": "Ivy leaf is a traditional European expectorant herbal substance in authorised products. Saponins (hederacoside C related) are the marked fraction. Authorised ivy-leaf preparations are not a reason to chew garden ivy; the whole plant is not a kitchen herb.",
     "activeConstituents": [
       "hederacoside C",
       "alpha-hederin"
@@ -5935,7 +5545,6 @@
       "Symptomatic hypotension"
     ],
     "traditionalUses": "Mediterranean traditional circulatory leaf.",
-    "properties": "Olive leaf is a traditional Mediterranean bitter. Oleuropein, a secoiridoid, is the best-known constituent. Traditional vascular folklore is not an ACE inhibitor or statin.",
     "activeConstituents": [
       "oleuropein",
       "hydroxytyrosol"
@@ -5997,7 +5606,6 @@
       "Faecal impaction without medical review"
     ],
     "traditionalUses": "Traditional bulk-forming seed husk.",
-    "properties": "Psyllium/ispaghula is the seed husk of Plantago ovata, a bulk-forming viscous fibre (arabinoxylan). It is not ribwort plantain leaf. Adequate water is essential. Traditional stool-bulk use and modest lipid/glucose fibre effects are not metformin or stimulant-laxative equivalents.",
     "activeConstituents": [
       "arabinoxylan viscous fibre"
     ],
@@ -6062,7 +5670,6 @@
       }
     ],
     "traditionalUses": "Traditional northern European bark and leaf birch materials; outer bark is the betulin-rich tissue.",
-    "properties": "Birch bark, especially the white outer bark (phellem) of Betula pendula / B. pubescens, is the betulin-rich botanical material. Betulin is a lupane triterpene abundant in that outer bark; betulinic acid is a related, more oxidised triterpenoid typically obtained industrially from betulin, not by kitchen chemistry. Inner bark, leaf, sap, birch polypore and chaga are different articles. Traditional bark decoction is not an anticancer isolate.",
     "activeConstituents": [
       "betulin (outer bark)",
       "related lupane triterpenes in smaller amounts",
@@ -6114,7 +5721,6 @@
       }
     ],
     "traditionalUses": "Not a traditional herbal tea article; a characterised triterpenoid associated with birch outer-bark chemistry and laboratory research.",
-    "properties": "Betulinic acid is an isolated lupane triterpenoid (3β-hydroxy-lup-20(29)-en-28-oic acid), not a plant. It occurs in small amounts in some barks and is usually made industrially from betulin-rich birch outer bark. Preclinical mitochondrial/apoptosis literature is not licensed chemotherapy. This record is not birch bark, not betulin the parent alcohol, not Fomitopsis and not chaga.",
     "activeConstituents": [
       "betulinic acid (the isolate itself)",
       "industrially related to betulin from Betula outer bark"
@@ -6122,55 +5728,6 @@
     "notAReplacement": true,
     "galleryKey": "betulinic-acid",
     "id": "betulinic-acid"
-  },
-  "betulin": {
-    "botanicaOnly": true,
-    "commonName": "Betulin",
-    "botanicalName": "betulin (lupane triterpene alcohol)",
-    "botanicalProfile": "Betulin (lup-20(29)-ene-3β,28-diol) is an isolated lupane triterpene alcohol, not a plant. It is abundant in the white outer bark of Betula species (birch phellem). Birch bark is the botanical material; betulin is the characterised compound extracted industrially from that bark; betulinic acid is a related C-28 carboxylic acid typically obtained by oxidation/processing of betulin. Fomitopsis betulina and Inonotus obliquus may contain related triterpenes but are not ‘betulin’.",
-    "conditions": [
-      "laboratory / industrial phytochemical — not a self-care tea"
-    ],
-    "mechanisms": [
-      "Betulin is a pentacyclic triterpene studied experimentally for membrane and anti-inflammatory-related activities. That laboratory chemistry is not a licensed medicine and is not reproduced by drinking birch-bark tea."
-    ],
-    "evidenceLevel": "insufficient",
-    "evidenceText": "The occurrence of betulin in birch outer bark is chemically well established. Preclinical papers exist. There is insufficient evidence to treat household bark or unlicensed powders labelled betulin as an established medicine. Bark, betulin and betulinic acid are not equivalent articles.",
-    "relationshipLabel": "Educational phytochemical context only — not used by OSIRIS Treatment / Prevention selection. Not a cytotoxic analogue.",
-    "correspondingPharmaClasses": [],
-    "medicineInteractions": [
-      {
-        "note": "No household interaction table is provided for unlicensed isolate powders."
-      }
-    ],
-    "monitoring": [
-      "This isolate is not for self-monitoring as a herbal therapy"
-    ],
-    "contraindications": [
-      "Unsupervised solvent extraction of birch bark to obtain betulin",
-      "Using an unlicensed powder in place of indicated medical treatment"
-    ],
-    "osirisRelevance": "If a patient reports betulin, interpret it as the parent lupane alcohol of birch outer bark, distinct from crude Betula decoction and from betulinic acid. Do not collapse chaga or birch polypore into this isolate.",
-    "preparations": [
-      {
-        "type": "Not a household botanical preparation",
-        "plantPart": "industrially, white outer bark of Betula as starting material — not a kitchen process",
-        "materialState": "Not applicable for unsupervised preparation",
-        "parametersVerified": false,
-        "form": "No kitchen tea, tincture or extraction method is described",
-        "sourceNote": "Betulin used in research is a characterised isolate from birch outer bark",
-        "safetyLimitations": "Do not provide home recipes for extracting betulin or converting it to betulinic acid. Unlicensed powders are not standardised medicines.",
-        "route": "Do not self-prepare"
-      }
-    ],
-    "traditionalUses": "Not a traditional herbal tea article; the principal triterpene alcohol of birch white outer bark, industrially isolated.",
-    "properties": "Betulin is the main lupane triterpene alcohol of birch white outer bark. The botanical material is Betula outer bark; betulin is the isolated compound; betulinic acid is a related oxidised triterpenoid made industrially from betulin. Laboratory interest is not a kitchen anticancer protocol.",
-    "activeConstituents": [
-      "betulin (the isolate itself)"
-    ],
-    "notAReplacement": true,
-    "galleryKey": "betulin",
-    "id": "betulin"
   }
 }
   ;
