@@ -1,19 +1,3553 @@
 :root {
-  --primary-color: #007a5e; /* Main green color */
+  --primary-color: #007a5e ; /* Main OSIRIS green */  
   --secondary-color: #005f47; /* Darker green for hover states */
-  --accent-color: #f4f4f4; /* Light gray background */
-  --text-color: #333; /* Default text color */
-  --muted-text-color: #666; /* Muted text */
-  --button-text-color: #fff; /* Text on buttons */
-  --shadow-color: rgba(0, 0, 0, 0.1); /* Shadow */
-  --border-color: #003c2f; /* Border color */
-  --hover-border-color: #002e25; /* Hover border color */
-  --active-border-color: #001f19; /* Active border color */
-  --focus-outline-color: #004d39; /* Focus outline color */
+  --accent-color: #ccfff0; /* Light mint background */
+  --text-color: #007a5e; /* Default text = primary OSIRIS colour */
+  --muted-text-color: #007a5e; /* No muddy muted tones — primary only */
+  --button-text-color: #ffffff; /* White text on solid buttons */
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --border-color: #003c2f;
+  --hover-border-color: #002e25;
+  --active-border-color: #001f19;
+  --focus-outline-color: #004d39;
+  --text-main: #ffffff; /* readable on green hero */
 }
 
 
 
+
+
+
+
+/* =========================================================
+   OSIRIS — LAUNCH ACCESS BAR
+   ========================================================= */
+
+button.osiris-launch-access {
+  border: 0 !important;
+  margin: 0;
+  cursor: pointer;
+  font-family: "Inter Tight", system-ui, sans-serif !important;
+  text-transform: none !important;
+  box-shadow: none !important;
+  color: #005f47 !important;
+  background: #b7e8df !important;
+}
+.osiris-launch-access {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 30px;
+  padding: 6px 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  background: #b7e8df;
+  border-bottom: 1px solid rgba(0, 95, 71, 0.25);
+
+  color: #005f47;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.osiris-launch-access > span:first-child {
+  font-weight: 700;
+}
+
+.osiris-launch-dot {
+  font-weight: 700;
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .osiris-launch-access {
+    min-height: 36px;
+    padding: 6px 10px;
+
+    flex-wrap: wrap;
+    gap: 2px 5px;
+
+    font-size: 10px;
+    letter-spacing: 0.045em;
+    line-height: 1.25;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  #equirevital .eqv-empty-state {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#wellbeing .duat-content {
+  /* Same banner-clear as #bones > button.category-button:first-of-type
+     (in-flow .logo ~60px stays on the banner). */
+  clear: both;
+  padding-top: 0;
+  margin-top: calc(280px - 60px + 10px);
+}
+
+#wellbeing .osiris-wb-trends {
+  text-align: left;
+  color: var(--primary-color, #007a5e);
+  background: #ffffff;
+  box-shadow: 0 4px 18px rgba(0, 40, 30, 0.1);
+  border-radius: 12px;
+  padding: 18px 20px 22px;
+  margin: 0 0 24px;
+  box-sizing: border-box;
+  /* Match Diagnostics .category-button: full .screen content width
+     (inside 20px screen padding), not the narrower .duat-content column. */
+  width: calc((100% + 20px) / 0.85);
+  max-width: none;
+  margin-left: -80px; /* .duat-content margin-left 70px + padding-left 10px */
+}
+
+@media screen and (max-width: 799px) {
+  #wellbeing .osiris-wb-trends:not(:has(.osiris-locked-state)) {
+    width: calc(100% + 40px); /* duat padding 10+10 + margins 10+10 */
+    margin-left: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #wellbeing .osiris-wb-trends:not(:has(.osiris-locked-state)) {
+    width: calc(100% + 30px); /* duat padding 5+5 + margins 10+10 */
+    margin-left: -15px;
+  }
+}
+
+#wellbeing .osiris-wb-trends-title {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary-color, #007a5e);
+}
+
+#wellbeing .osiris-wb-trends-note,
+#wellbeing .osiris-wb-trends-empty {
+  color: var(--primary-color, #007a5e);
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin: 0 0 14px;
+}
+
+/* Shared OSIRIS locked-module card (EQUIREVITAL + WELLBEING ME). */
+.osiris-locked-state {
+  text-align: center;
+  padding: 36px 28px 32px;
+  box-sizing: border-box;
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff;
+  border: 1px solid rgba(0, 122, 94, 0.16);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 40, 30, 0.08);
+  color: var(--primary-color, #007a5e);
+}
+
+.osiris-locked-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin: 0 auto 14px;
+  color: #007a5e;
+  opacity: 0.88;
+}
+
+.osiris-locked-icon svg {
+  display: block;
+}
+
+.osiris-locked-title {
+  margin: 0 0 14px;
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #004d3a;
+}
+
+.osiris-locked-lead {
+  margin: 0 0 12px;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.45;
+  color: #004d3a;
+}
+
+.osiris-locked-copy {
+  margin: 0 0 20px;
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--primary-color, #007a5e);
+}
+
+.osiris-locked-req {
+  margin: 0;
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #005f47;
+}
+
+.osiris-locked-state .osiris-locked-auth-btn {
+  display: inline-block;
+  width: auto;
+  max-width: none;
+  margin: 16px auto 0;
+  padding: 4px 15px;
+  background: #007a5e;
+  color: #fff;
+  border: 2px solid #007a5e;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  line-height: 1.15;
+  height: auto;
+  min-height: 0;
+  box-shadow: none;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.osiris-locked-state .osiris-locked-auth-btn:hover {
+  background: #005c47;
+  border-color: #005c47;
+  color: #fff;
+}
+
+#wellbeing .osiris-wb-trends:has(.osiris-locked-state) {
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 12px 36px rgba(0, 60, 47, 0.18),
+              0 2px 8px rgba(0, 60, 47, 0.06);
+}
+
+#wellbeing .osiris-wb-trends .osiris-locked-state {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#wellbeing .osiris-wb-trends .osiris-locked-state.osiris-wb-trends-empty {
+  font-size: inherit;
+  line-height: inherit;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#wellbeing .osiris-wb-trends .osiris-tx-block {
+  margin: 16px 0;
+}
+
+#wellbeing .osiris-wb-trends .osiris-tx-item {
+  margin: 10px 0 14px;
+}
+
+.osiris-tx-herb-acc {
+  margin: 0;
+  border-bottom: 1px solid rgba(0, 122, 94, 0.18);
+}
+.osiris-tx-herb-acc-sum {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  list-style: none;
+  padding: 10px 0;
+  font-weight: 700;
+  color: var(--primary-color, #007a5e);
+  line-height: 1.35;
+}
+.osiris-tx-herb-acc-sum::-webkit-details-marker {
+  display: none;
+}
+.osiris-tx-herb-acc-sum::after {
+  content: "";
+  display: inline-block;
+  width: 0.42rem;
+  height: 0.42rem;
+  flex: 0 0 auto;
+  margin-left: auto;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  opacity: 0.5;
+  transform: rotate(-45deg);
+  transition: transform 0.32s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease;
+}
+.osiris-tx-herb-acc[open] > .osiris-tx-herb-acc-sum::after {
+  transform: rotate(45deg);
+  opacity: 0.7;
+}
+.osiris-tx-herb-acc .osiris-tx-item {
+  margin: 0 0 12px;
+  padding: 0 0 8px;
+}
+.osiris-tx-herb-acc-title {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.osiris-tx-herb-acc-common {
+  flex: 0 1 auto;
+  min-width: 0;
+}
+.osiris-tx-herb-acc-latin {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.osiris-tx-herb-acc-latin::before {
+  content: " (";
+}
+.osiris-tx-herb-acc-latin::after {
+  content: ")";
+}
+.osiris-tx-botanica-btn {
+  flex: 0 0 200px;
+  width: 200px;
+  height: 20px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 14px;
+  border: none;
+  border-radius: 20px;
+  background: var(--primary-color, #007a5e);
+  color: var(--primary-color, #007a5e);
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.osiris-tx-botanica-btn:hover,
+.osiris-tx-botanica-btn:focus-visible {
+  color: #ffffff;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .osiris-tx-herb-acc-sum {
+    display: grid;
+    grid-template-columns: 1fr 125px auto;
+    grid-template-areas:
+      "common common chev"
+      "latin button chev";
+    align-items: center;
+    column-gap: 0.5rem;
+    row-gap: 4px;
+  }
+  .osiris-tx-herb-acc-common {
+    grid-area: common;
+    text-align: left;
+  }
+  .osiris-tx-herb-acc-latin {
+    grid-area: latin;
+    text-align: left;
+    font-weight: 400;
+    font-style: italic;
+  }
+  .osiris-tx-herb-acc-latin::before,
+  .osiris-tx-herb-acc-latin::after {
+    content: none;
+  }
+  .osiris-tx-botanica-btn {
+    grid-area: button;
+    flex: 0 0 125px;
+    width: 125px;
+    justify-self: end;
+    letter-spacing: 0.14em;
+  }
+  .osiris-tx-herb-acc-sum::after {
+    grid-area: chev;
+    margin-left: 0;
+    align-self: start;
+    margin-top: 0.55em;
+  }
+}
+
+/* TRENDS treatment comparison: parent section → child option → details */
+#wellbeing .osiris-wb-trends .osiris-wb-compare > strong {
+  display: block;
+  font-size: 1.22rem;
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  line-height: 1.25;
+  margin: 0 0 0.7em;
+}
+
+#wellbeing .osiris-wb-trends .osiris-wb-compare .osiris-wb-compare-title {
+  font-size: 1.02rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.35;
+  margin: 0 0 0.35em;
+}
+
+#wellbeing .osiris-wb-trends .osiris-wb-compare .osiris-wb-compare-title strong {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+#wellbeing .osiris-wb-trends .osiris-wb-compare .osiris-tx-item > div:not(.osiris-wb-compare-title) {
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+#wellbeing .osiris-wb-trends .osiris-wb-compare .osiris-tx-item > div:not(.osiris-wb-compare-title) strong {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+#wellbeing .osiris-wb-updated {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0 0 16px;
+  color: var(--primary-color, #007a5e);
+}
+
+#wellbeing .osiris-wb-progress-list {
+  list-style: none;
+  margin: 8px 0 12px;
+  padding: 0;
+}
+
+#wellbeing .osiris-wb-progress-list li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  justify-content: space-between;
+  align-items: start;
+  column-gap: 16px;
+  margin: 0 0 8px;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  line-height: 1.45;
+  color: var(--primary-color, #007a5e);
+}
+
+#wellbeing .osiris-wb-progress-label {
+  grid-column: 1;
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+#wellbeing .osiris-wb-progress-values {
+  grid-column: 2;
+  justify-self: end;
+  text-align: right;
+  white-space: nowrap;
+}
+
+#wellbeing .osiris-wb-progress-meta {
+  margin: 8px 0 0;
+  color: var(--primary-color, #007a5e);
+  line-height: 1.45;
+}
+
+#wellbeing .osiris-wb-suggest-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+}
+
+#wellbeing .osiris-wb-suggest-list li {
+  margin: 0 0 12px;
+  padding: 0;
+  line-height: 1.45;
+  color: var(--primary-color, #007a5e);
+}
+
+
+
+/* ==============================================================
+   OSIRIS Global Diagnostics popup — heading size alignment
+   Do not change .osiris-diag-header h3.
+   Nested diagnostic h4s keep .osiris-diag-body h4 (15px / 17.5px).
+   Body copy stays .osiris-diag-body (14.5px / 17px).
+   ============================================================== */
+
+#osirisEqrPopup .osiris-eqr-global-report {
+  font-size: inherit;
+  line-height: inherit;
+  text-align: left;
+}
+
+/* Desktop/laptop: fold titles 15px → 15px meet-point with subsections
+   that inherit 14.5px. Shared size: 15px. */
+#osirisDiagPopup .osiris-diag-body > .osiris-diag-fold > h4,
+#osirisEqrPopup .osiris-eqr-global-report > .osiris-diag-fold > h4 {
+  font-size: 15px;
+}
+
+/* T&P subsection titles in the generated markup (after fold wrap they
+   sit in .osiris-diag-fold-inner, not as popup direct children):
+     .osiris-tx-block strong  → Diagnostic basis, 1. Prevention, …
+     .osiris-tx-item strong    → Blood pressure / load reduction, Core Global monitoring set, … */
+#osirisDiagPopup .osiris-diag-body .osiris-tx-block > strong,
+#osirisDiagPopup .osiris-diag-body .osiris-tx-item strong,
+#osirisEqrPopup .osiris-eqr-global-report .osiris-tx-block > strong,
+#osirisEqrPopup .osiris-eqr-global-report .osiris-tx-item strong {
+  font-size: 19px;
+}
+
+#osirisDiagPopup .osiris-diag-body .osiris-tx-section-head,
+#osirisEqrPopup .osiris-eqr-global-report .osiris-tx-section-head,
+#osirisDiagPopup .osiris-diag-body .osiris-tx-item-head,
+#osirisEqrPopup .osiris-eqr-global-report .osiris-tx-item-head,
+#wellbeing .osiris-tx-section-head {
+  display: block;
+  text-align: center;
+}
+
+.osiris-tx-pharma-class,
+.osiris-tx-pharma-name {
+  font-weight: 600;
+  font-size: inherit;
+}
+
+.osiris-tx-field-label,
+#wellbeing .osiris-wb-trends .osiris-tx-field-label,
+#wellbeing .osiris-wb-trends .osiris-tx-item em.osiris-tx-field-label {
+  font-style: italic;
+  font-weight: 200;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.osiris-tx-spark {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 36px;
+  margin: 6px 0 8px;
+}
+
+.osiris-tx-spark-expand {
+  height: 88px;
+  margin: 8px 0 10px;
+}
+
+.osiris-tx-monitor-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 12px 0 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.osiris-tx-monitor-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  text-align: left;
+  margin: 0;
+  padding: 10px 10px 12px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 122, 94, 0.16);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 40, 30, 0.06);
+  cursor: pointer;
+  color: inherit;
+  font: inherit;
+  font-weight: 400;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.osiris-tx-monitor-tile-name {
+  font-size: 0.92em;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 4px;
+  text-align: left;
+}
+
+.osiris-tx-monitor-tile-value,
+.osiris-tx-monitor-status {
+  font-size: inherit;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.osiris-tx-monitor-empty {
+  font-size: 0.85em;
+  margin: 6px 0;
+  line-height: 1.35;
+}
+
+.osiris-tx-monitor-tile.is-open {
+  grid-column: 1 / -1;
+}
+
+.osiris-monitor-graph-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 40, 30, 0.55);
+  backdrop-filter: blur(2px);
+  z-index: 1600;
+}
+.osiris-monitor-graph-overlay.is-open { display: block; }
+
+.osiris-monitor-graph-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(94vw, 760px);
+  max-height: 85vh;
+  overflow: auto;
+  background: #ffffff;
+  border: 1px solid var(--border-color, #003c2f);
+  border-radius: 12px;
+  z-index: 1601;
+  box-sizing: border-box;
+  padding: 16px 18px 20px;
+}
+.osiris-monitor-graph-popup.is-open { display: block; }
+
+.osiris-monitor-graph-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 8px;
+}
+.osiris-monitor-graph-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #004d3a;
+}
+.osiris-monitor-graph-close {
+  border: 0;
+  background: transparent;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #004d3a;
+  padding: 0 4px;
+}
+
+.osiris-tx-monitor-expand {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 122, 94, 0.12);
+  min-width: 0;
+}
+
+.osiris-tx-monitor-readings {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.osiris-tx-monitor-readings li {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 0 6px;
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.osiris-tx-monitor-when {
+  min-width: 0;
+}
+
+.osiris-tx-monitor-reading {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .osiris-tx-monitor-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .osiris-tx-monitor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.osiris-tx-deprescribe-wrap {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+  margin-top: 8px;
+}
+
+.osiris-tx-deprescribe-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  box-sizing: border-box;
+}
+
+.osiris-tx-deprescribe-table th,
+.osiris-tx-deprescribe-table td {
+  border: 1px solid rgba(0, 122, 94, 0.18);
+  padding: 8px 10px;
+  vertical-align: top;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;
+}
+
+.osiris-tx-deprescribe-table th[scope="row"],
+.osiris-tx-deprescribe-table thead th:first-child {
+  width: 38%;
+}
+
+#wellbeing .osiris-wb-trends .osiris-tx-updated {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+#wellbeing .osiris-wb-trends .osiris-tx-patient-ident {
+  display: block;
+  width: 100%;
+  margin: 4px 0 14px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+#wellbeing .osiris-wb-trends .osiris-tx-patient-ident-name,
+#wellbeing .osiris-wb-trends .osiris-tx-patient-ident-pid {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 4px;
+}
+
+.osiris-tx-patient-ident {
+  display: block;
+  width: 100%;
+  margin: 4px 0 14px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.osiris-tx-patient-ident div {
+  display: block;
+  width: 100%;
+  margin: 0 0 4px;
+  text-align: center;
+}
+.osiris-tx-trend-chip {
+  display: block;
+  white-space: nowrap;
+  margin: 0 0 0.2em 0;
+}
+
+@media (max-width: 768px) {
+  #osirisDiagPopup .osiris-diag-body > .osiris-diag-fold > h4,
+  #osirisEqrPopup .osiris-eqr-global-report > .osiris-diag-fold > h4 {
+    font-size: 17px;
+  }
+
+  /* Phone currently renders these at 17px (this block was overwriting
+     the 19px desktop rule). 1.2em = 20% larger than that 17px. */
+  #osirisDiagPopup .osiris-diag-body .osiris-tx-block > strong,
+  #osirisDiagPopup .osiris-diag-body .osiris-tx-item strong,
+  #osirisEqrPopup .osiris-eqr-global-report .osiris-tx-block > strong,
+  #osirisEqrPopup .osiris-eqr-global-report .osiris-tx-item strong {
+    font-size: 1.2em;
+  }
+}
+
+/* DESKTOP/LAPTOP ONLY — do not use inside max-width: 768px.
+   Body 300 is the lighter desktop copy look. Fold titles stay 400.
+   T&P headings reuse .osiris-diag-body .osiris-sub > strong (CARDIO /
+   RENAL / UPPER RESPIRATORY / …): font-size 1.5em, no extra weight. */
+@media screen and (min-width: 769px) {
+  #osirisDiagPopup .osiris-diag-body,
+  #osirisEqrPopup .osiris-eqr-global-report {
+    font-weight: 300;
+  }
+  #osirisDiagPopup .osiris-diag-body > .osiris-diag-fold > h4,
+  #osirisEqrPopup .osiris-eqr-global-report > .osiris-diag-fold > h4 {
+    font-weight: 400;
+  }
+  #osirisDiagPopup .osiris-diag-body .osiris-tx-block > strong,
+  #osirisDiagPopup .osiris-diag-body .osiris-tx-item strong,
+  #osirisEqrPopup .osiris-eqr-global-report .osiris-tx-block > strong,
+  #osirisEqrPopup .osiris-eqr-global-report .osiris-tx-item strong {
+    font-size: 1.5em;
+    font-weight: bolder;
+  }
+}
+
+/* Global Diagnostics popup only: section 4 (Integrative / Alternative)
+   as one card wrapping the whole block, not each herb item. */
+#osirisDiagPopup .osiris-diag-body .osiris-tx-integrative-card {
+  background: #ffffff;
+  border: none;
+  box-shadow: 0 4px 18px rgba(0, 40, 30, 0.12);
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin: 22px 0;
+  box-sizing: border-box;
+}
+
+
+
+/* ============================================================
+   OSIRIS — EQUIREVITAL stylesheet (Iter-36 visual refresh)
+   ============================================================
+   Visual direction:
+     elegant · calm · clinical-artistic · interpretive · spacious
+     readable · biologically reflective.
+
+   NOT:
+     dense technical dashboard · admin panel · engineering console.
+
+   Architecture rules (unchanged):
+     - Every selector scoped under `#equirevital`.
+     - Only `.eqv-*` class names; no generic OSIRIS class touched.
+     - Reuses brand palette (#007a5e green, #ccfff0 mint, white card).
+     - Reuses Instrument Serif / Inter Tight / JetBrains Mono stacks.
+   ============================================================ */
+
+
+/* ---------- Container: a white "popup-style" card on the mint screen */
+
+#equirevital .eqv-container {
+    position: relative;
+    z-index: 2;                         /* above #equirevital::before */
+    width: 100%;
+    max-width: 760px;
+    margin: -10px auto 60px;            /* clears the 320 px hero on desktop */
+    padding: 48px 56px 56px;
+    box-sizing: border-box;
+
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 12px 36px rgba(0, 60, 47, 0.18),
+                0 2px 8px  rgba(0, 60, 47, 0.06);
+
+    font-family: "Inter Tight", system-ui, sans-serif;
+    color: #00432f;
+    text-align: left;
+    line-height: 1.65;
+}
+
+@media (max-width: 768px) {
+    #equirevital .eqv-container {
+        margin: -40px 12px 48px;        /* matches 280 px mobile hero */
+        padding: 32px 24px 36px;
+        border-radius: 12px;
+    }
+}
+
+
+/* ---------- Section titles (italic serif, no rule) */
+
+#equirevital .eqv-section-title {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.005em;
+    color: #00432f;
+
+    margin: 36px 0 18px;
+    padding: 0;
+    border: 0;
+    text-transform: none;
+}
+
+#equirevital .eqv-section-title:first-of-type { margin-top: 8px; }
+
+
+/* ---------- Status strip: centred, serif, breathing */
+
+#equirevital .eqv-status-strip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 8px 0 20px;
+    margin: 0 0 8px;
+    border-bottom: 1px solid rgba(0, 122, 94, 0.10);
+}
+
+/* Severity chip becomes the big italic-serif headline word. */
+#equirevital .eqv-status-strip [data-eqv-field="severity-chip"] {
+    display: block;
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0;
+    margin: 0;
+
+    font-family: "Instrument Serif", Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(34px, 5vw, 44px);
+    letter-spacing: -0.01em;
+    text-transform: none;
+    line-height: 1.1;
+    color: #007a5e;
+}
+
+/* "Tracking N weeks" — soft serif subtitle. */
+#equirevital .eqv-status-strip [data-eqv-field="tracked-for"] {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-style: italic;
+    font-size: 16px;
+    color: rgba(0, 60, 47, 0.6);
+    margin: 0 0 8px;
+}
+
+/* The four count "chips" become a single soft serif line with middots. */
+#equirevital .eqv-status-strip [data-eqv-field$="-count"] {
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0 6px;
+    margin: 0;
+
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-style: normal;
+    font-size: 13.5px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: rgba(0, 60, 47, 0.65);
+}
+#equirevital .eqv-status-strip [data-eqv-field$="-count"] + [data-eqv-field$="-count"]::before {
+    content: "·";
+    margin: 0 8px 0 -6px;
+    color: rgba(0, 60, 47, 0.35);
+}
+
+
+/* ---------- Critical panel: soft white card, no harsh borders */
+
+#equirevital .eqv-critical-panel {
+    background: #ffffff;
+    border: 0;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin: 0 0 28px;
+    box-shadow: 0 6px 18px rgba(192, 57, 43, 0.10);
+    position: relative;
+}
+
+#equirevital .eqv-critical-panel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 12px;
+    border: 1px solid rgba(192, 57, 43, 0.22);
+    pointer-events: none;
+}
+
+#equirevital .eqv-critical-panel .eqv-section-title {
+    margin: 0 0 14px;
+    font-size: 24px;
+    color: #00432f;
+}
+
+#equirevital .eqv-critical-panel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#equirevital .eqv-critical-panel li {
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(0, 122, 94, 0.08);
+    color: #00432f;
+}
+
+#equirevital .eqv-critical-panel li:last-child  { border-bottom: 0; padding-bottom: 0; }
+#equirevital .eqv-critical-panel li:first-child { padding-top: 6px; }
+
+#equirevital .eqv-critical-panel li .eqv-timeline-summary {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.25;
+    color: #00432f;
+    margin-right: 12px;
+}
+
+#equirevital .eqv-critical-panel li .eqv-muted {
+    display: block;
+    margin: 6px 0 0;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba(0, 60, 47, 0.7) !important;
+}
+
+
+/* ---------- Pill chips (soft, text-like) */
+
+#equirevital .eqv-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    border-radius: 999px;
+
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.5px;
+    letter-spacing: 0;
+    text-transform: none;
+    white-space: nowrap;
+
+    background: rgba(0, 122, 94, 0.07);
+    border: 1px solid transparent;
+    color: #007a5e;
+    transition: background-color 120ms ease,
+                border-color 120ms ease,
+                color 120ms ease;
+}
+
+#equirevital .eqv-chip.eqv-danger {
+    background: rgba(192, 57, 43, 0.08);
+    color: #8c1f14;
+}
+#equirevital .eqv-chip.eqv-warning {
+    background: rgba(184, 144, 76, 0.12);
+    color: #7a5a1e;
+}
+#equirevital .eqv-chip.eqv-normal {
+    background: rgba(0, 122, 94, 0.10);
+    color: #007a5e;
+}
+#equirevital .eqv-chip.eqv-muted {
+    background: transparent;
+    color: rgba(0, 60, 47, 0.55);
+    border-color: rgba(0, 60, 47, 0.18);
+}
+
+
+/* ---------- iter-41/42 — clickable filter chips (the visible bit) */
+
+#equirevital button.eqv-chip,
+#equirevital .eqv-chip-filter {
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid transparent;
+    font: inherit;
+    transition: background-color 140ms ease,
+                border-color   140ms ease,
+                color          140ms ease,
+                transform      120ms ease,
+                box-shadow     140ms ease;
+}
+#equirevital button.eqv-chip:hover,
+#equirevital .eqv-chip-filter:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 60, 47, 0.10);
+}
+#equirevital button.eqv-chip:active,
+#equirevital .eqv-chip-filter:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+#equirevital button.eqv-chip:focus-visible,
+#equirevital .eqv-chip-filter:focus-visible {
+    outline: 2px solid rgba(0, 122, 94, 0.35);
+    outline-offset: 2px;
+}
+
+#equirevital .eqv-status-strip .eqv-chip-filter {
+    border-color: rgba(0, 60, 47, 0.25);
+}
+#equirevital .eqv-status-strip .eqv-chip-filter.eqv-danger {
+    border-color: rgba(192, 57, 43, 0.40);
+    background: rgba(192, 57, 43, 0.06);
+}
+#equirevital .eqv-status-strip .eqv-chip-filter.eqv-normal {
+    border-color: rgba(0, 122, 94, 0.40);
+    background: rgba(0, 122, 94, 0.08);
+}
+
+
+/* ---------- In-card drill-down (iter-39) ------------------------- */
+
+/* The clicked card lifts visually so the user feels the "open" state. */
+#equirevital .eqv-category-card[data-eqv-active="1"] {
+    background: rgba(0, 122, 94, 0.04);
+    border-bottom-color: rgba(0, 122, 94, 0.18);
+}
+#equirevital .eqv-category-card[data-eqv-active="1"]:hover {
+    background: rgba(0, 122, 94, 0.06);
+}
+
+/* Top portion of the card (name + summary + footer) gets a tiny bit
+   more breathing space when expanded so the drill panel feels nested. */
+#equirevital .eqv-category-card-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 28px;
+    row-gap: 4px;
+    align-items: baseline;
+}
+#equirevital .eqv-category-card-header .eqv-category-name {
+    grid-column: 1; grid-row: 1;
+}
+#equirevital .eqv-category-card-header .eqv-category-summary {
+    grid-column: 1; grid-row: 2;
+}
+#equirevital .eqv-category-card-header .eqv-category-footer {
+    grid-column: 2; grid-row: 1 / span 2;
+    align-self: center;
+    display: flex; flex-direction: column; align-items: flex-end;
+    gap: 4px; margin: 0;
+}
+
+#equirevital .eqv-card-drill {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px dashed rgba(0, 122, 94, 0.18);
+}
+
+#equirevital .eqv-card-drill-label {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.2;
+    color: #007a5e;
+    margin: 0 0 14px;
+    padding: 0;
+}
+
+#equirevital .eqv-card-drill-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 16px;
+}
+
+/* Per-card chips reuse the same iter-36d "action pill" hardening so
+   no global `button` rule can invert the active palette. */
+#equirevital .eqv-card-drill-controls button {
+    cursor: pointer;
+    padding: 7px 16px;
+    border-radius: 999px;
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-style: normal;
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    line-height: 1.2;
+    white-space: nowrap;
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 122, 94, 0.30);
+    color: #007a5e !important;
+    transition: background-color 120ms ease, color 120ms ease,
+                border-color 120ms ease;
+}
+#equirevital .eqv-card-drill-controls button:hover {
+    background: rgba(0, 122, 94, 0.06) !important;
+    border-color: rgba(0, 122, 94, 0.55);
+}
+#equirevital .eqv-card-drill-controls button.eqv-normal {
+    background: #007a5e !important;
+    border-color: #007a5e !important;
+    color: #ffffff !important;
+}
+#equirevital .eqv-card-drill-controls button.eqv-normal:hover {
+    background: #005f47 !important;
+    border-color: #005f47 !important;
+}
+
+/* In-card timeline list — same iter-36b row look. Items inherit
+   `.eqv-timeline-item` styling already defined further up. */
+#equirevital .eqv-card-drill ul.eqv-timeline {
+    border-top: 1px solid rgba(0, 122, 94, 0.10);
+    margin: 0;
+    padding: 0;
+}
+
+#equirevital .eqv-card-drill-empty {
+    text-align: left;
+    padding: 28px 4px;
+    font-size: 18px;
+}
+
+#equirevital .eqv-card-drill .eqv-timeline-more {
+    margin-top: 18px;
+    text-align: center;
+}
+#equirevital .eqv-card-drill .eqv-timeline-more button {
+    cursor: pointer;
+    padding: 10px 24px;
+    border-radius: 999px;
+    background: #007a5e !important;
+    border: 1px solid #007a5e !important;
+    color: #ffffff !important;
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+#equirevital .eqv-card-drill .eqv-timeline-more button:hover {
+    background: #005f47 !important;
+    border-color: #005f47 !important;
+}
+
+@media (max-width: 600px) {
+    #equirevital .eqv-card-drill-label { font-size: 20px; }
+    #equirevital .eqv-card-drill { padding-top: 12px; margin-top: 14px; }
+}
+
+
+/* ---------- Subsystem drill-down header (iter-38) ---------------- */
+
+#equirevital .eqv-subsystem-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0 24px;
+    margin: 0 0 12px;
+    border-bottom: 1px solid rgba(0, 122, 94, 0.10);
+}
+
+#equirevital .eqv-subsystem-back {
+    background: transparent;
+    border: 0;
+    padding: 4px 0;
+    margin: 0;
+    cursor: pointer;
+
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-style: normal;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: none;
+    color: rgba(0, 60, 47, 0.6);
+
+    transition: color 120ms ease;
+}
+#equirevital .eqv-subsystem-back:hover { color: #007a5e; }
+
+#equirevital .eqv-subsystem-title {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: clamp(34px, 5vw, 44px);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    color: #00432f;
+    margin: 0;
+    padding: 0;
+}
+
+#equirevital .eqv-subsystem-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    #equirevital .eqv-subsystem-title { font-size: 30px; }
+}
+
+
+/* ---------- Category grid (single column, breathing rows) */
+
+#equirevital .eqv-category-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    margin: 0 0 8px;
+    border-top: 1px solid rgba(0, 122, 94, 0.10);
+}
+
+#equirevital .eqv-category-card {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 6px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 122, 94, 0.10);
+    border-radius: 0;
+    box-shadow: none;
+
+    cursor: pointer;
+    transition: background-color 120ms ease;
+}
+
+#equirevital .eqv-category-card:hover {
+    background: rgba(0, 122, 94, 0.04);
+    transform: none;
+    box-shadow: none;
+    border-color: rgba(0, 122, 94, 0.10);
+}
+
+#equirevital .eqv-category-card:last-child { border-bottom: 0; }
+
+#equirevital .eqv-category-card .eqv-category-name {
+    grid-column: 1;
+    grid-row: 1;
+    font-family: "Instrument Serif", Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.15;
+    color: #00432f;
+}
+
+#equirevital .eqv-category-card .eqv-category-summary {
+    grid-column: 1;
+    grid-row: 2;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: rgba(0, 60, 47, 0.78);
+    margin-top: 2px;
+}
+
+#equirevital .eqv-category-card .eqv-category-summary.eqv-muted {
+    font-style: italic;
+    color: rgba(0, 60, 47, 0.45) !important;
+}
+
+#equirevital .eqv-category-card .eqv-category-footer {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    margin: 0;
+}
+
+/* Inside the category footer, the severity chip reads as elegant
+   serif status text rather than a pill. */
+#equirevital .eqv-category-card .eqv-category-footer .eqv-chip {
+    background: transparent !important;
+    border: 0 !important;
+    padding: 0;
+    font-family: "Instrument Serif", Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1;
+    color: #007a5e;
+}
+#equirevital .eqv-category-card .eqv-category-footer .eqv-chip.eqv-danger  { color: #8c1f14; }
+#equirevital .eqv-category-card .eqv-category-footer .eqv-chip.eqv-warning { color: #7a5a1e; }
+#equirevital .eqv-category-card .eqv-category-footer .eqv-chip.eqv-normal  { color: #007a5e; }
+#equirevital .eqv-category-card .eqv-category-footer .eqv-chip.eqv-muted   {
+    font-size: 13px;
+    color: rgba(0, 60, 47, 0.55) !important;
+    font-style: normal;
+}
+
+
+/* ---------- Timeline controls (action pills) */
+
+#equirevital .eqv-timeline-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 18px;
+}
+
+#equirevital .eqv-timeline-controls button {
+    cursor: pointer;
+    padding: 7px 16px;
+    border-radius: 999px;
+
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-style: normal;
+    font-size: 12.5px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    line-height: 1.2;
+    white-space: nowrap;
+
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 122, 94, 0.30);
+    color: #007a5e !important;
+
+    transition: background-color 120ms ease, color 120ms ease,
+                border-color 120ms ease, transform 120ms ease;
+}
+
+#equirevital .eqv-timeline-controls button:hover {
+    background: rgba(0, 122, 94, 0.06) !important;
+    border-color: rgba(0, 122, 94, 0.55);
+}
+
+/* Active filter chip = solid OSIRIS green, white text. !important
+   so the global `button { color: var(--button-text-color) }`
+   and any future override can never reverse it. */
+#equirevital .eqv-timeline-controls button.eqv-normal {
+    background: #007a5e !important;
+    border-color: #007a5e !important;
+    color: #ffffff !important;
+}
+#equirevital .eqv-timeline-controls button.eqv-normal:hover {
+    background: #005f47 !important;
+    border-color: #005f47 !important;
+}
+
+
+/* ---------- Timeline list */
+
+#equirevital .eqv-timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid rgba(0, 122, 94, 0.10);
+}
+
+#equirevital .eqv-timeline-item {
+    display: grid;
+    grid-template-columns: 160px 1fr auto;
+    column-gap: 24px;
+    row-gap: 2px;
+    align-items: baseline;
+
+    position: static;            /* drop the iter-36 left-rail dot system */
+    padding: 18px 4px;
+    border-bottom: 1px solid rgba(0, 122, 94, 0.10);
+    background: transparent;
+}
+
+#equirevital .eqv-timeline-item:last-child { border-bottom: 0; }
+#equirevital .eqv-timeline-item::before    { content: none; }
+
+#equirevital .eqv-timeline-item .eqv-timeline-ts {
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-style: normal;
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    text-transform: none;
+    color: rgba(0, 60, 47, 0.55);
+    margin: 0;
+}
+
+#equirevital .eqv-timeline-item .eqv-timeline-summary {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.45;
+    color: #00432f;
+    margin: 0;
+}
+
+/* Severity tint applied via the .eqv-* modifier class on the <li>. */
+#equirevital .eqv-timeline-item.eqv-danger  .eqv-timeline-summary { color: #8c1f14; }
+#equirevital .eqv-timeline-item.eqv-warning .eqv-timeline-summary { color: #7a5a1e; }
+#equirevital .eqv-timeline-item.eqv-normal  .eqv-timeline-summary { color: #00432f; }
+#equirevital .eqv-timeline-item.eqv-muted   .eqv-timeline-summary { color: rgba(0, 60, 47, 0.55); }
+
+
+/* "Show earlier" — solid OSIRIS green pill button. */
+#equirevital .eqv-timeline-more {
+    margin-top: 24px;
+    text-align: center;
+}
+
+#equirevital .eqv-timeline-more button {
+    cursor: pointer;
+    padding: 12px 28px;
+    border-radius: 999px;
+
+    background: #007a5e !important;
+    border: 1px solid #007a5e !important;
+    color: #ffffff !important;
+
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12.5px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    transition: background-color 120ms ease, transform 120ms ease;
+}
+#equirevital .eqv-timeline-more button:hover {
+    background: #005f47 !important;
+    border-color: #005f47 !important;
+    transform: translateY(-1px);
+}
+
+
+/* ---------- Empty state */
+
+#equirevital .eqv-empty-state {
+    text-align: center;
+    padding: 56px 28px;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    color: rgba(0, 60, 47, 0.55);
+
+    font-family: "Instrument Serif", Georgia, serif;
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+#equirevital .eqv-empty-state small {
+    display: block;
+    margin-top: 14px;
+    font-family: "Inter Tight", system-ui, sans-serif;
+    font-style: normal;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(0, 60, 47, 0.40);
+}
+
+#equirevital .eqv-empty-state.osiris-locked-state[data-eqv-region="anonymous"] {
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 36px 28px 32px;
+    background: #ffffff;
+    border: 1px solid rgba(0, 122, 94, 0.16);
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 40, 30, 0.08);
+    font-style: normal;
+    font-size: inherit;
+    color: var(--primary-color, #007a5e);
+}
+
+#osiris-iter60-eqr-anon.osiris-locked-state {
+    max-width: 560px;
+    margin: 24px auto;
+    padding: 36px 28px 32px !important;
+    border: 1px solid rgba(0, 122, 94, 0.16) !important;
+    border-radius: 12px !important;
+    background: #ffffff !important;
+    text-align: center;
+    color: var(--primary-color, #007a5e) !important;
+}
+
+#equirevital:has(.eqv-empty-state[data-eqv-region="anonymous"]:not([hidden])) #osiris-iter60-eqr-anon {
+    display: none !important;
+}
+
+/* ---------- Standalone modifier tokens (text only) ---------- */
+
+#equirevital .eqv-muted   { color: rgba(0, 60, 47, 0.55) !important; }
+#equirevital .eqv-danger  { color: #8c1f14 !important; }
+#equirevital .eqv-warning { color: #7a5a1e !important; }
+#equirevital .eqv-normal  { color: #007a5e !important; }
+
+
+/* ---------- Mobile refinements ---------- */
+
+@media (max-width: 600px) {
+    #equirevital .eqv-section-title { font-size: 24px; margin-top: 28px; }
+
+    #equirevital .eqv-status-strip [data-eqv-field="severity-chip"] {
+        font-size: 32px;
+    }
+
+    #equirevital .eqv-category-card {
+        grid-template-columns: 1fr;
+    }
+    #equirevital .eqv-category-card .eqv-category-footer {
+        grid-column: 1;
+        grid-row: 3;
+        align-self: flex-start;
+        align-items: flex-start;
+        margin-top: 6px;
+    }
+
+    #equirevital .eqv-timeline-item {
+        grid-template-columns: 1fr;
+        row-gap: 4px;
+    }
+    #equirevital .eqv-timeline-item .eqv-timeline-ts {
+        font-size: 11.5px;
+    }
+    #equirevital .eqv-timeline-item .eqv-timeline-summary {
+        font-size: 17px;
+    }
+
+    #equirevital .eqv-critical-panel        { padding: 20px 18px; }
+    #equirevital .eqv-critical-panel li .eqv-timeline-summary { font-size: 20px; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.main-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  text-align: left;
+}
+
+.main-list li {
+  margin-bottom: 8px;
+}
+
+
+
+
+
+
+.shop-heading-wrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin-top: 70px;
+}
+
+.shop-heading-main {
+  display: inline-block;
+
+  max-width: 720px;
+  width: fit-content;
+
+  margin: 0 auto 20px auto;
+  padding: 14px 28px;
+
+  text-align: center;
+
+  font-family: inherit;
+  font-size: 32px;
+  line-height: 1.35;
+  letter-spacing: 3px;
+
+  color: #e8d39a;
+
+  background: #10211c;
+  border-radius: 8px;
+
+  text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+@media (min-width: 769px) {
+  .shop-panel.open .shop-heading-wrapper {
+    margin-top: 0;
+  }
+
+  .shop-panel.open .shop-heading-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    max-width: none;
+    height: 64px;
+    margin: 0;
+    padding: 0 28px;
+    box-sizing: border-box;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    z-index: 5;
+  }
+
+  .shop-panel.open .botanica-search-wrap {
+    margin-top: 44px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.intro-text {
+  margin-top: 150px;
+}
+
+.lower-heading {
+  margin-top: 280px;
+}
+
+a {
+  color: var(--primary);
+}
+
+
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+
+
+
+
+.shop-hero {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 30px;
+
+  margin-bottom: 30px;
+
+  flex-wrap: wrap;
+}
+
+.shop-hero-text-left,
+.shop-hero-text-right {
+
+  font-size: 1.4rem;
+
+  font-weight: 600;
+
+  color: #e7d3a2;
+
+  letter-spacing: 2px;
+
+  text-shadow:
+    0 2px 5px rgba(0,0,0,0.45);
+
+  max-width: 240px;
+
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.shop-banner-image {
+  max-width: 400px;
+
+  margin: 20px auto 30px auto;
+
+  display: block;
+}
+
+@media (min-width: 769px) {
+  #shopHeroImage.shop-banner-image,
+  .shop-banner-image {
+    width: min(90vw, 750px);
+    max-width: 750px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto 16px auto;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+
+  .botanica-search {
+    width: min(90vw, 750px);
+    max-width: 750px;
+    margin: 0 auto 12px auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  #shopHeroImage.shop-banner-image,
+  .shop-banner-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: calc(100svh - 210px);
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
+  }
+
+}
+
+
+.shop-heading-main,
+.shop-heading-sub,
+.shop-heading-description {
+  text-align: center;
+
+  letter-spacing: 2px;
+
+  text-shadow:
+    0 2px 4px rgba(0,0,0,0.55),
+    0 0 12px rgba(0,0,0,0.35);
+}
+
+
+
+.shop-heading-sub {
+  font-size: 2.3rem;
+
+  font-weight: 600;
+
+  color: #d7b87b;
+
+  margin-bottom: 24px;
+}
+
+.shop-heading-description {
+  font-size: 1.25rem;
+
+  font-weight: 500;
+
+  color: #f2dfb5 ;
+
+  max-width: 850px;
+
+  margin: 0 auto 38px auto;
+
+  line-height: 1.8;
+}
+
+
+
+@media (max-width: 768px) {
+
+  .shop-heading-wrapper {
+    margin-top: 32px;
+  }
+
+  .shop-heading-main {
+    font-size: 1.15rem;
+    line-height: 1.15;
+    margin: 0 auto 6px auto;
+    padding: 4px 10px;
+  }
+
+  .shop-heading-sub {
+    font-size: 1.7rem;
+  }
+
+  .shop-heading-description {
+    font-size: 1.05rem;
+
+    padding: 0 16px;
+  }
+
+}
+
+
+
+
+
+
+.botanica-search-wrap {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 8px 0 0;
+  background: #10211c;
+  position: relative;
+  z-index: 6;
+}
+
+.botanica-search {
+  display: block;
+  width: min(90vw, 750px);
+  max-width: 750px;
+  margin: 0 auto 12px auto;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #145c48;
+  background: #ffffff;
+  border: 1px solid #2a4a3c;
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.botanica-search::placeholder {
+  color: #5a8f7e;
+  opacity: 1;
+}
+
+.botanica-search:focus {
+  outline: 2px solid rgba(0, 122, 94, 0.35);
+  outline-offset: 1px;
+}
+
+.botanica-search-empty {
+  display: none;
+  width: 100%;
+  margin: 28px 0 8px;
+  text-align: center;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  color: rgba(0, 122, 94, 0.55);
+}
+
+.botanica-search-empty.is-visible {
+  display: block;
+}
+
+.shop-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+
+  width: 100%;
+  margin-top: 0;
+  background: #10211c;
+}
+
+.herb-image {
+  width: 100%;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+
+  display: block;
+}
+
+.herb-image:hover {
+  transform: scale(1.03);
+
+  box-shadow: 0 0 18px rgba(255,255,255,0.12);
+}
+
+
+
+/* =========================
+   POPUP OVERLAY
+========================= */
+
+.herb-popup-overlay {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.88);
+
+  z-index: 99999;
+
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+}
+
+
+
+/* =========================
+   POPUP WINDOW
+========================= */
+
+.herb-popup {
+  position: relative;
+
+  display: flex;
+
+  width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
+
+  max-width: none;
+  max-height: none;
+
+  background: #111;
+
+  border-radius: 14px;
+
+  overflow: hidden;
+
+  box-shadow: 0 0 30px rgba(0,0,0,0.45);
+}
+
+
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.herb-popup-left {
+  width: 50%;
+
+  background: #181818;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  touch-action: none;
+  flex-shrink: 0;
+}
+
+.herb-popup-left img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.herb-popup-right {
+  width: 50%;
+
+  padding: 35px;
+
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  touch-action: pan-y;
+
+  background: #202020;
+
+  color: #d7d7d7;
+
+  box-sizing: border-box;
+}
+
+.herb-popup-right h2 {
+  margin-top: 0;
+
+  font-size: 2rem;
+
+  color: #d8c08a;
+}
+
+.herb-popup-right h3 {
+  margin-top: 28px;
+
+  font-size: 1.1rem;
+
+  color: #bdbdbd;
+}
+
+.herb-popup-right p {
+  line-height: 1.7;
+
+  font-size: 0.96rem;
+}
+
+
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.herb-close {
+  position: absolute;
+
+  top: 14px;
+  right: 18px;
+
+  background: transparent;
+
+  border: none;
+
+  color: #d5d5d5;
+
+  font-size: 2rem;
+
+  cursor: pointer;
+
+  z-index: 5;
+}
+
+.herb-close:hover {
+  opacity: 0.7;
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .shop-gallery {
+    grid-template-columns: 1fr;
+
+    gap: 16px;
+  }
+
+  .botanica-search-wrap {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .botanica-search {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 6px 0;
+    box-sizing: border-box;
+  }
+
+  .herb-popup {
+    flex-direction: column;
+
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
+  }
+
+  .herb-popup-left,
+  .herb-popup-right {
+    width: 100%;
+  }
+
+  .herb-popup-left {
+    height: 45%;
+  }
+
+  .herb-popup-right {
+    height: 55%;
+
+    padding: 24px;
+  }
+
+  .herb-popup-right h2 {
+    font-size: 1.5rem;
+  }
+
+}
+
+
+
+
+
+
+.site-footer {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--primary-color); /* Uses your primary theme color */
+  color: white;
+  font-size: 14px;
+  margin-top: 20px; /* Adds spacing from content */
+}
+
+
+.site-footer {
+  color: white;
+}
+
+/* Override the global primary-color text rule for footer contents
+   (footer bg is primary-color, so green-on-green made the text invisible). */
+.site-footer,
+.site-footer p,
+.site-footer span,
+.site-footer small,
+.site-footer strong,
+.site-footer em,
+.site-footer a {
+  color: #ffffff !important;
+}
+.site-footer .site-footer-mark {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border: 1px solid rgba(255,255,255,0.55);
+  border-radius: 999px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #ffffff !important;
+  vertical-align: middle;
+}
+
+
+
+
+
+
+
+.comm-tab,
+.comm-bar,
+.messenger-panel {
+  position: fixed;
+  z-index: 99999;
+}
+
+.comm-tab {
+  right: 18px;
+  bottom: 90px;
+}
+
+.comm-bar {
+  right: 18px;
+  bottom: 145px;
+}
+
+.messenger-panel {
+  right: 90px;
+  bottom: 40px;
+  width: 340px;
+  max-width: calc(100vw - 30px);
+  height: 520px;
+  max-height: calc(100vh - 80px);
+  background: #fff;
+  display: none;
+  overflow: hidden;
+}
+
+.messenger-panel.active {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+
+/* -------- OSIRIS text-colour safety net --------
+   Enforce primary-colour text everywhere unless a node explicitly needs
+   white contrast. No muddy brownish / greyish tones must leak through. */
+body, p, label, span, li, h1, h2, h3, h4, h5, h6, strong, em, small, div {
+  color: var(--primary-color);
+}
+button,
+.analyze-button,
+.submit-button,
+.submit-diagnosis-button,
+.global-analyze-button,
+.diagnostic-button {
+  color: var(--button-text-color);
+}
+/* white-background buttons must stay readable */
+button.white-bg,
+.auth-buttons button,
+.btn-white { color: var(--primary-color); }
+input, select, textarea { color: var(--primary-color); }
+input::placeholder, textarea::placeholder { color: rgba(0,122,94,0.55); }
+.result-output { color: var(--primary-color); }
+
+
+
+.highlight-line {
+  /* Single OSIRIS green for all highlighted lead paragraphs — keeps the
+     "Create an account..." / "All results are based..." / "1. Complete
+     the diagnostic questions..." / "Do you have any known health
+     conditions..." blocks at the same shade and weight. */
+  color: var(--primary-color) !important;
+  font-weight: bold;
+}
+.maintext,
+.maintext strong {
+  /* Aligns the surrounding lead paragraphs to the same OSIRIS green. */
+  color: var(--primary-color) !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* BUTTON — full content width (same inset as other Diagnostics content).
+   Height is set below after .analyze-button so max-width:300px cannot win. */
+.global-analyze-button {
+  display: block;
+  background-color: #007a5e;
+  color: #fff;
+  font-weight: 400;
+  font-size: 17px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  text-align: center;
+
+  border: none;
+  border-radius: 8px;
+
+  padding: 8px 18px;
+  margin: 18px 0;
+
+  width: 100%;
+  max-width: none;
+  min-height: 0;
+
+  box-sizing: border-box;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* OSIRIS pulse — keep title white as in the original design.
+   The forced white + dark-green stroke is restored so the hero title
+   reads white on green, matching the OSIRIS sign on the diagnostic
+   screen. */
+#osiris-title-main {
+  animation: osirisPulse 4s ease-in-out infinite;
+}
+
+@keyframes osirisPulse {
+  0%, 100% { text-shadow: 0 0 0 rgba(0,0,0,0); }
+  50%      { text-shadow: 0 0 14px rgba(0,122,94,0.6); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Same stack as the OSIRIS DIAGNOSIS cascade: this window sits on the
+   parent header's bottom edge, not in the middle of the viewport.
+   The parent overlay already dims the page, so this one must not
+   cover that header. */
+#gpInviteOverlay {
+  z-index: 1700;
+}
+
+html.osiris-gp-attached #gpInviteOverlay {
+  display: none !important;
+}
+
+html.osiris-gp-attached #osirisDiagPopup.osiris-diag-open,
+html.osiris-gp-attached #osirisEqrPopup.osiris-diag-open {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+html.osiris-gp-attached #gpInvitePopup {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 0;
+  z-index: 1710;
+}
+
+#gpInvitePopup {
+  z-index: 1710;
+  flex-direction: column;
+  max-height: 92vh;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#gpInvitePopup .osiris-diag-header,
+#gpInvitePopup .osiris-diag-footer {
+  flex-shrink: 0;
+}
+
+#gpInvitePopup .osiris-diag-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  padding: 10px 22px 8px;
+  text-align: left;
+  white-space: normal;
+}
+
+#gpInvitePopup .osiris-diag-footer {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+#gpInvitePopup .osiris-diag-body p {
+  margin: 0 0 8px;
+  text-align: left;
+  line-height: 1.45;
+  color: #1a2a22;
+}
+
+#gpInvitePopup .osiris-diag-body label {
+  display: block;
+  margin: 2px 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--primary-color, #007a5e);
+}
+
+#gpInvitePopup #gpEmail,
+#gpInvitePopup #gpMessage {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 8px;
+  padding: 8px 12px;
+  border: 1px solid rgba(0, 60, 47, 0.28);
+  border-radius: 6px;
+  background: #fff;
+  color: #1a2a22;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+#gpInvitePopup #gpEmail {
+  max-width: none;
+  font-family: "Inter Tight", system-ui, sans-serif;
+}
+
+#gpInvitePopup #gpMessage {
+  flex: 1 1 auto;
+  align-self: stretch;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  min-height: 0;
+  max-height: 400px;
+  margin-bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  resize: none;
+  white-space: pre-wrap;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  #gpInvitePopup #gpMessage {
+    max-height: min(400px, 42vh);
+    font-size: 15px;
+  }
+}
+
+#gpLetterPrint { display: none; }
+
+@media print {
+  body.gp-letter-printing > * { display: none !important; }
+  body.gp-letter-printing #gpLetterPrint {
+    display: block !important;
+    position: static;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    color: #14221c;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 12pt;
+    line-height: 1.45;
+    text-align: left;
+  }
+  body.gp-letter-printing #gpLetterPrint h1 {
+    margin: 0 0 14pt;
+    font-size: 16pt;
+    font-weight: 600;
+    line-height: 1.3;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  body.gp-letter-printing #gpLetterPrint h2 {
+    margin: 0 0 6pt;
+    font-size: 12pt;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  body.gp-letter-printing #gpLetterPrint section {
+    margin: 0 0 12pt;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  body.gp-letter-printing #gpLetterPrint p {
+    margin: 0 0 8pt;
+    white-space: pre-wrap;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+.back-to-top.force-hide {
+  display: none !important;
+}
+
+
+.back-to-top {
+  z-index: 100;
+}
+
+
+
+.back-to-top {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 50px; /* było 20px → +30px */
+  touch-action: manipulation;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 8px;
+  border: none;
+
+  background: rgba(0, 122, 94, 0.12);
+  backdrop-filter: blur(4px);
+
+  color: var(--primary-color);
+  font-size: 20px;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.3s ease;
+  z-index: 21100;
+}
+
+.back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* MOBILE – zawsze widoczny */
+@media (max-width: 768px) {
+  .back-to-top {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.osiris-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+#welcome-preconditions,
+#welcome-medications {
+    font-size: 17px;
+    font-weight: 800;
+    margin-top: 8px;
+    text-align: left;
+    letter-spacing: 0.3px;
+}
+
+#display-blood-type {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+#blood-type-value {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+
+
+
+
+.baseline-box {
+  width: 100%;
+  margin: 20px auto;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 8px var(--shadow-color);
+  scroll-margin-top: 80px;
+}
+
+
+.baseline-box h2 {
+  margin-bottom: 15px;
+}
+
+.baseline-box .inline-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+
+
+
+
+
+
+
+.selected-medication-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.medication-name {
+  min-width: 140px;
+}
+
+.medication-dosage-input {
+  width: 140px;
+  max-width: 100%;
+}
+
+.remove-medication {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+.shop-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  background: #10211c;
+
+  z-index: 21000;
+
+  padding: 20px;
+
+  transition: right 0.3s ease;
+
+  overflow-y: auto;
+}
+
+
+
+.shop-panel.open {
+  right: 0;
+}
+
+.shop-close {
+  position: absolute;
+
+  top: 11px;
+  right: 8px;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #f0d89a;
+  background: rgba(15, 20, 15, 0.88);
+
+  border-radius: 50%;
+
+  font-size: 30px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  z-index: 1400;
+}
+
+@media (min-width: 769px) {
+  #shopPanel.shop-panel {
+    z-index: 21000;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+.comm-slot img {
+  pointer-events: none;
+}
+
+
+
+
+.suggestions-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+  background-size: contain;
+  z-index: 1200;
+  padding: 20px;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+}
+
+.suggestions-panel.open {
+  right: 0;
+}
+
+.suggestions-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+
+.suggestions-image {
+  width: 700px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px auto;
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+.comm-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.comm-tab {
+  position: fixed;
+  top: 400px;
+  right: 0;
+  width: 18px;
+  height: 120px;
+  background: var(--accent-color);
+  border-radius: 7px 0 0 7px;
+  z-index: 1003;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.comm-tab.open {
+  transform: translateX(-70px);
+}
+
+.comm-arrow {
+  width: 0;
+  height: 0;
+  border-top: 18px solid transparent;
+  border-bottom: 18px solid transparent;
+  border-right: 8px solid var(--primary-color);
+}
+
+.comm-bar {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+  width: 70px;
+  height: 480px;
+
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  border: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-radius: 5px;
+
+  z-index: 1001;
+  padding: 10px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  transform: translateX(140%);
+  transition: transform 0.3s ease;
+}
+
+.comm-bar.open {
+  transform: translateX(0);
+}
+
+.comm-close {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  color: var(--primary-color);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.comm-slot {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: var(--primary-color);
+  cursor: pointer;
+  border-bottom: 5px solid var(--primary-color);
+  background: rgba(0, 122, 94, 0.08);
+}
+
+.comm-slot.active {
+  background: rgba(0, 122, 94, 0.12);
+}
+
+.comm-slot.empty {
+  background: transparent;
+  border-bottom-color: transparent;
+}
+
+@media (max-width: 768px) {
+  .comm-tab {
+    top: 50%;
+    width: 27px;
+    transform: translateY(-50%);
+  }
+
+  .comm-tab.open {
+    transform: translateX(-70px) translateY(-50%);
+  }
+
+  .comm-bar {
+    right: 10px;
+    top: 36%;
+    bottom: auto;
+    transform: translateX(140%);
+  }
+
+  .comm-bar.open {
+    transform: translateX(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+@media (min-width: 769px) {
+
+  body::after {
+    content: "Diagnostics is based on patterns derived from statistical data, where specific combinations of parameters carry defined significance, while less probable relationships are eliminated. OSIRIS does not interfere with the data, but reveals interactions within the patient's autonomic system, presenting pathologies as the result of an interconnected, cascading system of coupled processes. The range of possible interpretations is narrowed through the elimination of less probable variants.The further development of OSIRIS is based on expanding the range of input data and diagnostic correlates that can be logically reorganized within the system. By identifying reaction cascades, the system can follow their progression and evaluate how individual factors influence the clinical picture. This creates the foundation for monitoring change and predicting the direction of further development.";
+    position: fixed;
+    top: 230px;
+    right: 140px;
+    width: 260px;
+    color: white;
+    font-size: 13px;
+    line-height: 1.8;
+    letter-spacing: 1.5px;
+    text-align: left;
+    white-space: normal;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  body::before {
+    content: "you see, I believe that we live in a world intensely contaminated by a disruption of somewhat primal ...balanced synchronisity in nature that happens to be driving proportionated evolution within an ecosystem whose structure in regards to its biological systems used to be coherent ...nowadays however we carry and tackle that disruption - that in turn instals some inconsistence as much within the genetic structure of the propagation of that evelution and its proportion as in the outside realm... as the violation has also produced its own biologically noncompatible antagonising entity trying to disrupt that proportional order ...the creator of that disruption being an asteroid hit nuclear blast 9.700BC and its RADIATION";
+    position: fixed;
+    top: 230px;
+    left: 140px;
+    width: 260px;
+    color: white;
+    font-size: 13px;
+    line-height: 1.8;
+    letter-spacing: 1.5px;
+    text-align: left;
+    white-space: normal;
+    opacity: 0.6;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+}
+
+
+
+
+
+
+
+@media (min-width: 769px) {
+  #osiris-title-main {
+    margin-top: 100px;
+  }
+}
+
+
+
+/* #osiris-title-main: white text on dark-green stroke — matches the
+   OSIRIS sign on the diagnostic screen. Original visual hierarchy.
+   The title is split into 3 child <span>s so the white must be
+   applied to the spans too — a global `* { color: primary }` rule
+   otherwise overrides them and the title renders green. */
+#osiris-title-main,
+#osiris-title-main span,
+.osiris-title,
+.osiris-title span {
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-text-stroke: 1.2px #004d3a;
+  text-shadow: 0 0 3px rgba(0, 77, 58, 0.6);
+}
+#osiris-title-main {
+  font-size: 3em;
+}
+
+
+#osiris-intro-text {
+  color: #007a5e;
+
+  -webkit-text-stroke: 0.5px #003d2e;
+}
+
+
+.osiris-title {
+  line-height: 1;
+}
+
+.osiris-title span {
+  display: block;
+  margin-bottom: 10px; /* 🔥 kontrolujesz odstęp tutaj */
+}
+
+.osiris-title span:last-child {
+  margin-bottom: 20px; /* brak odstępu na dole */
+}
+
+.osiris-title span:nth-child(2) {
+  font-size: 0.6em;
+  letter-spacing: 4px;
+}
+
+
+
+
+
+
+
+
+  .maintext.intro-text {
+    /* 4 linijki + dodatkowe 20px w dół */
+    margin-top: calc(4em + 20px);
+  }
+}
+
+
+
+#duat h3 {
+  margin-top: 40px;
+}
+
+
+/* =========================
+   DUAT
+   ========================= */
+
+#duat {
+  position: relative;
+  background-color: #ccfff0;
+}
+
+#duat::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  background-image: url("/photos/frontPageImage_250h.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#duat > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 769px) {
+  #duat::before {
+    height: 320px;
+    background-size: 100% 320px;
+  }
+}
+
+
+/* =========================
+   DIAGNOSTICS
+   ========================= */
+#diagnostics {
+  position: relative;
+  background-color: #ccfff0;
+}
+
+#diagnostics::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  background-image: url("/photos/AKH.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#diagnostics > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 769px) {
+  #diagnostics::before {
+    height: 320px;
+    background-size: 100% 320px;
+  }
+}
+/* =========================
+   BONES
+   ========================= */
+
+#bones {
+  position: relative;
+  background-color: #ccfff0;
+}
+
+#bones::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  background-image: url("/photos/TUBE.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#bones > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 769px) {
+  #bones::before {
+    height: 320px;
+    background-size: 100% 320px;
+  }
+}
+
+/* BONES diagnostic modules sit just below the banner (logo/contact stay
+   on the banner). 60px = in-flow .logo height + margin-bottom. */
+#bones > button.category-button:first-of-type {
+  clear: both;
+  margin-top: calc(280px - 60px + 10px);
+}
+@media (min-width: 769px) {
+  #bones > button.category-button:first-of-type {
+    margin-top: calc(320px - 60px + 10px);
+  }
+}
+@media (max-width: 768px) {
+  #bones > button.category-button:first-of-type {
+    margin-top: calc((100% + 40px) / 2.14 - 60px + 10px);
+  }
+}
+
+/* Empty leftover heading box. Its default .duat-content margins
+   (30px / 60px) sat in front of the cards and dropped them below
+   the BONES first category-button. Collapse it so the card root
+   can use the same banner-clear calc as BONES. */
+#equirevital .duat-content {
+  margin: 0;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+/* EQUIREVITAL patient cards: same banner-clear as BONES first
+   category button (logo/contact stay on the banner; small overlap). */
+#equirevital #osiris-eqr2-root {
+  clear: both;
+  padding-top: 0;
+  margin-top: calc(280px - 60px + 10px);
+}
+@media (min-width: 769px) {
+  #equirevital #osiris-eqr2-root {
+    margin-top: calc(320px - 60px + 10px);
+  }
+}
+@media (max-width: 768px) {
+  #equirevital #osiris-eqr2-root {
+    margin-top: calc((100% + 40px) / 2.14 - 60px + 10px);
+  }
+}
+
+
+/* =========================
+   WELLBEING
+   ========================= */
+
+#wellbeing {
+  position: relative;
+  background-color: #ccfff0;
+}
+
+#wellbeing::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  background-image: url("/photos/image5.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#wellbeing > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 769px) {
+  #wellbeing::before {
+    height: 320px;
+    background-size: 100% 320px;
+  }
+}
+
+
+/* =========================
+   EQUIREVITAL
+   ========================= */
+
+#equirevital {
+  position: relative;
+  background-color: #ccfff0;
+}
+
+#equirevital::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 280px;
+  background-image: url("/photos/muszlaBack.webp");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#equirevital > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 769px) {
+  #equirevital::before {
+    height: 320px;
+    background-size: 100% 320px;
+  }
+}
+
+
+/* =========================
+   MOBILE ONLY
+   Keep desktop banner proportions
+   ========================= */
+
+@media (max-width: 768px) {
+  #duat::before,
+  #diagnostics::before,
+  #bones::before,
+  #wellbeing::before,
+  #equirevital::before {
+    height: auto;
+    aspect-ratio: 2.14 / 1;
+    background-size: 100% 100%;
+    background-position: top center;
+  }
+
+  #duat .duat-content > h3:first-of-type {
+    margin-top: 0;
+  }
+
+  #diagnostics .duat-content {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 0;
+    overflow: hidden;
+  }
+}
+
+
+/* First-content offset previously created by in-flow .osiris-title
+   (#osiris-title-main font-size 3em, desktop margin-top 100px;
+   3-line titles add span stack). .nielogo was float:right and did
+   not contribute parent height. */
+#duat .duat-content {
+  padding-top: 165px;
+}
+
+#diagnostics .duat-content {
+  padding-top: 48px;
+}
+
+#bones .duat-content {
+  padding-top: 12px;
+}
+
+@media (min-width: 769px) {
+  #duat .duat-content {
+    padding-top: 265px;
+  }
+
+  #diagnostics .duat-content {
+    padding-top: 148px;
+  }
+
+  #wellbeing .duat-content {
+    padding-top: 0;
+    margin-top: calc(320px - 60px + 10px);
+  }
+}
+
+/* Mobile-only: must follow the unscoped padding-top rules above so
+   they do not restore the empty mint gap under the aspect-ratio banner. */
+@media (max-width: 768px) {
+  /* DUAT: drop the 165px leftover title offset and sit just under
+     the mobile banner (up by ~one banner height). */
+  #duat .duat-content {
+    padding-top: 0;
+    margin-top: calc((100% + 40px) / 2.14 - 60px + 10px + 10px);
+  }
+
+  #diagnostics .duat-content {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 0;
+    overflow: hidden;
+  }
+
+  /* DIAGNOSTICS intro + Register/Log In: same banner-clear, then
+     pull up by ~1/3 of the mobile banner height. */
+  #diagnostics .intro-text,
+  #diagnostics p.maintext.intro-text {
+    margin-top: calc((100% + 40px) / 2.14 - 60px + 10px - (100% + 40px) / 6.42 + 42px);
+  }
+
+  #wellbeing .duat-content {
+    padding-top: 0;
+    margin-top: calc((100% + 40px) / 2.14 - 60px + 10px);
+  }
+
+  /* EQUIREVITAL signed-out cover: overlap the banner like desktop
+     (after the logo), not parked below it. */
+  #equirevital .eqv-empty-state {
+    margin-top: -30px;
+  }
+}
+
+#wellbeing:has(.osiris-locked-state) {
+  height: 469.5px;
+}
+
+#wellbeing:has(.osiris-locked-state) .duat-content {
+  clear: both;
+  max-width: none;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  #wellbeing .osiris-wb-trends:has(.osiris-locked-state) {
+    width: auto;
+    max-width: 760px;
+    margin: 0 12px;
+    border-radius: 12px;
+  }
+  #wellbeing .osiris-wb-trends .osiris-locked-state {
+    margin-top: -30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+.logo-responsive {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.duat-image-wrapper.center img.logo-responsive {
+  max-width: 360px;
+  max-height: 60px;
+  margin-bottom: 10px;
+  margin-top:10px;
+}
 
 
 .widebtn {
@@ -54,12 +3588,13 @@
 
 
 h1 {
-    text-align: left;
+    text-align: center;
     margin-top: 0px;
     margin-bottom: 0px;
-    margin-left: 30px;
-    font-size: 1.8em; /* optional: reduce if too huge */
+    margin-left: 0px;
+    font-size: 1.6em; /* optional: reduce if too huge */
 }
+
 
 
 
@@ -129,9 +3664,6 @@ p.maintext {
 
 
 
-function scrollToDiagnostics() {
-  document.getElementById("diagnostics-start").scrollIntoView({ behavior: "smooth" });
-}
 
 
 
@@ -215,12 +3747,12 @@ function scrollToDiagnostics() {
 
 
 .contact {
-  margin-top: -95px;
+  margin-top: -60px;
   margin-right: -20px;
   width: 45vw;
   max-width: 200px;
   min-width: 120px; /* Add min width so it doesn't collapse */
-  padding: 10px;
+  padding: 5px;
   float: right;
   text-align: center;
   background: white;
@@ -270,6 +3802,7 @@ h2.textadjustment {
   line-height: 1.5;
   box-sizing: border-box;
   max-width: 100%;
+  box-shadow: 0 0 8px rgba(0, 122, 94, 0.18);
 }
 
 
@@ -277,10 +3810,21 @@ h2.textadjustment {
 
 
 .duat-image-wrapper.center {
+ 
   text-align: center;
   border-radius: 6px;          /* match buttons */
   overflow: hidden;            /* clip image corners */
   box-shadow: 0px 4px 6px var(--shadow-color); /* optional: match button shadow */
+}
+
+.mobile-only-image {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-only-image {
+    display: block;
+  }
 }
 
 .duat-image-wrapper.center img {
@@ -301,7 +3845,8 @@ h2.textadjustment {
     padding: 0 5px;
   }
 
-  h1.textadjustment {
+ 
+ h1.textadjustment {
     font-size: 1.5em;
   }
 
@@ -323,7 +3868,6 @@ h2.textadjustment {
 
 
 
-
 .logo {
   margin-top: -40px; /* cancels out .screen's padding-top */
   margin-left: -20px; /* cancels out .screen's padding-left */
@@ -334,8 +3878,8 @@ h2.textadjustment {
 }
 
 .logo img {
-  width: 80px;       /* force square */
-  height: 80px;
+  width: 40px;       /* force square */
+  height: 40px;
   display: block;
   border-radius: 50%;
   margin: 0;
@@ -343,9 +3887,9 @@ h2.textadjustment {
 }
 
 .nielogo {
-  margin-top: -40px;   /* cancels out .screen's padding-top */
-  margin-right: -20px; /* cancels out .screen's padding-right */
-  margin-bottom: 20px; /* adds space below the logo */
+  margin-top: 80px;    /* another 30px down */
+  margin-right: -20px;
+  margin-bottom: 20px;
   width: 15vw;
   max-width: 120px;
   padding: 0;
@@ -360,8 +3904,6 @@ h2.textadjustment {
   margin: 0;
   padding: 0;
 }
-
-
 
 
 
@@ -400,14 +3942,24 @@ hr {
   margin: 0px;
   padding: 0px;
   font-family: Arial, sans-serif;
+  
 }
+
+
+
 
 body {
   font-family: var(--font-family);
-  color: var(--text-color);
-  background-color: var(--accent-color);
+  color: var(--primary-color);
+  background: #10211c;
+ 
   line-height: 1.6;
 }
+
+
+
+
+
 
 h1,
 h2,
@@ -419,21 +3971,56 @@ h6 {
 }
 
 /* Header styling */
+header,
+.navbar,
+.hamburger,
+.menu,
+#hamburger,
+#menu {
+  position: relative;
+  z-index: 10;
+}
+
 .header {
   background-color: var(--primary-color);
   color: var(--button-text-color);
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: flex-start;
   padding: 10px 10px;
+
+  position: sticky;
+  top: 0;
 }
+
+
 
 .header-title {
   font-size: 24px;
+  /* Same computed family as header nav `.button` and GLOBAL DIAGNOSTICS
+     (inherited from `*` — `.button` does not set its own family). */
+  font-family: Arial, sans-serif;
+  /* WELLBEING DESIGN branding — must be white on the green header bar.
+     Without this, a global `* { color: primary }` rule paints it
+     green and the text disappears against the green background. */
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  text-shadow: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
+
+
+
 
 /* Desktop Buttons */
 .buttons {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   gap: 10px;
 }
@@ -441,6 +4028,9 @@ h6 {
 .desktop-nav {
   display: flex;
 }
+
+
+
 
 .button {
   background: linear-gradient(
@@ -460,7 +4050,17 @@ h6 {
   justify-content: center;
   align-items: center;
   box-shadow: 0px 4px 6px var(--shadow-color);
+  width: 150px;
+  flex: 1;
 }
+
+
+
+
+
+
+
+
 
 .button:hover {
   background: linear-gradient(
@@ -489,12 +4089,33 @@ h6 {
   border: 2px solid var(--focus-outline-color);
 }
 
+.desktop-nav .button.nav-current,
+.mobile-nav .button.nav-current {
+  background: linear-gradient(
+    to bottom,
+    var(--secondary-color),
+    var(--hover-border-color)
+  );
+}
+
 /* Mobile-specific styling */
 .hamburger-menu {
   display: none;
-  font-size: 24px;
   cursor: pointer;
-  color: var(--button-text-color);
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+  margin-left: auto;
+  width: 24px;
+  height: 18px;
+}
+.hamburger-menu .hamburger-bar {
+  display: block;
+  height: 2px;
+  background: #ffffff !important;
+  margin: 4px 0 0 0;
+}
+.hamburger-menu .hamburger-bar:first-child {
+  margin-top: 0;
 }
 
 .mobile-nav {
@@ -524,7 +4145,8 @@ h6 {
   }
 }
 
-/* Screen styling */
+
+
 .screen {
   display: none;
   padding: 40px 20px;
@@ -532,7 +4154,7 @@ h6 {
   background-color: var(--accent-color);
   border-radius: 8px;
   width: 90%;
-  max-width: 1000px;
+  max-width: 750px;
   margin: auto;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -540,6 +4162,12 @@ h6 {
 .screen.active {
   display: block;
 }
+
+
+
+
+
+
 
 /* Navigation Buttons */
 .nav-btn {
@@ -572,10 +4200,40 @@ h6 {
   text-align: center;
   margin: 20px auto;
   padding: 20px;
-  border-radius: 10px; /* Smooth rounded corners */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-  background-color: #fff; /* Clean white background */
-  max-width: 600px; /* Adjust width as needed */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  width: calc(100% - 24px);
+  max-width: 600px;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.medication-entry-section #medication-search,
+.medication-entry-section #submit-medications {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.medication-entry-section #open-saved-medications-dialog {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  display: block;
+  margin: 10px auto 0;
+}
+
+.medication-entry-section #selected-medications:empty,
+.medication-entry-section .medication-list:empty {
+  display: none;
+  margin: 0;
+  padding: 0;
+  height: 0;
 }
 .section-title {
   font-size: 1.5em;
@@ -585,6 +4243,8 @@ h6 {
 
 #medication-search {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -598,7 +4258,20 @@ h6 {
   outline: none;
 }
 
+.remove-medication {
+  background: none;
+  border: 1px solid #007a5e;
+  color: #007a5e;
+  font-size: 14px;
+  padding: 4px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+}
 
+.remove-medication:hover {
+  background: #007a5e;
+  color: #fff;
+}
 
 
 
@@ -615,6 +4288,33 @@ h6 {
 .suggestions-list li {
   padding: 10px;
   cursor: pointer;
+}
+
+/* Med Entry suggestion: canonical name + tiny "matched: <alias>" subtitle
+   shown only when the matched alias differs from the canonical name. */
+.suggestions-list li .med-sugg-name {
+  display: block;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.suggestions-list li .med-sugg-matched {
+  display: block;
+  margin-top: 2px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  color: var(--primary-color);
+  opacity: 0.75;
+}
+/* On hover/active the li bg goes solid green — force the inner spans to
+   white so the name + subtitle never sit green-on-green (invisible). */
+.suggestions-list li:hover .med-sugg-name,
+.suggestions-list li.active .med-sugg-name,
+.suggestions-list li:hover .med-sugg-matched,
+.suggestions-list li.active .med-sugg-matched {
+  color: #ffffff !important;
+  opacity: 1;
 }
 
 .suggestions-list li:hover,
@@ -747,16 +4447,25 @@ h6 {
 
 
 
-/* Authentication Buttons Styling */
+/* Authentication Buttons Styling
+   Width tracks .input-box (Patient Metrics). Desktop height stays 10px 20px. */
 .auth-container {
   text-align: center;
-  margin: 20px 0;
+  margin: 10px auto 20px;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .auth-buttons {
   display: flex;
-  justify-content: center;
-  gap: 10px;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .auth-buttons button {
@@ -770,12 +4479,19 @@ h6 {
   transition: background-color 0.3s ease, transform 0.2s ease, border 0.3s ease;
   box-shadow: 0 4px 6px var(--shadow-color);
   text-align: center;
-  width: 50%; /* Default for mobile */
+  flex: 1 1 0;
+  width: auto;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
-@media (min-width: 768px) {
+@media screen and (max-width: 768px) {
   .auth-buttons button {
-    width: 20%; /* Adjust for laptop screens */
+    padding: 8px 16px;
+    min-height: 0;
+    height: auto;
+    font-weight: 400;
+    line-height: 1.2;
   }
 }
 
@@ -785,19 +4501,44 @@ h6 {
   transform: translateY(-2px);
 }
 
+/* Register / Log In dialogs sit in-flow under the button row.
+   Do not apply this to Update Profile or Forgot Password. */
+#register-modal.modal-reg,
+#login-modal.modal-log {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: calc(100% - 24px);
+  max-width: 600px;
+  height: auto;
+  margin: 8px auto 20px;
+  overflow: visible;
+  background-color: transparent;
+  z-index: 2000;
+  box-sizing: border-box;
+}
+
+#register-modal .modal-content-reg,
+#login-modal .modal-content-log {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 /* Universal Modal Styling for Register, Login, and Update Profile */
 .modal-reg,
 .modal-log,
 .modal-profile {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 2000;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: var(--accent-color); 
 }
 
 /* Universal Modal Content Styling */
@@ -899,6 +4640,73 @@ h6 {
   transform: translateY(-2px);
 }
 
+#register-form .osiris-reg-legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px 14px;
+  margin: 2px 0 12px;
+}
+#register-form .osiris-reg-legal button,
+#register-form .osiris-reg-accept button {
+  display: inline;
+  width: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+  letter-spacing: 0;
+  text-transform: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#register-form .osiris-reg-legal button:hover,
+#register-form .osiris-reg-legal button:focus,
+#register-form .osiris-reg-accept button:hover,
+#register-form .osiris-reg-accept button:focus {
+  background: transparent;
+  border: 0;
+  color: var(--secondary-color);
+  transform: none;
+}
+#register-form .osiris-reg-accept {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 0 0 8px;
+}
+#register-form .osiris-reg-accept input[type="checkbox"] {
+  width: 22px !important;
+  max-width: 22px !important;
+  height: 22px !important;
+  min-height: 22px;
+  margin: 1px 0 0 !important;
+  padding: 0 !important;
+  flex: 0 0 22px;
+  box-shadow: none;
+  accent-color: var(--primary-color);
+}
+#register-form .osiris-reg-accept label {
+  display: block;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+#register-form .osiris-reg-accept-message {
+  margin: 0 0 8px;
+  color: #7a0000;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
 @media (max-width: 480px) {
   .modal-content-reg input,
   .modal-content-log input,
@@ -964,13 +4772,22 @@ h6 {
   border-radius: 8px;
   background-color: var(--accent-color);
   box-shadow: 0px 4px 8px var(--shadow-color);
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
   word-wrap: break-word;
   overflow-wrap: break-word;
   font-size: 14px; /* Slightly smaller text */
+}
+
+#welcome-preconditions,
+#welcome-medications {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-align: left;
 }
 
 /* Ensures the welcome message text wraps properly */
@@ -990,7 +4807,7 @@ h6 {
 }
 
 /* Styling for buttons inside the welcome box */
-#welcome-box button {
+#welcome-box .button-container button {
   background-color: var(--primary-color);
   color: var(--button-text-color);
   padding: 8px 15px; /* Slightly smaller padding */
@@ -1006,10 +4823,61 @@ h6 {
 }
 
 /* Hover effect */
-#welcome-box button:hover {
+#welcome-box .button-container button:hover {
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
   transform: translateY(-2px);
+}
+
+#welcome-box #osiris-premium-account {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 5px 0 0 0;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+#welcome-box #osiris-premium-account[hidden] {
+  display: none !important;
+}
+
+#welcome-box #osiris-premium-account:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+#osiris-premium-account-modal #osirisPremiumAccountStore[hidden],
+#osiris-premium-account-modal #osirisPremiumAccountDownload[hidden] {
+  display: none !important;
+}
+
+#welcome-box #delete-account-btn {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: 5px 0 0 0;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  box-shadow: 0 4px 6px var(--shadow-color);
+}
+
+#welcome-box #delete-account-btn:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 
 
@@ -1033,14 +4901,14 @@ h6 {
 
 
 .respiratory-button {
-  display: flex; /* Flexbox for proper alignment */
-  align-items: center; /* Vertically align icon and text */
-  justify-content: flex-start; /* Align everything to the left */
-  text-align: left; /* Ensures text aligns properly */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 75%; /* Full width button within its container */
   max-width: 620px; /* Limit max width for better layout */
   height: auto; /* Adjust height as needed */
-  padding: 10px 15px 10px 160px; /* Proper spacing inside */
+  padding: 10px 15px; /* Icon gutter removed; keep existing non-icon padding */
   font-size: 16px; /* Adjust font size */
   border-radius: 5px; /* Rounded corners for styling */
   border: 2px solid var(--primary-color); /* Consistent border */
@@ -1048,22 +4916,7 @@ h6 {
   color: var(--button-text-color); /* Text color */
   cursor: pointer; /* Pointer cursor for buttons */
   transition: background-color 0.3s ease, transform 0.2s ease;
-  gap: 50px;
-}
-
-/* Icon Styling */
-.respiratory-button i {
-  margin-left: 10%; /* Moves icon more to the right */
-  font-size: 1.2em; /* Icon size */
-  width: 24px; /* Fixed width to maintain alignment */
-  text-align: center; /* Centers icon */
-  flex-shrink: 0; /* Prevents icon from resizing */
-}
-
-/* Moves text further away from the icon */
-.respiratory-button span {
-  margin-left: 60px; /* Increased spacing between icon and text */
-  flex-grow: 1; /* Ensures text expands properly */
+  gap: 0;
 }
 
 /* Hover and Active States */
@@ -1086,14 +4939,6 @@ h6 {
     max-width: none; /* Allow full width */
     padding: 10px; /* Reduce padding to keep button heights equal */
   }
-
-  .respiratory-button i {
-    margin-left: 8%; /* Adjust icon alignment on mobile */
-  }
-
-  .respiratory-button span {
-    margin-left: 70px; /* Further increase spacing between icon and text on mobile */
-  }
 }
 
 /* Container for Symptom Group */
@@ -1101,7 +4946,7 @@ h6 {
   margin-bottom: 10px;
   padding: 5px;
   background-color: var(--accent-color);
-  border: px solid var(--primary-color);
+  border: 1px solid var(--primary-color);
   border-radius: 8px;
   box-shadow: 0px 4px 8px var(--shadow-color);
   display: flex; /* Use flexbox for centering */
@@ -1356,6 +5201,38 @@ select:focus {
 
 
 
+#cardioHighBloodPressureAdditionalTestsSection {
+  width: 100%;
+}
+
+#cardioHighBloodPressureAdditionalTestsSection .diagnostic-question {
+  width: 100%;
+}
+
+#cardioHighBloodPressureAdditionalTestsSection input {
+  width: 100%;
+  max-width: 297px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  #cardioHighBloodPressureAdditionalTestsSection {
+    width: 100% !important;
+  }
+
+  #cardioHighBloodPressureAdditionalTestsSection .diagnostic-question {
+    width: 100% !important;
+  }
+
+  #cardioHighBloodPressureAdditionalTestsSection input {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
+
+
+
+
 
 
 
@@ -1386,21 +5263,33 @@ select:focus {
   background-color: #005f48;
 }
 
+
+
 .diagnosis-result {
   margin-top: 20px;
   padding: 20px;
+
+  background-color: rgba(0, 122, 94, 0.5);
+  backdrop-filter: blur(10px);
+
+  color: var(--text-main);
+
   border: 2px solid #007a5e;
   border-radius: 10px;
-  background-color: #1a1a2e;
   box-shadow: 0 4px 15px rgba(0, 122, 94, 0.3);
-  color: #e0e0e0;
+
   font-family: 'Courier New', monospace;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.6;
+
   white-space: pre-line;
   max-width: 100%;
   overflow-x: auto;
 }
+
+
+
+
 
 .diagnosis-result h3 {
   color: #00c896;
@@ -1450,7 +5339,7 @@ select:focus {
   padding: 20px; /* Inner spacing */
   border-radius: 10px; /* Rounded corners */
   width: 100%; /* Controls width */
-  margin: 5px auto; /* Centers the box horizontally */
+  margin: 40px auto; /* Centers the box horizontally */
   font-family: Arial, sans-serif;
 }
 
@@ -1596,12 +5485,9 @@ select:focus {
 .dialog-overlay {
   display: none;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw; /* Ensure full width */
-  height: 100vh; /* Ensure full height */
-  background: rgba(0, 0, 0, 0.5); /* Dimmed background */
-  z-index: 999; /* Just below the modal */
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
 .dialog.active + .dialog-overlay {
@@ -1672,12 +5558,123 @@ select:focus {
   height: auto; /* or set a fixed height if needed */
 }
 
-@media (max-width: 600px) {
-  #condition-input {
-    width: 80%;
-    max-width: 300px;
+#conditions-dialog.dialog,
+#saved-medications-dialog.dialog {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: min(600px, calc(100vw - 24px));
+  max-width: min(600px, calc(100vw - 24px));
+  min-width: 0;
+  padding: 20px;
+}
+
+#conditions-dialog #condition-input,
+#conditions-dialog #close-dialog,
+#conditions-dialog #close-dialog.submit-diagnosis-button,
+#saved-medications-dialog #close-saved-medications-dialog,
+#saved-medications-dialog #close-saved-medications-dialog.submit-diagnosis-button {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+}
+
+#conditions-dialog #autocomplete-list,
+#conditions-dialog #selected-conditions {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+#conditions-dialog #autocomplete-list li,
+#conditions-dialog #selected-conditions li,
+#conditions-dialog .condition-item {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: nowrap;
+}
+
+#conditions-dialog .condition-item span,
+#conditions-dialog #selected-conditions li > span,
+#conditions-dialog #autocomplete-list li {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+#conditions-dialog .condition-item span {
+  flex: 1 1 auto;
+}
+
+#conditions-dialog .condition-item .delete-button {
+  flex: 0 0 auto;
+}
+
+#saved-medications-list {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  max-height: 150px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 10px 0;
+}
+
+#saved-medications-list .selected-medication-item {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+#saved-medications-list .medication-name {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 768px), (orientation: landscape) and (max-height: 500px) {
+  #conditions-dialog.dialog,
+  #saved-medications-dialog.dialog {
+    width: min(600px, calc(100vw - 24px));
+    max-width: min(600px, calc(100vw - 24px));
+    min-width: 0;
+    max-height: calc(100dvh - 16px);
+    padding: 20px;
+  }
+
+  #conditions-dialog #condition-input,
+  #conditions-dialog #close-dialog,
+  #conditions-dialog #close-dialog.submit-diagnosis-button,
+  #saved-medications-dialog #close-saved-medications-dialog,
+  #saved-medications-dialog #close-saved-medications-dialog.submit-diagnosis-button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #conditions-dialog #condition-input {
     font-size: 16px;
     padding: 10px 12px;
+    min-height: 44px;
+    line-height: 1.3;
+  }
+
+  #conditions-dialog #close-dialog,
+  #saved-medications-dialog #close-saved-medications-dialog {
+    margin-top: 12px;
+    margin-bottom: 4px;
+    padding: 10px 16px;
+    font-size: 16px;
   }
 }
 
@@ -1734,7 +5731,6 @@ select:focus {
 
 
 
-
 /* ✅ Popup Overlay (Background Dim) */
 .popup-overlay {
   display: none;
@@ -1744,7 +5740,7 @@ select:focus {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 22000;
 }
 
 /* ✅ Popup Window */
@@ -1753,16 +5749,25 @@ select:focus {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  max-width: 600px;
+  transform: translate(-50%, -45%);
+  width: min(80vw, 600px);
+  max-height: 90vh;
   background: var(--accent-color);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
-  padding: 50px;
-  z-index: 1000;
-  max-height: 90vh;
+  padding: 30px;
+  box-sizing: border-box;
+  z-index: 22000;
   overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ✅ Keep everything inside popup width */
+.popup *,
+.popup *::before,
+.popup *::after {
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 /* ✅ Popup Header */
@@ -1778,6 +5783,7 @@ select:focus {
   margin: 0 auto;
   font-size: 20px;
   font-weight: bold;
+  text-align: center;
 }
 
 .popup-header .close {
@@ -1796,13 +5802,23 @@ select:focus {
   flex-direction: column;
   gap: 5px;
   padding-top: 10px;
+  overflow-x: hidden;
 }
 
 .popup-content label {
-  display: inline-block;
+  display: block;
   width: 100%;
   margin-bottom: 5px;
   text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* ✅ Diagnostic blocks inside popup */
+.popup .diagnostic-question {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* ✅ Popup Input Styling - Desktop */
@@ -1812,17 +5828,26 @@ select:focus {
   margin: 0 auto 10px;
   padding: 10px;
   font-size: 16px;
-  
   display: block;
+}
+
+/* ✅ Result Output */
+.popup .result-output {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  white-space: pre-line;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* ✅ Mobile Optimization */
 @media screen and (max-width: 768px) {
   .popup {
-    width: 75%;
-    max-width: 600px;
+    width: 75vw;
     max-height: 95vh;
     padding: 15px;
+    transform: translate(-50%, -50%);
   }
 
   .popup-header .close {
@@ -1835,6 +5860,11 @@ select:focus {
     padding: 8px;
   }
 }
+
+
+
+
+
 
 
 
@@ -1880,6 +5910,44 @@ select:focus {
         font-size: 14px;
         padding: 10px;
     }
+}
+
+/* GLOBAL DIAGNOSTICS: full Diagnostics content width (not the 300/180px
+   Analyse cap). Same left/right inset as category buttons. Taller than
+   Doctor View OPEN EQUIREVITAL (~8px 15px / 14px type). */
+#diagnostics .analyze-button.global-analyze-button {
+  display: block;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+  margin: 18px 0;
+  padding: 8px 18px;
+  min-height: 0;
+  height: auto;
+  text-align: center;
+  background-color: #007a5e;
+  color: #fff;
+  font-weight: 400;
+  font-size: 17px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+@media screen and (max-width: 768px) {
+  #diagnostics .analyze-button.global-analyze-button {
+    width: 100%;
+    max-width: none;
+    margin: 18px 0;
+    padding: 8px 16px;
+    min-height: 0;
+    height: auto;
+    font-size: 17px;
+    font-weight: 400;
+  }
 }
 
 
@@ -2118,6 +6186,694 @@ footer {
 }
 
 
+/* ==============================================================
+   OSIRIS — Pharmacopeia (brand green) + Diagnostic popup
+   ============================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* ---- Hide inline diagnostic results under each category ------- */
+.diagnostic-category .diagnosis-result,
+.diagnostic-question  .diagnosis-result,
+.question-container   .diagnosis-result,
+div.diagnosis-result,
+.diagnostic-category  .diagnosis-result-box {
+  display: none !important;
+}
+
+/* ---- Baseline popup centering fix (was sitting too high) ------ */
+.popup { transform: translate(-50%, -50%) !important; }
+@media screen and (max-width: 768px) {
+  .popup { transform: translate(-50%, -50%) !important; }
+}
+
+/* Pin the slide drawer to the viewport so the pharmacopeia never
+   extends past the footer. The drawer itself scrolls internally. */
+.suggestions-panel {
+  position: fixed !important;
+  top: 0 !important;
+  height: 100vh !important;
+  max-height: 100vh !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 40px;
+}
+.suggestions-panel.open { right: 0 !important; }
+@media (max-width: 768px) {
+  .suggestions-panel {
+    width: 100% !important;
+    max-width: 100vw !important;
+  }
+}
+
+/* ==============================================================
+   Pharmacopeia panel — brand green palette (single source of truth)
+   ============================================================== */
+.pd-root {
+  --pd-bg:          #ccfff0;
+  --pd-bg-2:        #ffffff;
+  --pd-bg-3:        #f1faf5;
+  --pd-line:        rgba(0,122,94,0.22);
+  --pd-line-strong: rgba(0,122,94,0.55);
+  --pd-ink:         #007a5e;
+  --pd-ink-dim:     #005f47;
+  --pd-ink-faint:   rgba(0,60,47,0.55);
+  --pd-accent:      #007a5e;
+  --pd-accent-2:    #b8904c;
+  --pd-warn:        #c0392b;
+  --pd-good:        #007a5e;
+  --pd-purple:      #5a4a99;
+
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  background: transparent;
+  color: var(--pd-ink);
+  font-family: "Inter Tight", system-ui, sans-serif;
+  padding: 0;
+  letter-spacing: 0;
+  position: relative;
+  margin-top: 40px;   /* space under the suggestions-panel close button */
+}
+.pd-root *, .pd-root *::before, .pd-root *::after { box-sizing: border-box; }
+.pd-root::before { content: none !important; display: none !important; }
+
+.pd-wrap {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  padding: 12px;
+}
+.pd-header {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 8px 4px 14px;
+  border-bottom: 1px solid var(--pd-line);
+  margin-bottom: 12px;
+}
+.pd-title {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: normal;
+  font-size: clamp(24px, 4.2vw, 34px);
+  letter-spacing: -0.01em;
+  color: var(--pd-ink);
+}
+.pd-title em { color: var(--pd-accent); font-style: normal; }
+.pd-title-tag {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--pd-ink-faint); margin-top: 4px;
+}
+.pd-meta { text-align: right; }
+.pd-meta-num {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-style: italic; font-size: 26px; color: var(--pd-accent);
+  display: block; line-height: 1;
+}
+.pd-meta-row {
+  font-family: "JetBrains Mono", monospace; font-size: 10px;
+  letter-spacing: 0.08em; color: var(--pd-ink-faint); text-transform: uppercase;
+}
+
+.pd-rail { display: flex; flex-direction: column; gap: 14px; width: 100%; max-width: 560px; margin: 0 auto; }
+
+.pd-card {
+  background: var(--pd-bg-2);
+  border: 1px solid var(--pd-line);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+.pd-card-title {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--pd-ink-faint); margin-bottom: 10px;
+}
+
+.pd-search-wrap { position: relative; }
+#pd-search-input {
+  width: 100%;
+  padding: 11px 14px 11px 38px;
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-size: 15px;
+  background: var(--pd-bg-3);
+  border: 1px solid var(--pd-line);
+  color: var(--pd-ink);
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+#pd-search-input::placeholder { color: var(--pd-ink-faint); }
+#pd-search-input:focus {
+  border-color: var(--pd-accent);
+  box-shadow: 0 0 0 3px rgba(0,122,94,0.14);
+}
+.pd-search-icon {
+  position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+  width: 16px; height: 16px; color: var(--pd-ink-faint); pointer-events: none;
+}
+
+#pd-search-suggestions {
+  margin-top: 8px; max-height: 320px; overflow-y: auto;
+  border: 1px solid var(--pd-line); border-radius: 6px;
+  background: var(--pd-bg-2); display: none;
+}
+#pd-search-suggestions.pd-open { display: block; }
+#pd-search-suggestions::-webkit-scrollbar { width: 8px; }
+#pd-search-suggestions::-webkit-scrollbar-thumb { background: var(--pd-line); border-radius: 4px; }
+
+.pd-suggestion {
+  padding: 10px 14px; cursor: pointer;
+  border-bottom: 1px solid var(--pd-line);
+  display: flex; flex-direction: column; gap: 2px;
+  transition: background-color 120ms ease;
+}
+.pd-suggestion:last-child { border-bottom: 0; }
+.pd-suggestion:hover { background: rgba(0,122,94,0.08); }
+.pd-suggestion-name { font-weight: 600; color: var(--pd-ink); font-size: 14px; }
+.pd-suggestion-name mark {
+  background: rgba(184,144,76,0.22); color: #7a5a1e;
+  padding: 0 2px; border-radius: 2px;
+}
+.pd-suggestion-meta {
+  font-family: "JetBrains Mono", monospace; font-size: 10px;
+  color: var(--pd-ink-faint); letter-spacing: 0.06em; text-transform: uppercase;
+}
+.pd-suggestion-class { color: var(--pd-accent); text-transform: none; letter-spacing: 0; }
+.pd-no-results { padding: 20px 14px; color: var(--pd-ink-faint); font-size: 13px; text-align: center; }
+
+.pd-selected-empty {
+  color: var(--pd-ink-faint); font-size: 13px; font-style: italic;
+  padding: 16px 4px; text-align: center;
+}
+.pd-selected-item {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 10px 12px;
+  background: var(--pd-bg-3); border: 1px solid var(--pd-line);
+  border-radius: 6px; margin-bottom: 8px;
+  cursor: pointer;
+  transition: border-color 120ms ease, transform 120ms ease;
+}
+.pd-selected-item:hover     { border-color: var(--pd-accent); transform: translateX(2px); }
+.pd-selected-item.pd-focus  { border-color: var(--pd-accent); box-shadow: 0 0 0 2px rgba(0,122,94,0.10); }
+.pd-selected-item-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.pd-selected-item-name { font-weight: 600; font-size: 14px; color: var(--pd-ink); }
+.pd-selected-item-class {
+  font-family: "JetBrains Mono", monospace; font-size: 10px;
+  color: var(--pd-accent); letter-spacing: 0.08em;
+}
+.pd-selected-remove {
+  background: transparent;
+  border: 1px solid var(--pd-line-strong);
+  color: var(--pd-ink-dim);
+  cursor: pointer; padding: 4px 8px; border-radius: 4px;
+  font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 0.1em;
+  transition: color 120ms ease, border-color 120ms ease, background-color 120ms ease;
+}
+.pd-selected-remove:hover {
+  color: #fff; background: var(--pd-warn); border-color: var(--pd-warn);
+}
+
+#pd-submit-btn {
+  width: 100%; margin-top: 4px;
+  padding: 12px 14px;
+  background: var(--pd-accent); color: #fff;
+  border: 1px solid var(--pd-accent); border-radius: 6px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 120ms ease, transform 120ms ease, opacity 120ms ease;
+}
+#pd-submit-btn:hover  { background: var(--pd-ink-dim); transform: translateY(-1px); }
+#pd-submit-btn:disabled {
+  opacity: 0.4; cursor: not-allowed;
+  background: var(--pd-bg-3); color: var(--pd-ink-faint);
+  border-color: var(--pd-line); transform: none;
+}
+
+/* Legend chips */
+.pd-legend-row {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 12px; font-family: "JetBrains Mono", monospace; padding: 3px 0;
+  color: var(--pd-ink-dim);
+}
+.pd-legend-chip {
+  font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 0.15em;
+  text-transform: uppercase; padding: 1px 6px; border-radius: 2px;
+  border: 1px solid currentColor; opacity: 0.85;
+  min-width: 100px; text-align: center;
+}
+
+/* Effect color tokens — brand-aware */
+.pd-eff-suppresses    { color: var(--pd-good); }
+.pd-eff-increases     { color: var(--pd-warn); }
+.pd-eff-may_increase  { color: var(--pd-accent-2); }
+.pd-eff-masks         { color: var(--pd-accent-2); }
+.pd-eff-distorts      { color: var(--pd-purple); }
+.pd-eff-neutral       { color: var(--pd-ink-faint); }
+
+.pd-status {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px; letter-spacing: 0.1em;
+  color: var(--pd-ink-faint); padding: 14px 4px; text-align: center;
+}
+.pd-status.pd-err { color: var(--pd-warn); }
+
+/* ---- Drug detail panel inside slide drawer -------------------- */
+.pd-detail { min-height: auto; margin-top: 14px; padding: 0 12px 24px; }
+.pd-placeholder {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  height: 180px; text-align: center;
+  color: var(--pd-ink-faint);
+  font-family: "Instrument Serif", Georgia, serif; font-style: italic; font-size: 20px;
+  border: 1px dashed var(--pd-line); border-radius: 6px;
+  background: var(--pd-bg-2);
+}
+.pd-placeholder small {
+  display: block; margin-top: 10px;
+  font-family: "JetBrains Mono", monospace; font-size: 10px; font-style: normal;
+  letter-spacing: 0.2em; text-transform: uppercase; color: var(--pd-ink-faint);
+}
+
+.pd-drug-head {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+  padding-bottom: 16px; border-bottom: 1px solid var(--pd-line);
+  margin-bottom: 18px;
+  background: var(--pd-bg-2); border: 1px solid var(--pd-line);
+  border-radius: 8px; padding: 14px;
+}
+.pd-drug-generic {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: clamp(24px, 4.6vw, 36px);
+  font-style: italic; letter-spacing: -0.01em;
+  margin-bottom: 4px; color: var(--pd-ink);
+}
+.pd-drug-class-row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.pd-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 3px 9px;
+  background: var(--pd-bg-3); border: 1px solid var(--pd-line);
+  border-radius: 999px;
+  font-family: "JetBrains Mono", monospace; font-size: 10px; letter-spacing: 0.08em;
+  color: var(--pd-ink-dim);
+}
+.pd-chip-slug { color: var(--pd-accent); border-color: rgba(0,122,94,0.35); }
+.pd-chip-rel                { border-color: var(--pd-accent-2); color: var(--pd-accent-2); }
+.pd-chip-rel.pd-rel-low     { border-color: var(--pd-good); color: var(--pd-good); }
+.pd-chip-rel.pd-rel-high    { border-color: var(--pd-warn); color: var(--pd-warn); }
+.pd-drug-subtitle { font-size: 13px; color: var(--pd-ink-dim); margin-top: 3px; }
+
+.pd-brands-box { max-width: 260px; }
+.pd-brands-box-title {
+  font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.22em;
+  color: var(--pd-ink-faint); text-transform: uppercase; margin-bottom: 6px;
+}
+.pd-brand {
+  display: inline-block;
+  padding: 2px 7px;
+  background: rgba(0,122,94,0.08); border: 1px solid rgba(0,122,94,0.28);
+  color: var(--pd-accent);
+  font-family: "JetBrains Mono", monospace; font-size: 10px;
+  border-radius: 3px; margin: 2px 0 2px 4px;
+}
+
+.pd-section { margin-bottom: 22px; background: var(--pd-bg-2); border: 1px solid var(--pd-line); border-radius: 8px; padding: 14px; }
+.pd-section-heading {
+  font-family: "JetBrains Mono", monospace; font-size: 10px;
+  letter-spacing: 0.24em; text-transform: uppercase;
+  color: var(--pd-accent);
+  margin-bottom: 10px; padding-bottom: 5px;
+  border-bottom: 1px solid var(--pd-line);
+}
+
+.osiris-gdt-block { margin: 0 0 16px; }
+.osiris-gdt-block:last-child { margin-bottom: 0; }
+.osiris-gdt-kicker {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pd-accent, #007a5e);
+  margin-bottom: 6px;
+}
+.osiris-gdt-coverage {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  padding: 1px 6px;
+  margin-bottom: 8px;
+}
+.osiris-gdt-verified { color: var(--pd-good, #007a5e); }
+.osiris-gdt-unverified { color: var(--pd-warn, #8a5a00); }
+.osiris-gdt-h {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 10px 0 4px;
+}
+.osiris-gdt-block p, .osiris-gdt-block li { margin: 0 0 4px; }
+.osiris-gdt-block a { color: inherit; }
+
+
+.pd-cluster-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px;
+}
+.pd-cluster-cell {
+  background: var(--pd-bg-3); border: 1px solid var(--pd-line);
+  border-left: 3px solid var(--pd-line);
+  padding: 9px 10px; border-radius: 4px;
+}
+.pd-cluster-key {
+  font-family: "JetBrains Mono", monospace; font-size: 9px;
+  letter-spacing: 0.1em; color: var(--pd-ink-dim); text-transform: uppercase;
+}
+.pd-cluster-val-row { display: flex; align-items: baseline; gap: 8px; margin-top: 3px; }
+.pd-cluster-val { font-size: 14px; font-weight: 600; font-family: "JetBrains Mono", monospace; }
+.pd-cluster-str {
+  font-family: "JetBrains Mono", monospace; font-size: 9px; letter-spacing: 0.14em;
+  text-transform: uppercase; padding: 1px 6px; border-radius: 2px;
+  border: 1px solid currentColor; opacity: 0.78;
+}
+
+/* Left-border cluster cell accent by effect */
+.pd-cluster-cell.pd-eff-suppresses   { border-left-color: var(--pd-good)     !important; }
+.pd-cluster-cell.pd-eff-increases    { border-left-color: var(--pd-warn)     !important; }
+.pd-cluster-cell.pd-eff-may_increase { border-left-color: var(--pd-accent-2) !important; }
+.pd-cluster-cell.pd-eff-masks        { border-left-color: var(--pd-accent-2) !important; }
+.pd-cluster-cell.pd-eff-distorts     { border-left-color: var(--pd-purple)   !important; }
+.pd-cluster-cell.pd-eff-neutral      { border-left-color: var(--pd-line)     !important; }
+
+.pd-list { list-style: none; padding: 0; margin: 0; }
+.pd-list li {
+  padding: 7px 0 7px 20px; position: relative;
+  font-size: 13.5px; line-height: 1.5;
+  border-bottom: 1px dashed var(--pd-line); color: var(--pd-ink);
+}
+.pd-list li:last-child { border-bottom: 0; }
+.pd-list li::before {
+  content: "—"; position: absolute; left: 0; top: 7px;
+  font-family: "JetBrains Mono", monospace; color: var(--pd-accent);
+}
+
+.pd-int-table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+.pd-int-table th, .pd-int-table td {
+  padding: 9px 10px; text-align: left; vertical-align: top;
+  border-bottom: 1px solid var(--pd-line);
+}
+.pd-int-table th {
+  font-family: "JetBrains Mono", monospace; font-size: 9px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--pd-ink-faint); font-weight: 500;
+  background: var(--pd-bg-3);
+}
+.pd-int-table td:first-child {
+  font-family: "JetBrains Mono", monospace;
+  color: var(--pd-accent-2); font-size: 11px; white-space: nowrap;
+}
+.pd-int-recommend {
+  font-family: "JetBrains Mono", monospace; font-size: 10.5px;
+  color: var(--pd-warn); letter-spacing: 0.05em;
+}
+
+.pd-ddi-banner {
+  background: linear-gradient(135deg, rgba(192,57,43,0.06), rgba(184,144,76,0.06));
+  border: 1px solid rgba(192,57,43,0.28);
+  padding: 12px 14px; border-radius: 6px; margin-bottom: 18px;
+}
+.pd-ddi-title {
+  font-family: "JetBrains Mono", monospace; font-size: 10px;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--pd-warn); margin-bottom: 6px;
+}
+.pd-ddi-row { font-size: 12.5px; margin: 3px 0; color: var(--pd-ink); }
+.pd-ddi-row code {
+  font-family: "JetBrains Mono", monospace;
+  background: rgba(0,122,94,0.08); padding: 1px 6px; border-radius: 2px;
+  color: var(--pd-accent); font-size: 11px;
+}
+
+.pd-meta-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;
+}
+.pd-meta-block {
+  background: var(--pd-bg-3); border: 1px solid var(--pd-line);
+  padding: 9px 11px; border-radius: 4px;
+}
+.pd-meta-label {
+  font-family: "JetBrains Mono", monospace; font-size: 9px;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--pd-ink-faint); margin-bottom: 3px;
+}
+.pd-meta-val { font-size: 12.5px; color: var(--pd-ink); word-break: break-word; }
+.pd-meta-val.pd-mono { font-family: "JetBrains Mono", monospace; font-size: 10.5px; color: var(--pd-ink-dim); }
+
+
+/* ==============================================================
+   OSIRIS diagnostic popup (cross-screen, brand-green)
+   ============================================================== */
+.osiris-diag-overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0, 40, 30, 0.55);
+  backdrop-filter: blur(2px);
+  z-index: 1500;
+}
+.osiris-diag-overlay.osiris-diag-open { display: block; }
+
+
+.osiris-diag-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(92vw, 720px);
+  max-height: 85vh;
+  background: #ffffff;
+  border: 1px solid var(--border-color, #003c2f);
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 40, 30, 0.35);
+  z-index: 1600;
+  overflow: hidden;
+  flex-direction: column;
+  font-family: "Inter Tight", system-ui, sans-serif;
+  color: #1a2a22;
+}
+
+.osiris-diag-popup.osiris-diag-open {
+  display: flex;
+}
+
+.osiris-diag-header {
+  background: var(--primary-color, #007a5e);
+  color: #fff;
+  padding: 18px 52px 16px 22px;
+  position: relative;
+}
+.osiris-diag-kicker {
+  display: block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 10px; letter-spacing: 0.26em; text-transform: uppercase;
+  opacity: 0.85; margin-bottom: 4px;
+}
+.osiris-diag-header h3 {
+  margin: 0;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 26px; font-style: normal; font-weight: 400;
+  letter-spacing: -0.01em; color: #fff;
+}
+.osiris-diag-close {
+  position: absolute; top: 14px; right: 18px;
+  font-size: 30px; font-weight: 400; line-height: 1;
+  cursor: pointer; color: #fff; opacity: 0.8;
+  transition: opacity 120ms ease, transform 120ms ease;
+  user-select: none;
+}
+.osiris-diag-close:hover { opacity: 1; transform: scale(1.08); }
+
+.osiris-diag-severity-bar {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 22px;
+  background: var(--accent-color, #ccfff0);
+  border-bottom: 1px solid rgba(0,122,94,0.15);
+}
+.osiris-diag-sev-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--primary-color, #007a5e);
+  box-shadow: 0 0 0 3px rgba(0,122,94,0.2);
+}
+.osiris-diag-sev-label {
+  font-family: "JetBrains Mono", monospace; font-size: 11px;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--secondary-color, #005f47);
+}
+.osiris-diag-popup[data-severity="medium"] .osiris-diag-sev-dot  { background: #b8904c; box-shadow: 0 0 0 3px rgba(184,144,76,0.25); }
+.osiris-diag-popup[data-severity="medium"] .osiris-diag-sev-label { color: #7a5a1e; }
+.osiris-diag-popup[data-severity="high"]   .osiris-diag-sev-dot  { background: #c0392b; box-shadow: 0 0 0 3px rgba(192,57,43,0.25); }
+.osiris-diag-popup[data-severity="high"]   .osiris-diag-sev-label { color: #8c1f14; }
+
+.osiris-diag-body {
+  padding: 18px 22px 22px;
+  overflow-y: auto;
+  flex: 1 1 auto;
+  line-height: 1.55; font-size: 14.5px;
+  white-space: pre-line; color: #1a2a22;
+}
+.osiris-diag-body h4 {
+  font-family: "JetBrains Mono", monospace; font-size: 15px;
+  letter-spacing: 0.26em; text-transform: uppercase;
+  color: var(--primary-color, #007a5e);
+  margin: 16px 0 8px; padding-bottom: 4px;
+  border-bottom: 1px solid rgba(0,122,94,0.18);
+}
+.osiris-diag-body h4:first-child { margin-top: 0; }
+.osiris-diag-body ul { padding-left: 18px; margin: 6px 0 10px; }
+.osiris-diag-body li { margin: 3px 0; }
+/* Global subsystem titles (Upper Respiratory, GI, Hematology, …) —
+   font-size only: 150% of inherited .osiris-diag-body text size. */
+.osiris-diag-body .osiris-sub > strong {
+  font-size: 1.5em;
+}
+.osiris-diag-body code,
+.osiris-diag-body .osiris-diag-chip {
+  font-family: "JetBrains Mono", monospace;
+  background: rgba(0,122,94,0.08);
+  color: var(--primary-color, #007a5e);
+  padding: 1px 6px; border-radius: 3px;
+  font-size: 12px;
+}
+
+.osiris-diag-footer {
+  padding: 12px 22px;
+  border-top: 1px solid rgba(0,122,94,0.15);
+  background: #f4fdf8;
+  display: flex; justify-content: flex-end;
+}
+#osirisDiagPopup[data-osiris-metrics-gate="1"] {
+  width: max-content;
+  min-width: min(92vw, 560px);
+  max-width: min(94vw, 720px);
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+#osirisDiagPopup[data-osiris-metrics-gate="1"] .osiris-diag-kicker,
+#osirisDiagPopup[data-osiris-metrics-gate="1"] .osiris-diag-severity-bar,
+#osirisDiagPopup[data-osiris-metrics-gate="1"] .osiris-diag-footer {
+  display: none;
+}
+#osirisDiagPopup[data-osiris-metrics-gate="1"] .osiris-diag-body {
+  white-space: normal;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.3;
+}
+#osirisDiagPopup[data-osiris-metrics-gate="1"] .osiris-diag-body p,
+#osirisDiagPopup[data-osiris-metrics-gate="1"] .osiris-metrics-prompt {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  #osirisDiagPopup[data-osiris-metrics-gate="1"] {
+    width: 94vw;
+    min-width: 0;
+    max-width: 94vw;
+  }
+  #osirisDiagPopup[data-osiris-metrics-gate="1"] .osiris-diag-body p,
+  #osirisDiagPopup[data-osiris-metrics-gate="1"] .osiris-metrics-prompt {
+    white-space: normal;
+  }
+}
+.osiris-diag-close-btn {
+  background: var(--primary-color, #007a5e);
+  color: #fff; border: none;
+  padding: 10px 20px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  border-radius: 6px; cursor: pointer;
+  transition: background-color 120ms ease;
+  margin-left: 10px; /* 👈 to */
+}
+.osiris-diag-close-btn:hover { background: var(--secondary-color, #005f47); }
+
+@media (max-width: 640px) {
+  .osiris-diag-popup { width: 94vw; max-height: 90vh; border-radius: 10px; }
+  .osiris-diag-header h3 { font-size: 22px; }
+  /* Body size set in the shared mobile typography block below (≥640). */
+  .osiris-diag-body { padding: 14px 16px 18px; }
+}
+
+/* MOBILE ONLY — scale diagnostic popup typography for phone readability.
+   Desktop/laptop (.osiris-diag-body 14.5px / h4 15px) stays unchanged. */
+@media (max-width: 768px) {
+  .osiris-diag-body {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  .osiris-diag-body h4 {
+    font-size: 17.5px;
+  }
+  .osiris-diag-body code,
+  .osiris-diag-body .osiris-diag-chip {
+    font-size: 14px;
+  }
+  .osiris-diag-body p,
+  .osiris-diag-body li,
+  .osiris-diag-body ul {
+    font-size: inherit;
+  }
+  #osirisDiagPopup .osiris-diag-body .osiris-tx-block > strong,
+  #osirisDiagPopup .osiris-diag-body .osiris-tx-item strong,
+  #osirisEqrPopup .osiris-eqr-global-report .osiris-tx-block > strong,
+  #osirisEqrPopup .osiris-eqr-global-report .osiris-tx-item strong {
+    font-size: 1.2em;
+  }
+}
+
+/* Fix: .dialog is position:fixed and centered, but has no height cap.
+   When the medication entry content grows, the modal's lower half is
+   pushed below the viewport and visually falls beneath the page footer.
+   Cap the modal to viewport height and scroll internally. */
+.dialog {
+  max-height: 90vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 768px) {
+  .dialog {
+    max-height: 85vh;
+  }
+}
+
+/* Medication impact preview — visual separation inside #medication-submit-result */
+#medication-submit-result .medication-impact-section { margin-top: 10px; }
+#medication-submit-result .medication-impact-heading { font-weight: 600; margin-top: 14px; }
+#medication-submit-result .medication-impact-system { font-weight: 600; margin-top: 6px; }
+#medication-submit-result .medication-impact-list { margin: 4px 0 0 18px; padding: 0; }
+#medication-submit-result .medication-impact-item { margin: 2px 0; }
 
 
 
@@ -2129,3 +6885,1143 @@ footer {
 
 
 
+
+
+
+
+
+
+
+/* =============================================================
+   OSIRIS — global text-colour enforcement (added by PART 1)
+   All visible text must be primary OSIRIS colour (#007a5e)
+   or white on solid primary backgrounds. No muddy tones.
+   ============================================================= */
+.result-output,
+.normal-range,
+.diagnostic-question label,
+.diagnostic-question small,
+.message,
+.note,
+.hint { color: #007a5e !important; }
+
+/* OSIRIS Global Diagnostics modal — must float over the entire page.
+   Higher specificity than `#diagnostics > *` (which forces position:
+   relative + z-index:1) so the modal is never trapped inside the
+   diagnostics stacking context. */
+#osiris-global-modal.osiris-modal-overlay,
+.osiris-modal-overlay {
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 3000 !important;
+  display: none;
+  align-items: center; justify-content: center;
+}
+#osiris-global-modal.osiris-modal-overlay.open,
+.osiris-modal-overlay.open { display: flex !important; }
+.osiris-modal {
+  background: #ffffff;
+  color: #007a5e;
+  border: 2px solid #007a5e;
+  border-radius: 12px;
+  padding: 24px 24px 20px;
+  width: min(520px, 92vw);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.osiris-modal h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: #007a5e;
+}
+.osiris-modal .osiris-verdict { margin: 10px 0; white-space: pre-line; }
+.osiris-modal .osiris-missing {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed #007a5e;
+  color: #007a5e;
+}
+.osiris-modal .osiris-close {
+  display: block; margin: 16px auto 0;
+  background: #007a5e; color: #ffffff;
+  border: none; border-radius: 8px;
+  padding: 10px 22px; font-weight: 600; cursor: pointer;
+}
+
+
+/* =====================================================================
+ * Password recovery — minimal additive styles (iter-42)
+ * Inherits .modal-log layout already used by Login.
+ * =================================================================== */
+
+.osiris-forgot-link-row {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 0.92rem;
+}
+
+a.osiris-forgot-link {
+  color: #007a5e;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+
+a.osiris-forgot-link:hover,
+a.osiris-forgot-link:focus {
+  color: #005f47;
+  border-bottom-color: #007a5e;
+  outline: none;
+}
+
+.osiris-forgot-help {
+  margin: 0 0 14px;
+  font-size: 0.94rem;
+  line-height: 1.45;
+  color: #234;
+  background: #f4f9f7;
+  border-left: 3px solid #007a5e;
+  padding: 10px 12px;
+  border-radius: 4px;
+}
+
+.osiris-forgot-feedback {
+  margin-top: 12px;
+  min-height: 1.4em;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.osiris-forgot-feedback.is-success {
+  color: #0c6b3c;
+  background: #e9f7ef;
+  border: 1px solid #b7e1c8;
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+
+.osiris-forgot-feedback.is-error {
+  color: #8a1f1f;
+  background: #fdecea;
+  border: 1px solid #f5c2bf;
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+
+.osiris-forgot-feedback.is-pending {
+  color: #555;
+  font-style: italic;
+}
+
+#forgot-password-modal .modal-content-log,
+#reset-password-modal  .modal-content-log {
+  max-width: 440px;
+}
+
+
+
+/* =====================================================================
+ * iter-44 (EQR-2) — Strip chip / badge / KPI / severity-bar chrome.
+ *
+ * The visual meaning now lives inside the EQUIREVITAL graphs (yellow /
+ * red markers on the line, reference bands behind it). Anything that
+ * looked like a HIGH chip, a CRITICAL pill, a KPI tile, a status badge,
+ * a severity bar or a coloured count tile is reduced to plain inline
+ * text so the underlying status data still reaches the reader without
+ * any decorative chrome.
+ *
+ * We override rather than delete the legacy selectors so any JS that
+ * still emits `<span class="eqv-chip eqv-danger">…</span>` keeps
+ * working without a chip appearance. Functional buttons that happen to
+ * borrow the same class (filter toggles inside EQUIREVITAL) keep their
+ * click-target geometry but lose their pill look.
+ * =================================================================== */
+
+#equirevital .eqv-chip,
+#equirevital .eqv-chip.eqv-danger,
+#equirevital .eqv-chip.eqv-warning,
+#equirevital .eqv-chip.eqv-normal,
+#equirevital .eqv-chip.eqv-muted,
+#equirevital button.eqv-chip,
+#equirevital .eqv-chip-filter,
+#equirevital .eqv-status-strip .eqv-chip-filter,
+#equirevital .eqv-status-strip .eqv-chip-filter.eqv-danger,
+#equirevital .eqv-status-strip .eqv-chip-filter.eqv-normal,
+#equirevital .eqv-category-card .eqv-category-footer .eqv-chip,
+#equirevital .eqv-category-card .eqv-category-footer .eqv-chip.eqv-danger,
+#equirevital .eqv-category-card .eqv-category-footer .eqv-chip.eqv-warning,
+#equirevital .eqv-category-card .eqv-category-footer .eqv-chip.eqv-normal,
+#equirevital .eqv-category-card .eqv-category-footer .eqv-chip.eqv-muted {
+  /* Reset every chip-ish surface to plain inline text. */
+  background: transparent !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 0 6px 0 0 !important;
+  box-shadow: none !important;
+  color: #2b2b2b !important;
+  font-weight: 400 !important;
+  font-size: 0.92em !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  min-height: 0 !important;
+  line-height: 1.35 !important;
+  display: inline !important;
+  cursor: inherit;
+}
+
+/* Buttons that double as filters keep a click affordance — minimal:
+   just a thin underline on hover. No chip, no fill. */
+#equirevital button.eqv-chip,
+#equirevital .eqv-chip-filter,
+#equirevital .eqv-status-strip .eqv-chip-filter {
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: 1px dotted transparent !important;
+  transition: border-color 120ms ease, color 120ms ease;
+}
+#equirevital button.eqv-chip:hover,
+#equirevital .eqv-chip-filter:hover,
+#equirevital .eqv-status-strip .eqv-chip-filter:hover,
+#equirevital button.eqv-chip:focus-visible,
+#equirevital .eqv-chip-filter:focus-visible {
+  color: #005f47 !important;
+  border-bottom-color: #007a5e !important;
+  outline: none;
+}
+#equirevital button.eqv-chip[aria-pressed="true"],
+#equirevital .eqv-chip-filter[aria-pressed="true"] {
+  color: #005f47 !important;
+  border-bottom-color: #005f47 !important;
+}
+
+/* Drop the severity colour fills from any chip variant. The graph
+   is the status indicator now, not the badge. */
+#equirevital .eqv-chip.eqv-danger,
+#equirevital .eqv-chip.eqv-warning,
+#equirevital .eqv-chip.eqv-normal,
+#equirevital .eqv-chip.eqv-muted,
+#equirevital .eqv-category-card .eqv-category-footer .eqv-chip.eqv-danger,
+#equirevital .eqv-category-card .eqv-category-footer .eqv-chip.eqv-warning,
+#equirevital .eqv-category-card .eqv-category-footer .eqv-chip.eqv-normal,
+#equirevital .eqv-category-card .eqv-category-footer .eqv-chip.eqv-muted {
+  color: #2b2b2b !important;
+}
+
+/* Diagnostic popup: hide the bottom severity bar entirely. */
+.osiris-diag-severity-bar { display: none !important; }
+
+/* Any inline severity-class chips inside diagnostic-result blocks. */
+.diagnosis-result.severity-low,
+.diagnosis-result.severity-medium,
+.diagnosis-result.severity-high {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* =====================================================================
+ * iter-44 (EQR-2) — EQUIREVITAL graph host styling.
+ * =================================================================== */
+.osiris-eqr-graphs {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin: 4px 0 24px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e1e4e6;
+}
+
+.osiris-eqr-graph {
+  position: relative;
+}
+
+.osiris-eqr-graph-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: 0 0 6px;
+  font-size: 0.86rem;
+  letter-spacing: 0.03em;
+  color: #3b4248;
+}
+
+.osiris-eqr-graph-name {
+  font-weight: 600;
+  font-size: 0.96rem;
+  color: #1d2429;
+  letter-spacing: 0;
+}
+
+.osiris-eqr-graph-trend {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #5a6168;
+}
+
+.osiris-eqr-graph-trend.is-worsening { color: #c0392b; }
+.osiris-eqr-graph-trend.is-improving { color: #007a5e; }
+.osiris-eqr-graph-trend.is-stable { color: #3b4248; }
+
+.osiris-eqr-graph-meta {
+  font-size: 0.84rem;
+  color: #5a6168;
+  font-variant-numeric: tabular-nums;
+}
+
+.osiris-eqr-graph-host {
+  width: 100%;
+  min-height: 140px;
+}
+
+/* Empty state — single static reading, no trend yet. */
+.osiris-eqr-graph-empty {
+  font-size: 0.86rem;
+  color: #5a6168;
+  font-style: italic;
+  padding: 6px 0 4px;
+}
+
+.osiris-eqr-graph-empty strong {
+  font-style: normal;
+  color: #1d2429;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+/* uPlot overrides — kill chrome we don't want. */
+.osiris-eqr-graph .u-legend { display: none !important; }
+.osiris-eqr-graph .u-title  { display: none !important; }
+.osiris-eqr-graph .uplot    { font-family: inherit; }
+.osiris-eqr-graph .u-cursor-pt { box-shadow: none; }
+
+
+
+/* =====================================================================
+ * iter-45 — EQUIREVITAL rebuild.
+ *
+ * The legacy clutter (severity strip, critical-count chip, cluster
+ * count, metric count, pinned count, "All / Critical / Global runs /
+ * Section analyses" filter buttons, "Comparatives" / "History"
+ * section titles, per-card metric-count rows like "3 metrics",
+ * "Manual ECG review · HR 76 · QTc 0.42" summary lines) is hidden
+ * site-wide. A new graph-led subsystem grid + a single chronological
+ * event list are injected into #equirevital by JS at boot.
+ * =================================================================== */
+
+#equirevital .eqv-status-strip,
+#equirevital .eqv-critical-panel,
+#equirevital .eqv-timeline-controls,
+#equirevital .eqv-section-title,
+#equirevital .eqv-category-grid,
+#equirevital .eqv-timeline,
+#equirevital .eqv-timeline-more {
+  display: none !important;
+}
+
+/* The legacy container is preserved (so the old JS can keep writing to
+   it without errors), but visually we anchor the new UI ABOVE it. */
+#equirevital .eqv-container {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- New EQUIREVITAL root container ---------------------- */
+#osiris-eqr2-root {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 12px 22px 60px;
+  color: #1d2429;
+}
+
+/* Mobile EQUIREVITAL patient column matches the Doctor View popup.
+   At max-width 768px the popup is 94vw with a 1px border. Body padding
+   is 22px until 640px, then 16px. The patient screen was 90% with 20px
+   padding plus this root's 22px side padding, so its cards sat narrower
+   and further in. These rules apply only to #equirevital. */
+@media (max-width: 768px) {
+  #equirevital.screen {
+    width: calc(94vw - 2px);
+    max-width: calc(94vw - 2px);
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  #equirevital #osiris-eqr2-root {
+    width: auto;
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: calc((100% + 44px) / 2.14 - 60px + 10px);
+  }
+  #equirevital .logo { margin-left: -22px; }
+  #equirevital .nielogo { margin-right: -22px; }
+}
+@media (max-width: 640px) {
+  #equirevital.screen {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  #equirevital #osiris-eqr2-root {
+    margin-top: calc((100% + 32px) / 2.14 - 60px + 10px);
+  }
+  #equirevital .logo { margin-left: -16px; }
+  #equirevital .nielogo { margin-right: -16px; }
+}
+
+/* Defensive: kill the intro paragraph if anywhere in the DOM. */
+.osiris-eqr2-intro { display: none !important; }
+
+/* Subsystem grid. Six cards, large click-targets. No counters, no
+   chips, no severity dots. Pure label + quiet "last reading" line. */
+.osiris-eqr2-subsystems {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.osiris-eqr2-hero-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+  align-items: stretch;
+}
+
+.osiris-eqr2-hero-row > .osiris-eqr2-card {
+  min-height: 176px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.osiris-eqr2-hero-row .osiris-eqr2-ecg-open {
+  margin-top: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .osiris-eqr2-hero-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.osiris-eqr2-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #d6dadd;
+  border-left: 3px solid #007a5e;
+  border-radius: 6px;
+  padding: 18px 20px 16px;
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  transition: border-color 140ms ease, box-shadow 140ms ease,
+              transform 140ms ease;
+}
+
+.osiris-eqr2-card:hover,
+.osiris-eqr2-card:focus-visible {
+  border-color: #007a5e;
+  box-shadow: 0 4px 16px rgba(0, 122, 94, 0.14);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.osiris-eqr2-card-name {
+  display: block;
+  font-size: 1.04rem;
+  font-weight: 600;
+  color: #1d2429;
+  letter-spacing: 0;
+  margin-bottom: 6px;
+}
+
+.osiris-eqr2-card-line {
+  display: block;
+  font-size: 0.86rem;
+  color: #5a6168;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.45;
+}
+
+/* Single chronological event list at the bottom. No header chrome
+   beyond a quiet rule line. */
+.osiris-eqr2-events {
+  border-top: 1px solid #e1e4e6;
+  padding-top: 22px;
+}
+
+.osiris-eqr2-events-head {
+  font-size: 0.92rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #5a6168;
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.osiris-eqr2-event {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 14px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #e6e8eb;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.osiris-eqr2-event:last-child { border-bottom: none; }
+
+.osiris-eqr2-event-when {
+  color: #5a6168;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.84rem;
+}
+
+.osiris-eqr2-event-text { color: #1d2429; }
+
+.osiris-eqr2-events-empty {
+  font-size: 0.9rem;
+  color: #5a6168;
+  font-style: italic;
+  padding: 6px 0;
+}
+
+/* ---------- EQR subsystem popup ---------------------------------- */
+
+.osiris-eqr-popup .osiris-diag-kicker {
+  color: #4a525a;
+  letter-spacing: 0.08em;
+}
+
+/* Progression list inside the EQR popup. Pure two-column rows;
+   no chips, no badges. The value cell gets a thin coloured rule
+   on its left edge ONLY when status indicates abnormal — the same
+   colour as the marker on the graph above. This is information
+   continuity, not a badge. */
+.osiris-eqr-popup .osiris-eqr-prog {
+  margin-top: 18px;
+}
+
+.osiris-eqr-popup .osiris-eqr-prog-head {
+  font-size: 0.92rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #5a6168;
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.osiris-eqr-popup .osiris-eqr-prog-row {
+  display: grid;
+  grid-template-columns: 130px 1fr 90px;
+  gap: 14px;
+  padding: 6px 0;
+  border-bottom: 1px dashed #eaecee;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.osiris-eqr-popup .osiris-eqr-prog-row:last-child { border-bottom: none; }
+
+.osiris-eqr-popup .osiris-eqr-prog-when {
+  color: #5a6168;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.84rem;
+}
+
+.osiris-eqr-popup .osiris-eqr-prog-metric { color: #1d2429; }
+
+.osiris-eqr-popup .osiris-eqr-prog-value {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  padding-right: 4px;
+  border-right: 3px solid transparent;
+}
+
+.osiris-eqr-popup .osiris-eqr-prog-value[data-status="low"],
+.osiris-eqr-popup .osiris-eqr-prog-value[data-status="high"],
+.osiris-eqr-popup .osiris-eqr-prog-value[data-status="mild"],
+.osiris-eqr-popup .osiris-eqr-prog-value[data-status="moderate"] {
+  border-right-color: #d4a017;
+}
+
+.osiris-eqr-popup .osiris-eqr-prog-value[data-status="critical_low"],
+.osiris-eqr-popup .osiris-eqr-prog-value[data-status="critical_high"],
+.osiris-eqr-popup .osiris-eqr-prog-value[data-status="moderately_severe"],
+.osiris-eqr-popup .osiris-eqr-prog-value[data-status="severe"] {
+  border-right-color: #c0392b;
+}
+
+.osiris-eqr-popup .osiris-eqr-prog-empty {
+  font-size: 0.9rem;
+  color: #5a6168;
+  font-style: italic;
+}
+
+.osiris-modal .osiris-close:hover { background: #005f47; }
+
+
+
+
+@media (min-width: 769px) {
+  .desktop-nav {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    width: max-content;
+  }
+
+  .desktop-nav .button {
+    width: 12ch;
+    min-width: 12ch;
+    max-width: 12ch;
+    padding: 1px 0;
+    box-sizing: border-box;
+  }
+}
+
+/* Shared diagnostic-label alignment. Existing dimensions and visual styling
+   stay with each component; hidden controls remain hidden.
+   display:flex makes these buttons block boxes, so a width under 100%
+   no longer follows .screen { text-align: center }. Centre that box here. */
+.diagnostic-button:not(.hidden),
+.diagnostic-input-button:not(.hidden),
+.respiratory-button:not(.hidden),
+.category-button:not(.hidden),
+.analyze-button:not(.hidden),
+.submit-button:not(.hidden),
+.submit-diagnosis-button:not(.hidden),
+.back-to-baseline-button:not(.hidden),
+.global-analyze-button:not(.hidden) {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Footer legal links and the legal reader. Not part of the main nav. */
+.site-footer .site-footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px 14px;
+  margin: 8px 0 0;
+}
+.site-footer .site-footer-legal button {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 2px 0 !important;
+  margin: 0 !important;
+  min-height: 0 !important;
+  font-family: "Inter Tight", system-ui, sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.osiris-legal {
+  position: fixed;
+  inset: 0;
+  z-index: 30000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 40, 30, 0.55);
+  padding:
+    max(12px, env(safe-area-inset-top))
+    max(12px, env(safe-area-inset-right))
+    max(12px, env(safe-area-inset-bottom))
+    max(12px, env(safe-area-inset-left));
+  box-sizing: border-box;
+}
+.osiris-legal[hidden] {
+  display: none !important;
+}
+body.osiris-legal-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+.osiris-legal-panel {
+  background: #ffffff;
+  color: #14352c;
+  width: min(720px, 100%);
+  max-height: calc(100vh - 32px);
+  max-height: calc(100dvh - 32px);
+  border: 1px solid #003c2f;
+  border-radius: 12px;
+  box-sizing: border-box;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.osiris-legal-head {
+  position: relative;
+  flex-shrink: 0;
+  background: #007a5e;
+  padding: 18px 56px 14px 22px;
+}
+.osiris-legal-head h2,
+.osiris-legal-updated {
+  color: #ffffff;
+}
+.osiris-legal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 8px;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  font-family: "Inter Tight", system-ui, sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  cursor: pointer;
+}
+.osiris-legal-close:hover,
+.osiris-legal-close:focus {
+  background: rgba(255, 255, 255, 0.16) !important;
+}
+.osiris-legal-panel h2 {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 4px;
+}
+.osiris-legal-updated {
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+  margin: 0;
+}
+.osiris-legal-scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  min-height: 0;
+  padding: 8px 22px 24px;
+}
+.osiris-legal-scroll [data-legal-panel][hidden] {
+  display: none !important;
+}
+.osiris-legal-panel h3 {
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  margin: 18px 0 6px;
+  color: #007a5e;
+}
+.osiris-legal-panel p,
+.osiris-legal-panel li {
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #14352c;
+  overflow-wrap: anywhere;
+}
+.osiris-legal-panel p {
+  margin: 0 0 10px;
+}
+.osiris-legal-panel ul {
+  margin: 0 0 10px;
+  padding-left: 18px;
+}
+.osiris-legal-panel a {
+  color: #007a5e;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+.osiris-legal-code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 12px;
+}
+.osiris-legal-emergency {
+  border: 2px solid #8c1f14;
+  background: #fff6f5;
+  padding: 10px 12px;
+  margin: 8px 0 12px;
+  border-radius: 8px;
+}
+.osiris-legal-emergency p {
+  margin: 0;
+  color: #14352c;
+}
+#osirisMembership.osiris-membership {
+  position: fixed;
+  inset: 0;
+  z-index: 30100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 16, 12, 0.72);
+  padding:
+    max(12px, env(safe-area-inset-top))
+    max(12px, env(safe-area-inset-right))
+    max(12px, env(safe-area-inset-bottom))
+    max(12px, env(safe-area-inset-left));
+  box-sizing: border-box;
+}
+#osirisMembership.osiris-membership[hidden] {
+  display: none !important;
+}
+body.osiris-membership-open {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+#osirisMembership .osiris-membership-card {
+  position: relative;
+  width: min(420px, 100%);
+  max-height: calc(100vh - 24px);
+  max-height: calc(100dvh - 24px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #10251e;
+  color: #f0f5ef;
+  border: 1px solid #1b4034;
+  border-radius: 16px;
+  text-align: center;
+}
+#osirisMembership .osiris-membership-scroll {
+  position: relative;
+  z-index: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  min-height: 0;
+}
+#osirisMembership .osiris-membership-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 8px;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  font-family: "Inter Tight", system-ui, sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  cursor: pointer;
+}
+#osirisMembership .osiris-membership-close:hover,
+#osirisMembership .osiris-membership-close:focus {
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+#osirisMembership .osiris-membership-panel,
+#osirisMembership .osiris-premium-offer {
+  margin: 12px 16px 0;
+  padding: 16px 18px;
+  background: #1b4034;
+  border-radius: 14px;
+}
+#osirisMembership .osiris-premium-offer {
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+#osirisMembership .osiris-membership-head {
+  background: transparent;
+  padding: 0;
+}
+#osirisMembership .osiris-membership-head h2,
+#osirisMembership .osiris-membership-price,
+#osirisMembership .osiris-membership-lead {
+  color: #ffffff;
+  margin: 0;
+}
+#osirisMembership .osiris-membership-head h2 {
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.3;
+}
+#osirisMembership .osiris-membership-price {
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 34px;
+  line-height: 1.15;
+  margin-top: 8px;
+}
+#osirisMembership .osiris-membership-lead {
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  margin-top: 6px;
+  opacity: 0.82;
+}
+#osirisMembership .osiris-membership-benefits {
+  list-style: none;
+  margin: 0;
+  padding: 12px 0 0;
+  text-align: left;
+}
+#osirisMembership .osiris-membership-benefits li {
+  position: relative;
+  margin: 0 0 14px;
+  padding-left: 28px;
+  color: #f4f7f5;
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+#osirisMembership .osiris-membership-benefits li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #3dbe8b;
+  font-weight: 700;
+}
+#osirisMembership .osiris-membership-pay {
+  margin: 12px 0 0;
+  padding: 16px 16px 12px;
+  background: #e7eeea;
+  border-radius: 12px;
+}
+#osirisMembership .osiris-membership-pay-title,
+#osirisMembership .osiris-membership-pay-methods,
+#osirisMembership .osiris-membership-note {
+  margin: 0;
+  font-family: "Inter Tight", system-ui, sans-serif;
+}
+#osirisMembership .osiris-membership-pay-title {
+  color: #14352c;
+  font-size: 16px;
+  font-weight: 700;
+}
+#osirisMembership .osiris-membership-pay-methods {
+  color: #5c6b66;
+  font-size: 13px;
+  margin-top: 4px;
+}
+#osirisMembership .osiris-membership-subscribe {
+  display: block;
+  width: 100%;
+  margin: 14px 0 8px !important;
+  padding: 12px 16px !important;
+  border: 0 !important;
+  border-radius: 8px;
+  background: #1a3d32 !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  font-family: "Inter Tight", system-ui, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  cursor: pointer;
+}
+#osirisMembership .osiris-membership-subscribe:disabled {
+  background: #6d857c !important;
+  cursor: not-allowed;
+}
+#osirisMembershipEntry[hidden],
+#osirisMembershipManage[hidden],
+#osirisLaunchMembership[hidden],
+#osirisMembershipPurchase[hidden],
+#osirisMembershipManagePanel[hidden],
+#osirisMembershipCancel[hidden],
+#osirisMembership .osiris-membership-price[hidden] {
+  display: none !important;
+}
+.osiris-membership-entry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  padding: 8px 16px;
+  background: #e7f6f2;
+  color: #005f47;
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.35;
+  text-align: center;
+}
+.osiris-membership-entry span {
+  color: #005f47;
+}
+#osirisMembershipOpen,
+#osirisMembershipManageOpen {
+  margin: 0 !important;
+  padding: 6px 12px !important;
+  border: 0 !important;
+  border-radius: 6px;
+  background: #007a5e !important;
+  box-shadow: none !important;
+  color: #ffffff !important;
+  font-family: "Inter Tight", system-ui, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+  cursor: pointer;
+}
+#osirisMembership .osiris-membership-note {
+  color: #5c6b66;
+  font-size: 12px;
+  line-height: 1.4;
+}
+#osirisMembership .osiris-premium-head,
+#osirisMembership .osiris-premium-body {
+  display: flex;
+  align-items: center;
+}
+#osirisMembership .osiris-premium-head {
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+#osirisMembership .osiris-premium-head p {
+  margin: 0;
+  color: #d6e5dd;
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+}
+#osirisMembership .osiris-premium-body {
+  align-items: center;
+  gap: 12px;
+}
+#osirisMembership .osiris-premium-emblem {
+  display: block;
+  flex: 0 0 25%;
+  width: 86px;
+  max-width: 86px;
+  height: auto;
+  margin: 0;
+}
+#osirisMembership .osiris-premium-copy {
+  flex: 1 1 75%;
+  min-width: 0;
+  text-align: left;
+}
+#osirisMembership .osiris-premium-price,
+#osirisMembership .osiris-premium-once,
+#osirisMembership .osiris-premium-benefits,
+#osirisMembership .osiris-premium-benefits li {
+  margin: 0;
+  font-family: "Inter Tight", system-ui, sans-serif;
+}
+#osirisMembership .osiris-premium-price {
+  color: #f0f5ef;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 32px;
+  line-height: 1.05;
+}
+#osirisMembership .osiris-premium-once {
+  margin-top: 2px;
+  color: #d6e5dd;
+  font-size: 13px;
+  line-height: 1.3;
+}
+#osirisMembership .osiris-premium-benefits {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+#osirisMembership .osiris-premium-benefits li {
+  color: #d6e5dd;
+  font-size: 13px;
+  line-height: 1.3;
+}
+#osirisMembership .osiris-premium-benefits li + li {
+  margin-top: 4px;
+}
+#osirisMembership .osiris-premium-download {
+  display: block;
+  width: 100%;
+  margin: 12px 0 0 !important;
+  padding: 12px 16px !important;
+  border: 0 !important;
+  border-radius: 10px;
+  background: #e7f0eb !important;
+  box-shadow: none !important;
+  color: #1b4034 !important;
+  font-family: "Inter Tight", system-ui, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.04em !important;
+  text-transform: none !important;
+  cursor: not-allowed;
+}
+#osirisMembership .osiris-premium-download:disabled {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  #osirisMembership .osiris-membership-card {
+    border-radius: 14px;
+  }
+  #osirisMembership .osiris-membership-price {
+    font-size: 30px;
+  }
+  #osirisMembership .osiris-membership-benefits li {
+    font-size: 15px;
+  }
+  #osirisMembership .osiris-premium-emblem {
+    width: 72px;
+    max-width: 72px;
+  }
+  #osirisMembership .osiris-premium-price {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .osiris-legal-panel {
+    width: 100%;
+    max-height: calc(100vh - 24px);
+    max-height: calc(100dvh - 24px);
+    border-radius: 10px;
+  }
+  .osiris-legal-head {
+    padding: 16px 52px 12px 16px;
+  }
+  .osiris-legal-panel h2 {
+    font-size: 22px;
+  }
+  .osiris-legal-scroll {
+    padding: 6px 16px 20px;
+  }
+}

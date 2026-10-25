@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /index-3.html
+Disallow: /index-4.html
+Disallow: /index-5.html
+
+Sitemap: https://www.wellbeingdesign.uk/sitemap.xml
