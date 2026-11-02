@@ -3098,6 +3098,17 @@ html.osiris-gp-attached #gpInvitePopup {
 
 }
 
+/* Phones, including landscape. Desktop and laptop rules above stay unchanged. */
+@media (max-width: 768px),
+       (max-width: 1100px) and (max-height: 500px),
+       (hover: none) and (pointer: coarse) and (max-width: 1100px) {
+  body::before,
+  body::after {
+    content: none;
+    display: none;
+  }
+}
+
 
 
 
