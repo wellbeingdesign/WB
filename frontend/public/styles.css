@@ -3080,7 +3080,7 @@ html.osiris-gp-attached #gpInvitePopup {
   }
 
   body::before {
-    content: "Not just WHAT is disrupted, but WHY, WHERE, and through WHICH mechanism.";
+    content: "Not just WHAT is disrupted, but WHY, WHERE, and through WHICH mechanism. Diagnostics should lead from the symptom, through the network of physiological relationships, to the most probable underlying cause — and ultimately to an intervention that addresses that cause. This is the difference between treating the consequences and intervening in the mechanisms that produce them. Of course, such a causal point must still be validated through appropriate evidence. But that is precisely why probabilistic analysis of multiple interconnected pathways makes sense!";
     position: fixed;
     top: 230px;
     left: 140px;
