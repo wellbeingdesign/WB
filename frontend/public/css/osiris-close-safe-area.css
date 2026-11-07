@@ -375,6 +375,25 @@
     -webkit-overflow-scrolling: touch;
   }
 
+  .popup[style*="display: block"] .popup-content > *,
+  .popup[style*="display:block"] .popup-content > * {
+    flex: 0 0 auto !important;
+  }
+
+  .popup[style*="display: block"] .popup-content > .diagnostic-question,
+  .popup[style*="display:block"] .popup-content > .diagnostic-question {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .popup .diagnostic-question input,
+  .popup .diagnostic-question select,
+  .popup .diagnostic-question textarea {
+    scroll-margin-top: 3.2em;
+    scroll-margin-bottom: 16px;
+  }
+
   #osiris-global-modal.open .osiris-modal {
     position: fixed !important;
     inset: 0 !important;
