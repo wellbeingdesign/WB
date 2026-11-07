@@ -31826,6 +31826,25 @@ function OSIRIS_suggestionTextWithoutChecks(li) {
   return String(clone.textContent || "").replace(/\s+/g, " ").trim();
 }
 
+function OSIRIS_checkPhraseSpan(sentence, hit) {
+  var jumps = (typeof OSIRIS_SUGGESTED_TEST_JUMPS !== "undefined") ? OSIRIS_SUGGESTED_TEST_JUMPS : [];
+  var j, jump, span;
+  for (j = 0; j < jumps.length; j++) {
+    jump = jumps[j];
+    if (String(jump.key || "") !== String(hit && hit.metricKey || "") &&
+        String(jump.label || "") !== String(hit && hit.label || "")) continue;
+    try { span = OSIRIS_jumpMatchSpan(jump.re, sentence); } catch (eSpan) { span = null; }
+    if (span) return span;
+  }
+  return null;
+}
+
+function OSIRIS_checkPhrase(sentence, hit) {
+  var span = OSIRIS_checkPhraseSpan(sentence, hit);
+  if (!span) return "";
+  return String(sentence || "").slice(span.start, span.end).replace(/\s+/g, " ").replace(/[.,;:]+$/g, "").trim();
+}
+
 function OSIRIS_linkSuggestedTestList(ul) {
   if (!ul || !ul.children) return;
   var lis = ul.children;
@@ -31867,7 +31886,7 @@ function OSIRIS_linkSuggestedTestList(ul) {
       if (!supplied) active.push(hits[h]);
     }
     oldNodes = li.querySelectorAll(
-      "[data-osiris-open-test], button.osiris-open-test-btn, .osiris-open-test-actions"
+      ".osiris-open-test-pair, [data-osiris-open-test], button.osiris-open-test-btn, .osiris-open-test-actions"
     );
     Array.prototype.forEach.call(oldNodes, function (n) {
       if (n.parentNode) n.parentNode.removeChild(n);
@@ -31877,14 +31896,27 @@ function OSIRIS_linkSuggestedTestList(ul) {
       continue;
     }
     li.classList.add("osiris-open-test-row");
-    host = document.createElement("span");
-    host.className = "osiris-open-test-actions";
-    for (h = 0; h < active.length; h++) {
+    var ordered = active.slice().sort(function (a, b) {
+      var sa = OSIRIS_checkPhraseSpan(sourceText, a);
+      var sb = OSIRIS_checkPhraseSpan(sourceText, b);
+      return (sa ? sa.start : 0) - (sb ? sb.start : 0);
+    });
+    while (li.firstChild) li.removeChild(li.firstChild);
+    for (h = 0; h < ordered.length; h++) {
+      var pair = document.createElement("span");
+      var lab = document.createElement("span");
+      var phrase = (ordered.length === 1)
+        ? sourceText
+        : OSIRIS_checkPhrase(sourceText, ordered[h]);
+      pair.className = "osiris-open-test-pair";
+      lab.className = "osiris-open-test-label";
+      lab.textContent = phrase || sourceText;
       btn = document.createElement("button");
-      OSIRIS_stampCheckButton(btn, active[h]);
-      host.appendChild(btn);
+      OSIRIS_stampCheckButton(btn, ordered[h]);
+      pair.appendChild(lab);
+      pair.appendChild(btn);
+      li.appendChild(pair);
     }
-    li.appendChild(host);
   }
 }
 
@@ -36834,7 +36866,10 @@ function toggleQuestions(questionnaireId) {
     }
     var css = foldBlock("#osirisDiagBody") + foldBlock("#osirisEqrBody") +
       "#osirisDiagBody li.osiris-open-test-row,#osirisEqrBody li.osiris-open-test-row{" +
-        "display:flex;align-items:center;justify-content:space-between;gap:12px;white-space:normal;" +
+        "display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:8px;white-space:normal;" +
+      "}" +
+      "#osirisDiagBody .osiris-open-test-pair,#osirisEqrBody .osiris-open-test-pair{" +
+        "display:flex;align-items:center;justify-content:space-between;gap:12px;" +
       "}" +
       "#osirisDiagBody .osiris-open-test-label,#osirisEqrBody .osiris-open-test-label{" +
         "flex:1 1 auto;min-width:0;" +
