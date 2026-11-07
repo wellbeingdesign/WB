@@ -14867,6 +14867,83 @@ function OSIRIS_eqrAppendRadiologyReasoning(host, sectionId) {
   else host.appendChild(box);
 }
 
+function _osirisRadWhen(entry) {
+  var t = Date.parse((entry && (entry.analyzedAt || entry.ts)) || "");
+  if (!isFinite(t)) return "";
+  var d = new Date(t);
+  function pad(n) { return String(n).padStart(2, "0"); }
+  return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()) +
+    " " + pad(d.getHours()) + ":" + pad(d.getMinutes());
+}
+
+/* Same stored radiologyImages bag as the Radiology archive. Renders the
+ * picture inside the owning EQUIREVITAL system the way ECG images render
+ * inside Cardio. Does not copy the study or add a contribution. */
+function OSIRIS_eqrMountSystemRadiologyImages(host, sectionId) {
+  if (!host || typeof document === "undefined") return;
+  if (host.querySelector("[data-eqr-system-radiology]")) return;
+  var cat = OSIRIS_radiologyCanonicalCategory(sectionId);
+  if (!cat) return;
+  var studies = OSIRIS_radiologyStudiesForCategory(cat);
+  if (!studies.length) return;
+  var wrap = document.createElement("div");
+  wrap.className = "osiris-eqr-radiology-images da-eqr-clinical";
+  wrap.setAttribute("data-eqr-system-radiology", cat);
+  var title = document.createElement("div");
+  title.className = "osiris-eqr-radiology-images-title";
+  title.textContent = "RADIOLOGY IMAGES";
+  wrap.appendChild(title);
+  var canDelete = !(typeof window !== "undefined" && window.OSIRIS_eqrDoctorCtx);
+  studies.forEach(function (entry, index) {
+    if (!entry || typeof entry.dataUrl !== "string") return;
+    var item = document.createElement("div");
+    item.className = index === 0
+      ? "osiris-eqr-radiology-image-latest"
+      : "osiris-eqr-radiology-image-hist-item";
+    var img = document.createElement("img");
+    img.src = entry.dataUrl;
+    img.alt = OSIRIS_radiologyStudyLabel(entry);
+    item.appendChild(img);
+    var meta = document.createElement("div");
+    meta.className = "osiris-eqr-radiology-image-meta";
+    var when = document.createElement("span");
+    when.className = "osiris-eqr-radiology-image-when";
+    var stamp = _osirisRadWhen(entry);
+    when.textContent = (index === 0 ? "Latest · " : "") +
+      OSIRIS_radiologyStudyLabel(entry) + (stamp ? (" · " + stamp) : "");
+    meta.appendChild(when);
+    if (canDelete && entry.id) {
+      var del = document.createElement("button");
+      del.type = "button";
+      del.className = "osiris-eqr-radiology-image-del";
+      del.textContent = "DELETE";
+      del.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        if (typeof OSIRIS_eqrDeleteArchivedRadiologyImage === "function") {
+          try { OSIRIS_eqrDeleteArchivedRadiologyImage(entry.id); } catch (eDel) {}
+        }
+        var parent = wrap.parentNode;
+        if (wrap.parentNode) wrap.parentNode.removeChild(wrap);
+        if (parent) OSIRIS_eqrMountSystemRadiologyImages(parent, sectionId);
+      });
+      meta.appendChild(del);
+    }
+    item.appendChild(meta);
+    var pack = OSIRIS_radiologyReasoningPack(entry);
+    if (pack && pack.cardText) {
+      var note = document.createElement("div");
+      note.className = "osiris-eqr-radiology-analysis";
+      note.style.cssText = "margin:8px 0 0;font-size:13px;line-height:1.4;text-align:left;";
+      note.textContent = pack.cardText;
+      item.appendChild(note);
+    }
+    wrap.appendChild(item);
+  });
+  if (!wrap.querySelector("img")) return;
+  host.appendChild(wrap);
+}
+
 if (typeof window !== "undefined") {
   window.OSIRIS_radiologyCanonicalCategory = OSIRIS_radiologyCanonicalCategory;
   window.OSIRIS_radiologySystemsForStudy = OSIRIS_radiologySystemsForStudy;
@@ -14875,6 +14952,7 @@ if (typeof window !== "undefined") {
   window.OSIRIS_applyStoredRadiologyToResult = OSIRIS_applyStoredRadiologyToResult;
   window.OSIRIS_radiologyPeerText = OSIRIS_radiologyPeerText;
   window.OSIRIS_eqrAppendRadiologyReasoning = OSIRIS_eqrAppendRadiologyReasoning;
+  window.OSIRIS_eqrMountSystemRadiologyImages = OSIRIS_eqrMountSystemRadiologyImages;
 }
 
 function OSIRIS_finalizeSubsystemOutputs(result, category, context) {
@@ -45451,6 +45529,9 @@ function calculateNeutrophilLymphocyteRatio() {
       _eqrMountStoredSubmitFolds(bodyEl, sub.id);
       if (typeof window.OSIRIS_eqrAppendRadiologyReasoning === "function") {
         try { window.OSIRIS_eqrAppendRadiologyReasoning(bodyEl, sub.id); } catch (eRadCard) {}
+      }
+      if (typeof window.OSIRIS_eqrMountSystemRadiologyImages === "function") {
+        try { window.OSIRIS_eqrMountSystemRadiologyImages(bodyEl, sub.id); } catch (eRadImg) {}
       }
     }
 
