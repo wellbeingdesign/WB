@@ -401,4 +401,9 @@
   html.osiris-gp-attached #gpInvitePopup.osiris-diag-open > .osiris-diag-header {
     display: none !important;
   }
+
+  /* Pharmacopeia opens from Medications. The Medications window is 1600–1710. */
+  #suggestionsPanel.suggestions-panel.open {
+    z-index: 2000 !important;
+  }
 }
