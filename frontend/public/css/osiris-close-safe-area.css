@@ -1,0 +1,404 @@
+/* Mobile diagnostic popups — match OSIRIS MOBILE.
+   Open state only. Desktop unchanged. No floating page ×. */
+
+@media (max-width: 768px),
+       (hover: none) and (pointer: coarse),
+       (orientation: landscape) and (max-height: 500px) {
+
+  body:has(.osiris-diag-popup.osiris-diag-open) {
+    overflow: hidden !important;
+  }
+
+  /* Diagnostic overlays only — never #osirisPremiumPanel (Cap PREMIUM card). */
+  .osiris-diag-overlay.osiris-diag-open:not(#osirisPremiumPanel),
+  #gpInviteOverlay[style*="display: block"],
+  #gpInviteOverlay[style*="display:block"] {
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 100dvh !important;
+    background: #ffffff !important;
+    z-index: 11000 !important;
+  }
+
+  /* Full available browser viewport — edge to edge, top to bottom.
+     #osirisPremiumPopup keeps Cap premium.css header (circular mark). */
+  html:not(.osiris-eqr-diag-cascade) #osirisDiagPopup.osiris-diag-open:not([data-osiris-metrics-gate="1"]),
+  html:not(.osiris-eqr-diag-cascade) #osirisEqrPopup.osiris-diag-open,
+  html:not(.osiris-gp-attached) #gpInvitePopup.osiris-diag-open {
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    inset: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    height: 100% !important;
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    max-height: none !important;
+    margin: 0 !important;
+    transform: none !important;
+    border-radius: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    z-index: 11010 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+  }
+
+  html.osiris-eqr-diag-cascade #osirisEqrPopup.osiris-diag-open,
+  html.osiris-eqr-diag-cascade #osirisDiagPopup.osiris-diag-open,
+  html.osiris-gp-attached #gpInvitePopup.osiris-diag-open {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    transform: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    z-index: 11015 !important;
+  }
+
+  /* Slim green header like OSIRIS MOBILE — safe-area only, no fake 47px. */
+  #osirisDiagPopup.osiris-diag-open .osiris-diag-header,
+  #osirisEqrPopup.osiris-diag-open .osiris-diag-header,
+  #gpInvitePopup.osiris-diag-open .osiris-diag-header {
+    flex: 0 0 auto !important;
+    position: relative !important;
+    padding: calc(env(safe-area-inset-top, 0px) + 8px) 48px 8px 14px !important;
+    overflow: visible !important;
+  }
+
+  /* The front window is the only window. Its own header keeps the safe area. */
+  html.osiris-eqr-diag-cascade #osirisEqrPopup.osiris-diag-open {
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  html.osiris-gp-attached #osirisDiagPopup.osiris-diag-open,
+  html.osiris-gp-attached #osirisEqrPopup.osiris-diag-open {
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  html.osiris-eqr-diag-cascade #osirisDiagPopup.osiris-diag-open,
+  html.osiris-gp-attached #gpInvitePopup.osiris-diag-open {
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    inset: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    height: 100dvh !important;
+    min-height: 100dvh !important;
+    max-height: none !important;
+    margin: 0 !important;
+    transform: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  #osirisDiagPopup.osiris-diag-open .osiris-diag-kicker,
+  #osirisEqrPopup.osiris-diag-open .osiris-diag-kicker,
+  #gpInvitePopup.osiris-diag-open .osiris-diag-kicker {
+    font-size: 8px !important;
+    letter-spacing: 0.18em !important;
+    margin-bottom: 2px !important;
+    line-height: 1.2 !important;
+  }
+
+  #osirisDiagPopup.osiris-diag-open .osiris-diag-header h3,
+  #osirisEqrPopup.osiris-diag-open .osiris-diag-header h3,
+  #gpInvitePopup.osiris-diag-open .osiris-diag-header h3 {
+    font-size: 18px !important;
+    line-height: 1.15 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-right: 8px !important;
+  }
+
+  /* One small ×, right of title row, inside the header only. */
+  #osirisDiagPopup.osiris-diag-open .osiris-diag-close,
+  #osirisEqrPopup.osiris-diag-open .osiris-diag-close,
+  #gpInvitePopup.osiris-diag-open .osiris-diag-close {
+    position: absolute !important;
+    top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+    right: max(10px, env(safe-area-inset-right, 0px)) !important;
+    z-index: 5 !important;
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    min-height: 36px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 22px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+  }
+
+  #osirisDiagPopup.osiris-diag-open .osiris-diag-severity-bar,
+  #osirisEqrPopup.osiris-diag-open .osiris-diag-severity-bar {
+    flex: 0 0 auto !important;
+  }
+
+  #osirisDiagPopup.osiris-diag-open .osiris-diag-body,
+  #osirisEqrPopup.osiris-diag-open .osiris-diag-body,
+  #gpInvitePopup.osiris-diag-open .osiris-diag-body {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #osirisDiagPopup.osiris-diag-open .osiris-diag-footer,
+  #osirisEqrPopup.osiris-diag-open .osiris-diag-footer,
+  #gpInvitePopup.osiris-diag-open .osiris-diag-footer {
+    flex: 0 0 auto !important;
+    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+}
+
+/* Close controls only. Sheet size, colour, type and scrolling stay in styles.css. */
+@media (max-width: 768px),
+       (hover: none) and (pointer: coarse),
+       (orientation: landscape) and (max-height: 500px) {
+  body:has(#suggestionsPanel.open),
+  body:has(#shopPanel.open) {
+    overflow: hidden !important;
+  }
+
+  #shopPanel.shop-panel.open {
+    top: 0 !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  #shopPanel.shop-panel.open .shop-close {
+    position: absolute !important;
+    top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+    right: max(10px, env(safe-area-inset-right, 0px)) !important;
+    pointer-events: auto !important;
+  }
+
+  #shopPanel.shop-panel.open .shop-gallery {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #suggestionsPanel.suggestions-panel.open {
+    /* Above the Medications popup (z-index 11010) in both Patient and Doctor View. */
+    top: 0 !important;
+    height: 100dvh !important;
+    max-height: 100dvh !important;
+    z-index: 12000 !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  #suggestionsPanel.suggestions-panel.open .suggestions-close {
+    position: absolute !important;
+    top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+    right: max(10px, env(safe-area-inset-right, 0px)) !important;
+    z-index: 5 !important;
+    width: 36px !important;
+    height: 36px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+    font-size: 22px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  #suggestionsPanel.suggestions-panel.open .pd-root {
+    height: 100% !important;
+    min-height: 0 !important;
+    margin-top: 0 !important;
+    padding-top: calc(env(safe-area-inset-top, 0px) + 44px) !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    box-sizing: border-box !important;
+  }
+
+  /* Diagnostic entry windows use the same header as the assessment popup. */
+  #popupOverlay[style*="display: block"],
+  #popupOverlay[style*="display:block"] {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100dvh !important;
+    margin: 0 !important;
+    background: #ffffff !important;
+    z-index: 21990 !important;
+  }
+
+  .popup[style*="display: block"],
+  .popup[style*="display:block"] {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100dvh !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    z-index: 22000 !important;
+    box-sizing: border-box !important;
+  }
+
+  .popup[style*="display: block"] .popup-header,
+  .popup[style*="display:block"] .popup-header,
+  #osiris-global-modal.open .osiris-modal h3,
+  body.osiris-legal-open .osiris-legal-head {
+    flex: 0 0 auto !important;
+    position: relative !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    background: #007a5e !important;
+    color: #ffffff !important;
+    text-align: left !important;
+    padding: calc(env(safe-area-inset-top, 0px) + 8px) 48px 8px 14px !important;
+  }
+
+  .popup[style*="display: block"] .popup-header h3,
+  .popup[style*="display:block"] .popup-header h3,
+  #osiris-global-modal.open .osiris-modal h3,
+  body.osiris-legal-open .osiris-legal-head h2 {
+    font-family: "Instrument Serif", Georgia, serif !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.01em !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    text-align: left !important;
+    margin: 0 !important;
+  }
+
+  .popup[style*="display: block"] .popup-header .close,
+  .popup[style*="display:block"] .popup-header .close,
+  body.osiris-legal-open .osiris-legal-close {
+    position: absolute !important;
+    top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+    right: max(10px, env(safe-area-inset-right, 0px)) !important;
+    width: 36px !important;
+    height: 36px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 22px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background: transparent !important;
+    border: 0 !important;
+    opacity: 1 !important;
+  }
+
+  .popup[style*="display: block"] .popup-content,
+  .popup[style*="display:block"] .popup-content,
+  body.osiris-legal-open .osiris-legal-scroll {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #osiris-global-modal.open .osiris-modal {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100dvh !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  #osiris-global-modal.open .osiris-verdict,
+  #osiris-global-modal.open .osiris-missing {
+    flex: 1 1 auto !important;
+    min-height: 0 !important;
+    overflow-y: auto !important;
+  }
+
+  body.osiris-legal-open .osiris-legal,
+  body.osiris-legal-open .osiris-legal-panel {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100dvh !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  body.osiris-legal-open .osiris-legal-panel {
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden !important;
+  }
+
+  #herbPopupOverlay[style*="display: flex"] .herb-close,
+  #herbPopupOverlay[style*="display:flex"] .herb-close {
+    top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+    right: max(10px, env(safe-area-inset-right, 0px)) !important;
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 22px !important;
+    font-weight: 400 !important;
+  }
+}
+
+/* Desktop keeps the centred card. A window opened from another window
+   uses the parent header, so the second green bar is not painted. */
+@media (min-width: 769px) and (hover: hover) and (pointer: fine) {
+  html.osiris-eqr-diag-cascade #osirisDiagPopup.osiris-diag-open > .osiris-diag-header,
+  html.osiris-gp-attached #gpInvitePopup.osiris-diag-open > .osiris-diag-header {
+    display: none !important;
+  }
+}
