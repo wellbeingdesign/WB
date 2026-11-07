@@ -143,7 +143,7 @@
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-size: 22px !important;
+    font-size: 36px !important;
     font-weight: 400 !important;
     line-height: 1 !important;
     color: #ffffff !important;
@@ -325,7 +325,7 @@
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
-    font-size: 22px !important;
+    font-size: 36px !important;
     font-weight: 400 !important;
     line-height: 1 !important;
     color: #ffffff !important;
@@ -389,7 +389,7 @@
     right: max(10px, env(safe-area-inset-right, 0px)) !important;
     width: 36px !important;
     height: 36px !important;
-    font-size: 22px !important;
+    font-size: 36px !important;
     font-weight: 400 !important;
   }
 }
