@@ -198,10 +198,21 @@
     box-sizing: border-box !important;
   }
 
+  /* OSIRIS MOBILE drops this × onto the atlas title row, below the
+     status bar. On the mobile website that row is the first visible
+     line under the browser toolbar, so the control is anchored there
+     instead of to the layout top, which the toolbar clips. */
+  #shopPanel.shop-panel.open .shop-heading-wrapper {
+    anchor-name: --osiris-botanica-head;
+  }
+
   #shopPanel.shop-panel.open .shop-close {
     position: fixed !important;
-    top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
+    position-anchor: --osiris-botanica-head;
+    top: anchor(--osiris-botanica-head top, calc(20px + 32px)) !important;
     right: max(10px, env(safe-area-inset-right, 0px)) !important;
+    left: auto !important;
+    bottom: auto !important;
     z-index: 21020 !important;
     width: 36px !important;
     height: 36px !important;
