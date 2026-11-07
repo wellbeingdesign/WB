@@ -199,9 +199,26 @@
   }
 
   #shopPanel.shop-panel.open .shop-close {
-    position: absolute !important;
+    position: fixed !important;
     top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
     right: max(10px, env(safe-area-inset-right, 0px)) !important;
+    z-index: 21020 !important;
+    width: 36px !important;
+    height: 36px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 36px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
     pointer-events: auto !important;
   }
 
