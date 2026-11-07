@@ -36840,10 +36840,10 @@ function toggleQuestions(questionnaireId) {
         "flex:1 1 auto;min-width:0;" +
       "}" +
       "#osirisDiagBody .osiris-open-test-actions,#osirisEqrBody .osiris-open-test-actions{" +
-        "display:flex;flex:0 0 auto;flex-wrap:wrap;gap:8px;margin-left:auto;justify-content:flex-end;" +
+        "display:flex;flex-direction:column;align-items:flex-end;flex:0 0 auto;gap:8px;margin-left:auto;" +
       "}" +
       "#osirisDiagBody button.osiris-open-test-btn,#osirisEqrBody button.osiris-open-test-btn{" +
-        "display:inline-block;box-sizing:border-box;flex:0 0 140px;width:140px;min-width:140px;" +
+        "display:inline-block;box-sizing:border-box;flex:0 0 auto;width:140px;min-width:140px;max-width:140px;" +
         "margin:0;padding:2px 8px;font-size:11px;line-height:1.2;letter-spacing:.03em;" +
         "text-align:center;background:#007a5e !important;color:#fff !important;border:none;" +
         "border-radius:4px;cursor:pointer;box-shadow:none;white-space:nowrap;" +
