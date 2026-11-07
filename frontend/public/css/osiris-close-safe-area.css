@@ -126,7 +126,9 @@
   #osirisDiagPopup.osiris-diag-open .osiris-diag-header h3,
   #osirisEqrPopup.osiris-diag-open .osiris-diag-header h3,
   #gpInvitePopup.osiris-diag-open .osiris-diag-header h3 {
+    font-family: "Inter Tight", system-ui, sans-serif !important;
     font-size: 26px !important;
+    font-weight: 400 !important;
     line-height: 1.15 !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -328,7 +330,19 @@
 
   .popup[style*="display: block"] .popup-header h3,
   .popup[style*="display:block"] .popup-header h3,
-  #osiris-global-modal.open .osiris-modal h3,
+  #osiris-global-modal.open .osiris-modal h3 {
+    font-family: "Inter Tight", system-ui, sans-serif !important;
+    font-size: 26px !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.01em !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    text-align: left !important;
+    margin: 0 !important;
+  }
+
   body.osiris-legal-open .osiris-legal-head h2 {
     font-family: "Instrument Serif", Georgia, serif !important;
     font-size: 26px !important;
