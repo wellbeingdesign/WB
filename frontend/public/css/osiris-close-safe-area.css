@@ -49,6 +49,13 @@
     overflow: hidden !important;
   }
 
+  /* A clean Diagnostics card asks for Patient Metrics in this card.
+     The white sheet is z-index 11000; this card stays at 1600 unless
+     it is lifted above that sheet. */
+  #osirisDiagPopup.osiris-diag-open[data-osiris-metrics-gate="1"] {
+    z-index: 11010 !important;
+  }
+
   html.osiris-eqr-diag-cascade #osirisEqrPopup.osiris-diag-open,
   html.osiris-eqr-diag-cascade #osirisDiagPopup.osiris-diag-open,
   html.osiris-gp-attached #gpInvitePopup.osiris-diag-open {
