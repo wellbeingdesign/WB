@@ -310,8 +310,16 @@
     display: flex !important;
     flex-direction: column !important;
     overflow: hidden !important;
+    overscroll-behavior: none !important;
     z-index: 22000 !important;
     box-sizing: border-box !important;
+  }
+
+  html:has(.popup[style*="display: block"]),
+  html:has(.popup[style*="display:block"]),
+  body:has(.popup[style*="display: block"]),
+  body:has(.popup[style*="display:block"]) {
+    overflow: hidden !important;
   }
 
   .popup[style*="display: block"] .popup-header,
@@ -319,7 +327,9 @@
   #osiris-global-modal.open .osiris-modal h3,
   body.osiris-legal-open .osiris-legal-head {
     flex: 0 0 auto !important;
-    position: relative !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 5 !important;
     box-sizing: border-box !important;
     margin: 0 !important;
     background: #007a5e !important;
@@ -386,6 +396,7 @@
     min-height: 0 !important;
     overflow-x: hidden !important;
     overflow-y: auto !important;
+    overscroll-behavior: contain !important;
     -webkit-overflow-scrolling: touch;
   }
 
