@@ -13360,7 +13360,14 @@ function OSIRIS_systemicPeerRecordText(activeCategory, opts) {
       if (parts.length) chunks.push(parts.join(" "));
     }
   }
-  return chunks.join(" ");
+  var joinedPeer = chunks.join(" ");
+  try {
+    if (typeof OSIRIS_radiologyPeerText === "function") {
+      var radPeer = OSIRIS_radiologyPeerText(activeCategory, joinedPeer);
+      if (radPeer) joinedPeer = (joinedPeer + " " + radPeer).trim();
+    }
+  } catch (eRadPeer) {}
+  return joinedPeer;
 }
 
 /* Evidence-driven systemic relationships.
@@ -14550,6 +14557,326 @@ if (typeof window !== "undefined") {
 /* Local subsystem result → current cross-system picture → evidence-supported
  * contribution. globalContribution is rebuilt from this call's evidence.
  * A previously stored contribution is not copied in as evidence. */
+/* Stored radiology analyses feed the matching physiological assessment.
+ * Reads equirevital.radiologyImages only. Does not call the vision API
+ * and does not add a second Systemic Contribution pass. */
+function OSIRIS_radiologyCanonicalCategory(sectionId) {
+  var id = String(sectionId || "");
+  var map = {
+    musculoskeletal: "musculoskeletal_evaluation",
+    musculoskeletal_evaluation: "musculoskeletal_evaluation",
+    msk: "musculoskeletal_evaluation",
+    cardio: "cardio",
+    cardiovascular: "cardio",
+    heart: "cardio",
+    lower_respiratory: "lower_respiratory",
+    respiratory: "lower_respiratory",
+    upper_respiratory: "upper_respiratory",
+    renal: "renal_diagnostics",
+    renal_diagnostics: "renal_diagnostics",
+    gastrointestinal: "gastrointestinal",
+    gi: "gastrointestinal",
+    neurology: "neural",
+    neural: "neural",
+    neurological: "neural",
+    endocrine: "endocrine"
+  };
+  return map[id] || "";
+}
+
+function OSIRIS_radiologySystemsForStudy(entry) {
+  if (!entry || typeof entry !== "object") return [];
+  var type = String(entry.radiologyType || "").toLowerCase();
+  var region = String(entry.radiologyRegion || "").toLowerCase();
+  if (type === "echocardiogram" || type === "angiography") return ["cardio"];
+  if (type === "dexa" || type === "bone_scan") return ["musculoskeletal_evaluation"];
+  if (type === "mammography") return [];
+  if (region === "neck" && (type === "ultrasound" || type === "doppler")) return ["endocrine"];
+  var byRegion = {
+    head: "neural",
+    brain: "neural",
+    sinuses: "upper_respiratory",
+    neck: "musculoskeletal_evaluation",
+    chest: "lower_respiratory",
+    heart: "cardio",
+    lungs: "lower_respiratory",
+    abdomen: "gastrointestinal",
+    liver: "gastrointestinal",
+    kidneys: "renal_diagnostics",
+    pelvis: "musculoskeletal_evaluation",
+    spine: "musculoskeletal_evaluation",
+    cervical_spine: "musculoskeletal_evaluation",
+    thoracic_spine: "musculoskeletal_evaluation",
+    lumbar_spine: "musculoskeletal_evaluation",
+    shoulder: "musculoskeletal_evaluation",
+    arm: "musculoskeletal_evaluation",
+    elbow: "musculoskeletal_evaluation",
+    wrist_hand: "musculoskeletal_evaluation",
+    hip: "musculoskeletal_evaluation",
+    leg: "musculoskeletal_evaluation",
+    knee: "musculoskeletal_evaluation",
+    ankle_foot: "musculoskeletal_evaluation"
+  };
+  return byRegion[region] ? [byRegion[region]] : [];
+}
+
+function OSIRIS_radiologyAllStudies() {
+  var arr = [];
+  try {
+    if (typeof OSIRIS_eqrListArchivedRadiologyImages === "function") {
+      arr = OSIRIS_eqrListArchivedRadiologyImages() || [];
+    }
+  } catch (eList) { arr = []; }
+  if (!arr.length) {
+    try {
+      var eq = (typeof userProfile === "object" && userProfile && userProfile.equirevital) || null;
+      if (eq && Array.isArray(eq.radiologyImages)) arr = eq.radiologyImages.slice();
+    } catch (eBag) { arr = []; }
+  }
+  return arr.filter(function (entry) { return entry && typeof entry === "object"; });
+}
+
+function OSIRIS_radiologyStudiesForCategory(category) {
+  var cat = OSIRIS_radiologyCanonicalCategory(category) || String(category || "");
+  if (!cat) return [];
+  return OSIRIS_radiologyAllStudies().filter(function (entry) {
+    return OSIRIS_radiologySystemsForStudy(entry).indexOf(cat) !== -1;
+  });
+}
+
+function _osirisRadCleanList(arr) {
+  var out = [];
+  if (!Array.isArray(arr)) return out;
+  arr.forEach(function (item) {
+    var s = String(item == null ? "" : item).replace(/\s+/g, " ").trim();
+    if (!s) return;
+    if (/^(none|none recorded|nil|n\/a|not applicable)\.?$/i.test(s)) return;
+    out.push(s);
+  });
+  return out;
+}
+
+function _osirisRadNegated(text) {
+  return /\bno\b|\bwithout\b|\bnegative for\b|\bunremarkable\b|\bnot seen\b|\bno evidence\b|\babsence of\b|\bruled out\b/i.test(String(text || ""));
+}
+
+function _osirisRadItemLevel(text) {
+  var s = String(text || "");
+  if (!s || _osirisRadNegated(s)) return "normal";
+  if (/\b(fracture|dislocation|pneumothorax|haemorrhage|hemorrhage|malignan|cord compression|collapse|infarct)\b/i.test(s)) {
+    return "abnormal";
+  }
+  if (/\b(effusion|herniat|stenosis|narrowing|erosion|osteophyte|consolidation|mass|nodule|opacit|oedema|edema|infarct|obstruction|lytic|sclerotic|destructive|sublux|tear|rupture|compression|degenerat)\b/i.test(s)) {
+    return "borderline";
+  }
+  return "normal";
+}
+
+function _osirisRadRaise(current, target) {
+  if (typeof _raiseStatus === "function") return _raiseStatus(current, target);
+  if (current === "abnormal" || target === "abnormal") return "abnormal";
+  if (current === "borderline" || target === "borderline") return "borderline";
+  return current || target || "normal";
+}
+
+function OSIRIS_radiologyStudyLabel(entry) {
+  if (!entry) return "Imaging study";
+  if (entry.studyDescription) return String(entry.studyDescription);
+  var typeLabel = entry.typeLabel || entry.radiologyType || "Imaging";
+  var regionLabel = entry.regionLabel || entry.radiologyRegion || "";
+  return regionLabel ? (typeLabel + " of the " + regionLabel) : String(typeLabel);
+}
+
+function OSIRIS_radiologyReasoningPack(entry) {
+  if (!entry || typeof entry !== "object") return null;
+  var label = OSIRIS_radiologyStudyLabel(entry);
+  var analysis = (entry.analysis && typeof entry.analysis === "object") ? entry.analysis : null;
+  var prefix = "Radiology incorporated: " + label;
+  if (!analysis) {
+    return {
+      id: entry.id || "",
+      label: label,
+      level: "normal",
+      findingLines: [],
+      interpretationLines: [prefix + " is archived. No stored analysis is available for this study."],
+      tests: [],
+      cardText: prefix + " is archived. No stored analysis is available for this study.",
+      letterLine: prefix + " is archived without a stored analysis."
+    };
+  }
+  var abnormalities = _osirisRadCleanList(analysis.abnormalities);
+  var urgent = _osirisRadCleanList(analysis.significantOrUrgentFindings);
+  var findings = _osirisRadCleanList(analysis.findings);
+  var level = "normal";
+  function consider(items) {
+    items.forEach(function (item) {
+      var itemLevel = _osirisRadItemLevel(item);
+      if (itemLevel === "abnormal") level = "abnormal";
+      else if (itemLevel === "borderline" && level !== "abnormal") level = "borderline";
+    });
+  }
+  consider(urgent);
+  consider(abnormalities);
+  consider(findings);
+  if (analysis.summary) consider([String(analysis.summary)]);
+  if (analysis.interpretation) consider([String(analysis.interpretation)]);
+  var findingLines = [];
+  var seenSignal = {};
+  function pushSignal(kind, items) {
+    items.forEach(function (item) {
+      if (_osirisRadItemLevel(item) === "normal") return;
+      var key = String(item).toLowerCase();
+      if (seenSignal[key]) return;
+      seenSignal[key] = 1;
+      findingLines.push(prefix + " — " + kind + ": " + item);
+    });
+  }
+  pushSignal("urgent finding", urgent);
+  pushSignal("abnormality", abnormalities);
+  pushSignal("finding", findings);
+  var interpretationLines = [];
+  function pushInterp(line) {
+    if (!line || interpretationLines.indexOf(line) !== -1) return;
+    interpretationLines.push(line);
+  }
+  if (analysis.interpretation) {
+    pushInterp(prefix + " — " + String(analysis.interpretation).replace(/\s+/g, " ").trim());
+  } else if (analysis.summary) {
+    pushInterp(prefix + " — " + String(analysis.summary).replace(/\s+/g, " ").trim());
+  }
+  findings.forEach(function (item) {
+    if (_osirisRadItemLevel(item) !== "normal") return;
+    pushInterp(prefix + " — finding: " + item);
+  });
+  if (!findingLines.length && !interpretationLines.length) {
+    pushInterp(prefix + " is on file. The stored analysis did not record an abnormality.");
+  } else if (level === "normal" && !interpretationLines.length) {
+    pushInterp(prefix + " is on file. The stored analysis did not record an abnormality.");
+  }
+  var tests = [];
+  if (level !== "normal") {
+    _osirisRadCleanList(analysis.recommendedClinicalCorrelation).forEach(function (item) {
+      if (tests.length >= 4) return;
+      if (tests.indexOf(item) === -1) tests.push(item);
+    });
+  }
+  var cardBits = findingLines.concat(interpretationLines);
+  return {
+    id: entry.id || "",
+    label: label,
+    level: level,
+    findingLines: findingLines,
+    interpretationLines: interpretationLines,
+    tests: tests,
+    cardText: cardBits.join(" "),
+    letterLine: cardBits[0] || (prefix + " is on file.")
+  };
+}
+
+function OSIRIS_applyStoredRadiologyToResult(result, category) {
+  if (!result || typeof result !== "object") return result;
+  var studies = OSIRIS_radiologyStudiesForCategory(category);
+  if (!studies.length) return result;
+  result.findings = Array.isArray(result.findings) ? result.findings : [];
+  result.interpretations = Array.isArray(result.interpretations) ? result.interpretations : [];
+  result.suggestedTests = Array.isArray(result.suggestedTests) ? result.suggestedTests : [];
+  result.missing = Array.isArray(result.missing) ? result.missing : [];
+  var raised = false;
+  studies.forEach(function (entry) {
+    var pack = OSIRIS_radiologyReasoningPack(entry);
+    if (!pack) return;
+    if (pack.level === "abnormal" || pack.level === "borderline") {
+      pack.findingLines.forEach(function (line) {
+        if (result.findings.indexOf(line) === -1) result.findings.push(line);
+      });
+      result.status = _osirisRadRaise(result.status || "normal", pack.level);
+      raised = true;
+      pack.tests.forEach(function (test) {
+        if (result.suggestedTests.indexOf(test) === -1) result.suggestedTests.push(test);
+      });
+    }
+    pack.interpretationLines.forEach(function (line) {
+      if (result.interpretations.indexOf(line) === -1) result.interpretations.push(line);
+    });
+  });
+  if (raised) {
+    var cat = OSIRIS_radiologyCanonicalCategory(category) || String(category || "");
+    if (cat === "musculoskeletal_evaluation") {
+      result.missing = result.missing.filter(function (line) {
+        return !/no musculoskeletal symptoms reported/i.test(String(line || ""));
+      });
+    }
+  }
+  return result;
+}
+
+function OSIRIS_radiologyPeerText(activeCategory, existingText) {
+  var active = OSIRIS_radiologyCanonicalCategory(activeCategory) || String(activeCategory || "");
+  var have = String(existingText || "");
+  var lines = [];
+  OSIRIS_radiologyAllStudies().forEach(function (entry) {
+    var systems = OSIRIS_radiologySystemsForStudy(entry);
+    if (!systems.length) return;
+    if (active && systems.indexOf(active) !== -1) return;
+    var pack = OSIRIS_radiologyReasoningPack(entry);
+    if (!pack || pack.level === "normal") return;
+    pack.findingLines.forEach(function (line) {
+      if (have.indexOf(line) === -1 && lines.indexOf(line) === -1) lines.push(line);
+    });
+  });
+  return lines.join(" ");
+}
+
+function OSIRIS_radiologyEsc(s) {
+  return String(s == null ? "" : s)
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+}
+
+function OSIRIS_eqrAppendRadiologyReasoning(host, sectionId) {
+  if (!host || typeof document === "undefined") return;
+  if (host.querySelector("[data-eqr-radiology-reasoning]")) return;
+  var cat = OSIRIS_radiologyCanonicalCategory(sectionId);
+  if (!cat) return;
+  var studies = OSIRIS_radiologyStudiesForCategory(cat);
+  if (!studies.length) return;
+  var stored = "";
+  try {
+    if (typeof window.OSIRIS_eqrStoredSubmitHtml === "function") {
+      stored = window.OSIRIS_eqrStoredSubmitHtml(sectionId) || "";
+    }
+  } catch (eStored) { stored = ""; }
+  if (String(stored).indexOf("Radiology incorporated:") !== -1) return;
+  if (String(host.innerHTML || "").indexOf("Radiology incorporated:") !== -1) return;
+  var html = "<h4>Incorporated radiological findings</h4>";
+  var any = false;
+  studies.forEach(function (entry) {
+    var pack = OSIRIS_radiologyReasoningPack(entry);
+    if (!pack || !pack.cardText) return;
+    any = true;
+    html += "<p>" + OSIRIS_radiologyEsc(pack.cardText) + "</p>";
+  });
+  if (!any) return;
+  var box = document.createElement("div");
+  box.className = "da-eqr-clinical";
+  box.setAttribute("data-eqr-radiology-reasoning", "1");
+  box.innerHTML = html;
+  var anchor = host.querySelector("[data-eqr-accessible-diag]");
+  if (anchor && anchor.nextSibling) host.insertBefore(box, anchor.nextSibling);
+  else if (anchor) host.appendChild(box);
+  else host.appendChild(box);
+}
+
+if (typeof window !== "undefined") {
+  window.OSIRIS_radiologyCanonicalCategory = OSIRIS_radiologyCanonicalCategory;
+  window.OSIRIS_radiologySystemsForStudy = OSIRIS_radiologySystemsForStudy;
+  window.OSIRIS_radiologyStudiesForCategory = OSIRIS_radiologyStudiesForCategory;
+  window.OSIRIS_radiologyReasoningPack = OSIRIS_radiologyReasoningPack;
+  window.OSIRIS_applyStoredRadiologyToResult = OSIRIS_applyStoredRadiologyToResult;
+  window.OSIRIS_radiologyPeerText = OSIRIS_radiologyPeerText;
+  window.OSIRIS_eqrAppendRadiologyReasoning = OSIRIS_eqrAppendRadiologyReasoning;
+}
+
 function OSIRIS_finalizeSubsystemOutputs(result, category, context) {
   if (!result || typeof result !== "object") return result;
   result.category = result.category || category || "";
@@ -14565,6 +14892,9 @@ function OSIRIS_finalizeSubsystemOutputs(result, category, context) {
     if (arr.indexOf(msg) === -1) arr.push(msg);
   }
   var cat = String(category || result.category || "");
+  if (typeof OSIRIS_applyStoredRadiologyToResult === "function") {
+    try { OSIRIS_applyStoredRadiologyToResult(result, cat); } catch (eRadApply) {}
+  }
   var status = String(result.status || "normal");
   var hasSignal = status === "abnormal" || status === "borderline" ||
     (result.findings && result.findings.length) ||
@@ -26464,6 +26794,14 @@ function toggleCategory(categoryId) {
     let section = document.getElementById(categoryId);
     if (!section) return;
 
+    // toggleQuestions pins style.display on every .question-container,
+    // including #radiology-imaging. An inline display beats .hidden, so
+    // removing the class alone leaves Radiology closed. Release the pin
+    // and let the class control visibility.
+    function releaseInlineDisplay(el) {
+        if (el && el.style && el.style.display) el.style.display = "";
+    }
+
     if (section.classList.contains('hidden')) {
         // Hide every diagnostic body panel. Most categories use
         // .diagnostic-section; Renal / Hematology use .diagnostic-category
@@ -26475,14 +26813,18 @@ function toggleCategory(categoryId) {
         // reached interpretGastrointestinal / sectionAnalysis.gastrointestinal.
         document.querySelectorAll('.diagnostic-section').forEach(sec => {
             sec.classList.add('hidden');
+            releaseInlineDisplay(sec);
         });
         document.querySelectorAll('.diagnostic-category[id]').forEach(sec => {
             sec.classList.add('hidden');
+            releaseInlineDisplay(sec);
         });
 
         section.classList.remove('hidden');
+        releaseInlineDisplay(section);
     } else {
         section.classList.add('hidden');
+        releaseInlineDisplay(section);
     }
 }
 
@@ -37840,7 +38182,17 @@ function OSIRIS_doctorLetterImagingFacts(p) {
   }
   if (radN > 0) {
     lines.push("Radiology imaging study on file: Yes (" + radN + " archived image" +
-      (radN === 1 ? "" : "s") + "). AI/OSIRIS radiology interpretation is not included.");
+      (radN === 1 ? "" : "s") + ").");
+    var radBag = Array.isArray(eq.radiologyImages) ? eq.radiologyImages : [];
+    radBag.forEach(function (entry) {
+      if (!entry || typeof entry !== "object") return;
+      var pack = (typeof OSIRIS_radiologyReasoningPack === "function")
+        ? OSIRIS_radiologyReasoningPack(entry) : null;
+      if (pack && pack.letterLine) lines.push(pack.letterLine);
+      else if (entry.studyDescription || entry.typeLabel) {
+        lines.push("Stored imaging study: " + (entry.studyDescription || entry.typeLabel) + ".");
+      }
+    });
   }
   return lines;
 }
@@ -45097,6 +45449,9 @@ function calculateNeutrophilLymphocyteRatio() {
       _appendEqrOsirisDiagnosisBtn(bodyEl, sub.id, sub.label);
       _eqrMountAssessmentHeading(bodyEl, sub.id);
       _eqrMountStoredSubmitFolds(bodyEl, sub.id);
+      if (typeof window.OSIRIS_eqrAppendRadiologyReasoning === "function") {
+        try { window.OSIRIS_eqrAppendRadiologyReasoning(bodyEl, sub.id); } catch (eRadCard) {}
+      }
     }
 
     if (sub.id === "global_diagnostics" && !focusCritical) {
