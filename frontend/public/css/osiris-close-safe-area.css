@@ -191,7 +191,10 @@
     top: 0 !important;
     height: 100dvh !important;
     max-height: 100dvh !important;
-    overflow: hidden !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
     box-sizing: border-box !important;
   }
 
@@ -200,14 +203,6 @@
     top: calc(env(safe-area-inset-top, 0px) + 8px) !important;
     right: max(10px, env(safe-area-inset-right, 0px)) !important;
     pointer-events: auto !important;
-  }
-
-  #shopPanel.shop-panel.open .shop-gallery {
-    flex: 1 1 auto;
-    min-height: 0;
-    overflow-x: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
   }
 
   #suggestionsPanel.suggestions-panel.open {
